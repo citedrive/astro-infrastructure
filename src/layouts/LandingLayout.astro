@@ -1,0 +1,10 @@
+---
+import Header from '../components/header/Header.astro';
+const { title, lang, dir, frontmatter, headings } = Astro.props;
+---
+
+<Header title={title ?? frontmatter.title} lang={lang ?? frontmatter.lang}>
+<body>
+   <slot />
+</body>
+</Header>

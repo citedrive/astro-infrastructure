@@ -1,0 +1,5 @@
+[32m@astrojs/preact:build: [0mcache hit, replaying output [2mb37f6e2117f7308f[0m
+[32m@astrojs/preact:build: [0m
+[32m@astrojs/preact:build: [0m> @astrojs/preact@1.0.2 build /home/runner/work/astro/astro/packages/integrations/preact
+[32m@astrojs/preact:build: [0m> astro-scripts build "src/**/*.ts" && tsc
+[32m@astrojs/preact:build: [0m

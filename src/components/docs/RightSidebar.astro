@@ -1,0 +1,10 @@
+---
+import TableOfContents from './TableOfContents';
+const { headings, githubEditUrl } = Astro.props as Props;
+---
+
+<nav >
+	<div >
+	<TableOfContents headings={headings} />
+	</div>
+</nav>
