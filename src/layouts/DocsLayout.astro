@@ -3,6 +3,7 @@ import Header from '../components/header/Header.astro';
 const { title, lang, dir, frontmatter, headings } = Astro.props;
 import RightSidebar from '../components/docs/RightSidebar.astro';
 import LeftSidebar from '../components/docs/LeftSidebar.astro';
+import Footer from '../components/footer/Footer.astro';
 ---
 
 <Header title={title ?? frontmatter.title} lang={lang ?? frontmatter.lang}>
@@ -19,6 +20,7 @@ import LeftSidebar from '../components/docs/LeftSidebar.astro';
          <RightSidebar headings={headings} githubEditUrl={"githubEditUrl"} />
       </aside>
    </main>
+   <Footer lang={lang ?? frontmatter.lang}/>
 </body>
 </Header>
 <style>

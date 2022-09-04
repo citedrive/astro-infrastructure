@@ -1,12 +1,6 @@
 ---
-import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from '../utils/languages';
-import LanguageSelect from './LanguageSelect';
 import SEO from "./SEO.astro"
-
-
-
 const { title, lang, dir } = Astro.props;
-
 ---
 
 <!DOCTYPE html>
@@ -19,7 +13,9 @@ const { title, lang, dir } = Astro.props;
 
 	</head>
   <header class="header">
-        	{KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
+        	<div>LOGO</div>
+            	<div>Menu1</div>
+                	<div>Menu2</div>
   </header>
     <slot />
 </html>
@@ -28,7 +24,6 @@ const { title, lang, dir } = Astro.props;
 <style>
   .header{
     width: 100%;
-    margin-bottom: 4rem;
     position: fixed;
     display: flex;
     -webkit-box-pack: justify;

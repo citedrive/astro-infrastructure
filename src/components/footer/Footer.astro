@@ -1,0 +1,18 @@
+---
+import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from '../utils/languages';
+import LanguageSelect from './LanguageSelect';
+const {  lang } = Astro.props;
+
+---
+
+  <footer class="footer">
+        	{KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
+  </footer>
+
+
+<style>
+  .footer{
+  background: #303846;
+}
+
+    </style>

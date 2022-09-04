@@ -1,5 +1,6 @@
 ---
 import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
 const { title, lang, dir, frontmatter, headings } = Astro.props;
 ---
 
@@ -7,4 +8,5 @@ const { title, lang, dir, frontmatter, headings } = Astro.props;
 <body>
    <slot />
 </body>
+<Footer lang={lang ?? frontmatter.lang}/>
 </Header>
