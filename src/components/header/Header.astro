@@ -2,6 +2,7 @@
 import '../../styles/theme.css';
 import '../../styles/index.css';
 import SEO from "./SEO.astro"
+import Logo from "./Logo.astro"
 const { title, lang, dir } = Astro.props;
 ---
 
@@ -15,9 +16,9 @@ const { title, lang, dir } = Astro.props;
 
 	</head>
   <header class="header">
-        	<div>LOGO</div>
-            	<div>Menu1</div>
-                	<div>Menu2</div>
+        	<Logo class="logo"/>
+            	<div>Option Option Option</div>
+                	<div>Option Option Option</div>
   </header>
     <slot />
 </html>
@@ -37,9 +38,12 @@ const { title, lang, dir } = Astro.props;
     color: rgb(42, 42, 42);
     transition: all 0.5s ease 0s;
     box-shadow: none;
-    background-color: rgb(255, 255, 255);
-    padding: 1rem 0px;
-    border-bottom: 1px solid;
+    background-color: var(--theme-bg);
+    padding: 1rem 16px;
 }
+
+    .logo{
+    width: "10%";
+    }
 
     </style>
