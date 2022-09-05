@@ -16,9 +16,13 @@ const { title, lang, dir } = Astro.props;
 
 	</head>
   <header class="header">
-        	<Logo class="logo"/>
+  <a href= `/${lang == "en" ? "" : lang + "/"}` + >
+        	<Logo class="logo"/></a>
             	<div>Option Option Option</div>
-                	<div>Option Option Option</div>
+
+
+                	<div class="nav">Blog Docs  <button>Get started</button> Login</div>
+
   </header>
     <slot />
 </html>
@@ -40,6 +44,12 @@ const { title, lang, dir } = Astro.props;
     box-shadow: none;
     background-color: var(--theme-bg);
     padding: 1rem 16px;
+}
+
+  .nav{
+
+    display: flex;
+
 }
 
     .logo{

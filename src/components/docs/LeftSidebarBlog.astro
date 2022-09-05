@@ -4,9 +4,9 @@ const { headings, githubEditUrl, lang } = Astro.props as Props;
 
 const thisLang = lang === 'en' ? '' : '/' + lang;
 
-const path = '../../pages' + thisLang + '/blog/*.{md,mdx}'
+const path = '../../pages' + "thisLang" + '/blog/*.{md,mdx}'
 
-const posts = (await Astro.glob(path)).sort(
+const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
 
