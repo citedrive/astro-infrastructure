@@ -2,7 +2,7 @@
 import Header from '../components/header/Header.astro';
 const { title, lang, dir, frontmatter, headings } = Astro.props;
 import RightSidebar from '../components/docs/RightSidebar.astro';
-import LeftSidebar from '../components/docs/LeftSidebar.astro';
+import LeftSidebarBlog from '../components/docs/LeftSidebarBlog.astro';
 import Footer from '../components/footer/Footer.astro';
 ---
 
@@ -11,7 +11,7 @@ import Footer from '../components/footer/Footer.astro';
    <main>
       <section class="docs">
       <aside class="leftSideBar">
-         <LeftSidebar lang={lang ?? frontmatter.lang} />
+         <LeftSidebarBlog lang={lang ?? frontmatter.lang} />
       </aside>
       <article class="article" >
          <slot />

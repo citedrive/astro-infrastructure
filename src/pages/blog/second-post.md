@@ -1,9 +1,12 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "First post"
+title: "Second post"
 description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 08 2022"
+pubDate: "Jul 09 2022"
+lang: en
 ---
+
+# Second post
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 
