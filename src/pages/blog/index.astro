@@ -1,6 +1,10 @@
-<script is:inline>
-	// Redirect your homepage to the first page of documentation.
-	// If you have a landing page, remove this script and add it here!
-	window.location.pathname = `blog/second-post`;
-</script>
-i
+---
+const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+
+const url = "https://citedrive.com" + posts[0].url
+---
+
+
+<meta http-equiv="refresh" content=0; url={url} />
