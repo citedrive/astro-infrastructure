@@ -2,6 +2,20 @@
 import TableOfContents from './TableOfContents';
 const { headings, githubEditUrl, lang } = Astro.props as Props;
 
+const docs = (await Astro.glob('../../pages/docs/*.{md,mdx}'));
+
+const QUICKSTART = docs.filter(function(item){
+    return item.frontmatter.cat == "quick-start";
+})
+
+const ADDREFERENCES = docs.filter(function(item){
+    return item.frontmatter.cat == "add-references";
+})
+
+const OVERLEAFSETUP = docs.filter(function(item){
+    return item.frontmatter.cat == "overleaf-setup";
+})
+
 ---
 
 <nav >
@@ -9,36 +23,47 @@ const { headings, githubEditUrl, lang } = Astro.props as Props;
       <h4>Quick start</h4>
 	<ul class="ova" >
 
+    {QUICKSTART.map((doc) => (
+    						<li lass="list">
+    							<a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+    						</li>
+    					))}
 
-
-    <li class="list">
-    <a class="link" href={lang === "en" ? "/docs/quick-start" : "/" + lang + "/docs/try"}>
-		  Quick start
-		</a></li>
-
-    <li class="list">
-    <a class="link" href={lang === "en" ? "/docs/quick-start" : "/" + lang + "/docs/try"}>
-		  Quick start
-		</a></li>
-
-    <li class="list">
-    <a class="link" href={lang === "en" ? "/docs/quick-start" : "/" + lang + "/docs/try"}>
-		  Quick start
-		</a></li>
-
-    <li class="list">
-    <a class="link" href={lang === "en" ? "/docs/quick-start" : "/" + lang + "/docs/try"}>
-		  Quick start
-		</a></li>
-
+      </ul>
 
 
   </ul>
 
     <h4>Add References</h4>
 
+    	<ul class="ova" >
+
+        {ADDREFERENCES.map((doc) => (
+        						<li lass="list">
+        							<a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+        						</li>
+        					))}
+
+          </ul>
+
+
+      </ul>
+
 
       <h4>Overleaf Setup</h4>
+
+        	<ul class="ova" >
+
+            {OVERLEAFSETUP.map((doc) => (
+            						<li lass="list">
+            							<a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            						</li>
+            					))}
+
+              </ul>
+
+
+          </ul>
 
 
             <h4>How-Tos</h4>

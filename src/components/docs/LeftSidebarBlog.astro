@@ -12,14 +12,11 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 
 ---
 
-
-
 <nav >
 	<div >
       <h4>Latest posts</h4>
 	<ul class="ova" >
 
-{thisLang}
 
 {posts.map((post) => (
 						<li>
