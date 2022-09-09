@@ -1,11 +1,10 @@
 ---
+title: Adding References from Google Scholar
 layout: ../../layouts/DocsLayout.astro
 side: From Google Scholar
 cat: "add-references"
 lang: en
 ---
-
-import Image from '@theme/IdealImage';
 
 # Adding References from Google Scholar
 
@@ -21,14 +20,14 @@ If you do most of your source discovery in Google Scholar, CiteDrive provides mu
 
 Let's start by looking up our favorite `algorithms` article on Google Scholar:
 
-<Image img={require('../assets/from-bibtex-scholar.png')} alt={'Google Scholar lookup'} />
+![Google Scholar lookup](/assets/from-bibtex-scholar.png)
 
 Click on the `Algorithms` paper link to open the full view on Springer Link. Locate the CiteDrive Companion extension icon in the upper right of your browser (highlighted). _If you do not see the icon, please open your browser extensions list and pin the CiteDrive Companion extension in order for the icon to display_
 
-<Image img={require('../assets/from-scholar-icon.png')} alt={'Companion icon'} />
+![Companion icon](/assets/from-scholar-icon.png)
 
 Click the icon and you will see a BibTeX representation of your reference presented, with the ability to customize the BibTeX snippet to your liking:
 
-<Image img={require('../assets/from-scholar-add.png')} alt={'Companion popup'} />
+![Companion popup](/assets/from-scholar-add.png)
 
 Once you are satisfied, click `Save Reference` to add the reference to the selected project.

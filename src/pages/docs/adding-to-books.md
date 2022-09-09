@@ -1,11 +1,10 @@
 ---
+title: Adding References to Books
 layout: ../../layouts/DocsLayout.astro
 side: To Books
 cat: "add-references"
 lang: en
 ---
-
-import Image from '@theme/IdealImage';
 
 # Adding References to Books
 
@@ -21,12 +20,12 @@ CiteDrive supports collecting and adding references to your projects in a variet
 
 Start by looking up `Machine Learning` on Amazon and selecting your favorite machine learning textbook to pull up the full detail page:
 
-<Image img={require('../assets/from-amazon-detail.png')} alt={'Book on amazon'} />
+![Book on amazon]('../assets/from-amazon-detail.png)
 
 ## Example: Adding a book from an ISBN lookup
 
 If you intend to cite one or more book passages as part of your project, the ISBN lookup makes it easy to quickly import book references. Open the ISBN lookup from the Add Reference menu:
 
-<Image img={require('../assets/isbn-lookup-menu.png')} alt={'ISBN Menu Option'} />
+![ISBN Menu Option](/assets/isbn-lookup-menu.png)
 
 You will be presented with the option to provide an ISBN 10 or 13 for lookup. Try looking up `9780134159386` for an *Applied Physics* textbook:

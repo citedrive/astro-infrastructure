@@ -1,4 +1,5 @@
 ---
+title: Adding References to Journals
 layout: ../../layouts/DocsLayout.astro
 side: To Journals
 cat: "add-references"

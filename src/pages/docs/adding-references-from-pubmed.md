@@ -1,11 +1,10 @@
 ---
+title: Adding References from Pubmed
 layout: ../../layouts/DocsLayout.astro
 side: From Google Pubmed
 cat: "add-references"
 lang: en
 ---
-
-import Image from '@theme/IdealImage';
 
 # Adding References from Pubmed
 
@@ -21,14 +20,14 @@ If you do most of your source discovery in Pubmed, you have multiple options for
 
 Let's start by looking up our favorite `algorithms` article on Pubmed:
 
-<Image img={require('../assets/from-pubmed-list.png')} alt={'Pubmed lookup'} />
+![Pubmed lookup](/assets/from-pubmed-list.png)
 
 Click on the `Comparing different supervised machine learning algorithms for disease prediction` paper link to open the full view. Locate the CiteDrive Companion extension icon in the upper right of your browser (highlighted). _If you do not see the icon, please open your browser extensions list and pin the CiteDrive Companion extension in order for the icon to display_
 
-<Image img={require('../assets/from-pubmed-icon.png')} alt={'Companion icon'} />
+![Companion icon](/assets/from-pubmed-icon.png)
 
 Click the icon and you will see a BibTeX representation of your reference presented, with the ability to customize the BibTeX snippet to your liking:
 
-<Image img={require('../assets/from-pubmed-add.png')} alt={'Companion popup'} />
+![Companion popup](/assets/from-pubmed-add.png)
 
 Once you are satisfied, click `Save Reference` to add the reference to the selected project.

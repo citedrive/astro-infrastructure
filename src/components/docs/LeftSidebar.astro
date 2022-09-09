@@ -16,84 +16,95 @@ const OVERLEAFSETUP = docs.filter(function(item){
     return item.frontmatter.cat == "overleaf-setup";
 })
 
+const HOWTOS = docs.filter(function(item){
+    return item.frontmatter.cat == "how-tos";
+})
+
+const BIBLATEX = docs.filter(function(item){
+    return item.frontmatter.cat == "biblatex";
+})
+
+const BIBTEX = docs.filter(function(item){
+    return item.frontmatter.cat == "bibtex";
+})
+
+const NATBIB = docs.filter(function(item){
+    return item.frontmatter.cat == "natbib";
+})
+
 ---
 
+  
 <nav >
-	<div >
+   <div >
       <h4>Quick start</h4>
-	<ul class="ova" >
-
-    {QUICKSTART.map((doc) => (
-    						<li lass="list">
-    							<a class="link" href={doc.url}>{doc.frontmatter.side}</a>
-    						</li>
-    					))}
-
+      <ul class="ova" >
+         {QUICKSTART.map((doc) => (
+         <li lass="list">
+            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+         </li>
+         ))}
       </ul>
-
-
-  </ul>
-
-    <h4>Add References</h4>
-
-    	<ul class="ova" >
-
-        {ADDREFERENCES.map((doc) => (
-        						<li lass="list">
-        							<a class="link" href={doc.url}>{doc.frontmatter.side}</a>
-        						</li>
-        					))}
-
-          </ul>
-
-
+      <h4>Add References</h4>
+      <ul class="ova" >
+         {ADDREFERENCES.map((doc) => (
+         <li lass="list">
+            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+         </li>
+         ))}
       </ul>
-
-
       <h4>Overleaf Setup</h4>
-
-        	<ul class="ova" >
-
-            {OVERLEAFSETUP.map((doc) => (
-            						<li lass="list">
-            							<a class="link" href={doc.url}>{doc.frontmatter.side}</a>
-            						</li>
-            					))}
-
-              </ul>
-
-
-          </ul>
-
-
-            <h4>How-Tos</h4>
-
-            <h4>BibLaTeX Basics</h4>
+      <ul class="ova" >
+         {OVERLEAFSETUP.map((doc) => (
+         <li lass="list">
+            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+         </li>
+         ))}
+      </ul>
+      <h4>How-Tos</h4>
+      <ul class="ova" >
+         {HOWTOS.map((doc) => (
+         <li lass="list">
+            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+         </li>
+         ))}
+      </ul>
+      <h4>BibLaTeX Basics</h4>
+      <ul class="ova" >
+         {BIBLATEX.map((doc) => (
+         <li lass="list">
+            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+         </li>
+         ))}
+      </ul>
       <h4>BibTeX Basics</h4>
-
+      <ul class="ova" >
+         {BIBTEX.map((doc) => (
+         <li lass="list">
+            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+         </li>
+         ))}
+      </ul>
       <h4>Natbib Basics</h4>
-
-
-	</div>
+      <ul class="ova" >
+         {NATBIB.map((doc) => (
+         <li lass="list">
+            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+         </li>
+         ))}
+      </ul>
+   </div>
 </nav>
-
-
 <style>
-
-.list{
-font-size: 14px;
-    list-style: none;
-    margin-bottom: 6px;
-
-}
-
-.ova{
-padding: 5px;
-}
-
-.link{
-  text-decoration: none;
-}
-
-
+   .list{
+   font-size: 14px;
+   list-style: none;
+   margin-bottom: 6px;
+   }
+   .ova{
+   padding: 5px;
+   }
+   .link{
+   text-decoration: none;
+   }
 </style>
