@@ -1,6 +1,8 @@
 function TableOfContents({headings}) {
 	return (
 		<>
+		{headings.length > 1 &&
+			<>
 			<h4>On this page</h4>
 			<ul>
 				{headings
@@ -11,6 +13,8 @@ function TableOfContents({headings}) {
 						</li>
 					))}
 			</ul>
+			</>
+			}
 		</>
 	);
 };

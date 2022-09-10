@@ -18,10 +18,10 @@ const { title, lang, dir } = Astro.props;
   <header class="header">
   <a href= `/${lang == "en" ? "" : lang + "/"}` + >
         	<Logo class="logo"/></a>
-            	<div>Option Option Option</div>
+            	<div></div>
 
 
-                	<div class="nav">Blog Docs  <button>Get started</button> Login</div>
+                	<div class="navbar__items"> <a href="/docs" class= "navbar__item">Docs </a>  <a href="/blog" class= "navbar__item">Blog </a>  <button class= "navbar__item">Get started</button> <a href="/blog" class= "navbar__item">Login </a></div>
 
   </header>
     <slot />
@@ -50,6 +50,23 @@ const { title, lang, dir } = Astro.props;
 
     display: flex;
 
+}
+
+.navbar__items{
+  display: flex;
+
+  align-items: center;
+
+min-width: 0;
+
+}
+
+.navbar__item {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    text-decoration: none;
+    color: #1c1e21;
+    font-weight: 500;
 }
 
     .logo{
