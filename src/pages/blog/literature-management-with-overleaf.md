@@ -2,13 +2,15 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Literature management with Overleaft"
 description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 09 2022"
+pubDate: "Feb 21 2022"
 lang: en
 ---
 
 # Literature management with Overleaf
 
 Complete your research pipeline with the powerful two-app. Link your two APPs and get all the updates in your BibTeX file without having to do anything at all manually in Overleaf — with a few simple mouse clicks. Concentrate on your work in Overleaf and leave the tedious bibliography and citation formatting to us.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KfwYySjHRPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## A quick video tutorial on CiteDrive
 

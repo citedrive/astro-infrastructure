@@ -3,8 +3,10 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
 
-const url = "https://citedrive.com" + posts[0].url
+const url = posts[0].url
+
 ---
 
 
-<meta http-equiv="refresh" content=0; url={url} />
+
+<meta http-equiv="refresh" content={`0;url=${url}`} />
