@@ -2,11 +2,11 @@
 import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from '../utils/languages';
 import LanguageSelect from './LanguageSelect';
 const {  lang } = Astro.props;
-
+//	{KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
 ---
 
   <footer class="footer">
-        	{KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
+      CiteDrive, INC
   </footer>
 
 
@@ -14,6 +14,8 @@ const {  lang } = Astro.props;
   .footer{
   background: #222;
   padding: 5rem;
+  z-index: 999;
+  color: #fff;
 }
 
     </style>
