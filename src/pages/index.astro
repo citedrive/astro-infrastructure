@@ -3,13 +3,30 @@ import Layout from '../layouts/LandingLayout.astro';
 
 const testimonials =[
    {
-      "feedback":"Overleaf + CiteDrive is the best. I can't wait to write my paper.",
+      "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
       "author":"Josh (Standford)"
    },
    {
-      "feedback":"I strongly recommend this to my friends, colleagues, and students who are using Overleaf.",
+      "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
       "author":"gosh (MIT)"
-   }
+   },
+    {
+       "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+       "author":"Josh (Standford)"
+    },
+    {
+       "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+       "author":"gosh (MIT)"
+    },
+     {
+        "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "author":"Josh (Standford)"
+     },
+     {
+        "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "author":"gosh (MIT)"
+     },
+
 ]
 
 ---
@@ -17,17 +34,14 @@ const testimonials =[
 <Layout title="Welcome to CiteDrive" lang="en">
 <main class="main">
    <section class="hero">
-      <h1>Pipeline Your Research Data</h1>
-      <p>Keep your references and colleagues
-         organized in projects with the most
-         straightforward BibTeX-first reference management
-         tool in the universe.
+      <h1 class="hero_headline">Pipeline Your Research Data</h1>
+      <p>Keep your references and teams organized in projects with the world's most straightforward BibTeX-first reference management tool. Built from the ground up to stay out of your way and help you focus on writing.
       </p>
       <button>Get started!</button>
-      <p>Get started with your first</p>
+      <p>Overleaf, BibLaTeX, RStudio, R Markdown and Quarto
+are great options for getting started. More options. </p>
    </section>
    <section class="testimonials">
-      <h2>Loved by 1000000000 users</h2>
       <!-- todo: university list  -->
       <div class= "testimonial-grid">
       {testimonials.map((testimonial) => (
@@ -39,20 +53,28 @@ const testimonials =[
       <div>
    </section>
    <section class="features">
-      <h2>Slogan</h2>
+      <h2>Streamline Your bibliographic research</h2>
+      <p>
+      Many reference management systems are jam-packed with features and include many plugins,
+allowing them to do everything that CiteDrive can. This comes at the cost of a steeper learning curve.
+
+CiteDrive attempts to streamline bibliographic management by being laser-focused and BibTeX-empowered,
+as well as reducing clicks and general tedium. We focus on one thing and do it well - being the best
+reference management tool for LaTeX and Markdown users.
+      </p>
       <div class="feature">
          <h3>BibTeX</h3>
          <p>explainer</p>
          <div class="sub_feature">
-            <h4>SUB</h4>
+            <h4>Magic .bib-file</h4>
             sub feature 1
          </div>
          <div class="sub_feature">
-            <h4>SUB</h4>
+            <h4>BibTeX editor</h4>
             sub feature 2
          </div>
          <div class="sub_feature">
-            <h4>SUB</h4>
+            <h4>Error controll</h4>
             sub feature 3
          </div>
       </div>
@@ -106,25 +128,46 @@ const testimonials =[
     margin: auto;
     }
     .hero{
-    background: #cee5ee;
-    padding: 1rem;
-    margin: 1rem;
+        width: 800px;
+    margin: 0 auto;
+    max-width: 100%;
+    }
+    .hero_headline{
+
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 86px;
+    margin-bottom: 24px;
+
     }
    .testimonials{
-   background: #ceeecf;
    padding: 1rem;
    margin: 1rem;
    }
    .testimonial-grid{
-   background: #b68e8e;
-   padding: 1rem;
-   margin: 1rem;
+    display: flex;
+    padding: 10px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
    }
   .testimonial{
-  background: #cda2a2;
-  padding: 1rem;
-  margin: 1rem;
+    background: #F2F2F2;
+    border-radius: 30px;
+    padding: 25px 30px;
+    margin: 10px 20px 20px 20px;
+    font-size: 17px;
+    line-height: 1.5;
+    max-width: 700px;
+    color: var(--text-muted);
+    width: calc(50% - 60px);
   }
+  @media only screen and (max-width: 720px){
+.testimonial {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 20px 10px;
+}}
    .features{
    background: #d0ceee;
    padding: 1rem;
