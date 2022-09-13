@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-layout: ../layouts/SinglePage.astro
+layout: ../layouts/DocsLayout.astro
 side: Enable support
 cat: "natbib"
 lang: en
