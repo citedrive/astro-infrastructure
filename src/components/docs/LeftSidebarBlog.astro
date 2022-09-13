@@ -19,7 +19,8 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 
 
 {posts.map((post) => (
-						<li>
+						<li class="post">
+            {/*
 							<time datetime={post.frontmatter.pubDate}>
 								{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
 									year: 'numeric',
@@ -27,6 +28,8 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 									day: 'numeric',
 								})}
 							</time>
+*/}
+
 							<a href={post.url}>{post.frontmatter.title}</a>
 						</li>
 					))}
@@ -45,7 +48,10 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 font-size: 14px;
     list-style: none;
     margin-bottom: 6px;
+}
 
+.post{
+margin-bottom: 1rem;
 }
 
 .ova{
