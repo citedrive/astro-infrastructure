@@ -1,12 +1,19 @@
 ---
 import Header from '../components/header/Header.astro';
-import Footer from '../components/footer/Footer.astro';
+// import Footer from '../components/footer/Footer.astro';
 const { title, lang, dir, frontmatter, headings } = Astro.props;
 ---
 
-<Header title={title ?? frontmatter.title} lang={lang ?? frontmatter.lang}>
-<body>
+<!-- Nest the Layout! -->
+
+<html lang="en">
+  <head>
+  </head>
+  <body>
+   <Header  />
+   <main>
    <slot />
-</body>
-<Footer lang={lang ?? frontmatter.lang}/>
-</Header>
+   </main>
+   <!-- <Footer lang={lang ?? frontmatter.lang}/> -->
+  </body>
+</html>

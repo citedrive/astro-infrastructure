@@ -1,0 +1,33 @@
+---
+import Dropdown from "../Dropdown/Dropdown.astro";
+
+---
+
+<nav>
+    <ul class="flex" style="list-style: none; margin: 0; padding-left: 65px;">
+        <Dropdown label="Features"></Dropdown>
+        <Dropdown label="Integrations">
+            <ul class="grid" style="list-style: none; padding: 0">
+                <li><a href="/">Overleaf</a></li>
+                <li><a href="/">RStudio</a></li>
+            </ul>
+        </Dropdown>
+        <Dropdown label="Resources"></Dropdown>
+        <li><a class="header-link" href="#">Pricing</a></li>
+        <li><a class="header-link" href="/design-system/">Design System</a></li>
+    </ul>
+</nav>
+
+<style>
+
+    .header-link {
+        color: hsl(var( --clr-light-text));
+    }
+
+    /* .header-link:hover {
+        color: hsl(var(--clr-light-text, 0.1))
+    } */
+
+
+</style>
+

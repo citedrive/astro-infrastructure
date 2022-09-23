@@ -1,0 +1,38 @@
+---
+const { title, lang, dir } = Astro.props;
+---
+
+<a class="internal-link link">I'm a link</a>
+
+<style>
+
+.internal-link {
+    cursor: pointer;
+    color: hsl(var(--clr-secondary));
+    z-index: 1;
+}
+
+.internal-link:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: -11;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: hsl(var(--clr-secondary));
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .4s;
+}
+
+.internal-link:hover:after {
+    background-color: hsl(var(--clr-secondary));
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+.internal-link:active {
+    opacity: .75;
+}
+</style>

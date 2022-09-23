@@ -1,0 +1,39 @@
+---
+const { title, lang, dir } = Astro.props;
+---
+
+<a class="cta btn">LET'S .bib YOUR FIRST PROJECT</a>
+
+<style>
+.cta {
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    border: .5px solid hsl(var(--clr-secondary));
+    border-radius: 100vw;
+    color: hsl(var(--clr-secondary));
+    background: rgb(255, 255, 255); 
+    transition: .4s;
+    font-size: 1.1rem;
+    aspect-ratio: 1/.25;
+}
+
+.cta:hover {
+    /* Animation */
+    /* background: hsl(var(--clr-primary));
+    color: white; */
+    transform: translateY(-3.5px);
+    border: none;
+    box-shadow: 1px 3.5px 3px grey;
+}
+
+.cta:active {
+    transform: translateY(0px);
+    box-shadow: none;
+}
+
+</style>
+
+<script>
+  // Processed! Bundled! TypeScript-supported! ESM imports work, even to npm packages.
+</script>

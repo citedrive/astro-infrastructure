@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/LandingLayout.astro';
+import '../styles/index.css';
+import '../styles/theme.css';
 
 const testimonials =[
    {
@@ -32,8 +34,29 @@ const testimonials =[
 ---
 
 <Layout title="Welcome to CiteDrive" lang="en">
+
+
+
+
+
+
+<!-- Legacy Test -->
+
+<!-- <div class="container grid" style="--gap: 2.5rem">
+<div class="box">a</div>
+<div class="box">b</div>
+<div class="box">c</div>
+<div class="box sr-only">d</div>
+</div> -->
+
+
+
+
+
+   <!--
 <main class="main">
-   <section class="hero">
+
+ <section class="hero">
       <h1 class="hero_headline">Pipeline Your Research Data</h1>
       <p>Keep your references and teams organized in projects with the world's most straightforward BibTeX-first reference management tool. Built from the ground up to stay out of your way and help you focus on writing.
       </p>
@@ -41,8 +64,11 @@ const testimonials =[
       <p>Overleaf, BibLaTeX, RStudio, R Markdown and Quarto
 are great options for getting started. More options. </p>
    </section>
+
    <section class="testimonials">
-      <!-- todo: university list  -->
+
+    todo: university list  
+      
       <div class= "testimonial-grid">
       {testimonials.map((testimonial) => (
       <div class="testimonial">
@@ -52,6 +78,7 @@ are great options for getting started. More options. </p>
       ))}
       <div>
    </section>
+
    <section class="features">
       <h2>Streamline Your bibliographic research</h2>
       <p>
@@ -86,7 +113,7 @@ reference management tool for LaTeX and Markdown users.
             sub feature 1
          </div>
          <div class="sub_feature">
-            <h4>SUB</h4>
+            <h4>SUB</h4>s
             sub feature 2
          </div>
          <div class="sub_feature">
@@ -111,18 +138,21 @@ reference management tool for LaTeX and Markdown users.
          </div>
       </div>
    </section>
+
    <section class="get_started">
     <h2>Get started</h2>
     <p>Let's do it</p>
     <button>start now</button>
-   </section>
+   </section> 
+
 </main>
+-->
 
 </Layout>
 
 
 <style>
-    .main{
+    /* .main{
     max-width: 1200px;
     padding-top: 5rem;
     margin: auto;
@@ -187,5 +217,5 @@ reference management tool for LaTeX and Markdown users.
    background: #cee5ee;
    padding: 1rem;
    margin: 1rem;
-   }
+   } */
 </style>

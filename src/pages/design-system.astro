@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/LandingLayout.astro';
+import CallToActionButton from '../components/CTA.astro';
+import '../styles/index.css';
+import '../styles/theme.css';
+import InternalLink from '../components/InternalLink.astro';
+// import Dropdown from '../components/Dropdown/Dropdown';
+import Dropdown from '../components/Dropdown/Dropdown.astro';
+---
+
+<Layout title="CiteDrive | Design System" lang="en">
+
+
+    <div class="grid container" style="margin-top: 10rem; margin-bottom: 10rem; --gap: 2.5rem;">
+
+    <h1 class="heading-light letter-spacing-h1" style="font: var(--font-h1)">Design System</h1>
+
+    <section id="colors">
+
+        <h2 class="grid design-system-seperator" style="grid-template-columns: 20px auto;"><span class="text-accent">1.</span>Colors</h2>
+
+        <div class="flex" style="background-color: white; padding: 3rem 1rem; flex-wrap: wrap">
+
+            <div class="flow ds-color-showcase" style="flex: 1 1 400px;">
+                <div class="grid primary-background text-dark" style="height: 200px; place-items: center;">Primary Light</div>
+                <p class="text-light grid" style="grid-template-columns: 100px auto;"><span class="text-accent">RGB</span>32, 159, 139</p>
+                <p class="text-light grid" style="grid-template-columns: 100px auto;"><span class="text-accent">HSL</span>171, 66.5%, 37.5%</p>
+            </div>
+
+            <div class="flow ds-color-showcase" style="flex: 1 1 400px;">
+                <div class=" grid secondary-background text-dark" style="height: 200px; place-items: center;">Primary Dark</div>
+                <p class="text-light grid" style="grid-template-columns: 100px auto;"><span class="text-accent">RGB</span>32, 159, 139</p>
+                <p class="text-light grid" style="grid-template-columns: 100px auto;"><span class="text-accent">HSL</span>171, 66.5%, 37.5%</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="fonts">
+
+            <h2 class="grid design-system-seperator" style="grid-template-columns: 20px auto;"><span class="text-accent">2.</span>Fonts</h2>
+
+            <div class="flex" style="background-color: white; padding: 3rem 1rem; flex-wrap: wrap">
+
+            <div class="flow" style="flex: 1 1 400px;">
+
+                <div class="ds-font-showcase">
+                    <strong>Heading 1 - Mencken Head - 38.4px - 400 </strong>
+                    <div class="h1 letter-spacing-h1">Pipeline your Research Data</div>
+                </div>
+
+                <div class="ds-font-showcase">
+                    <strong>Heading 2 - Sofia Pro - 38.4px - 600</strong>
+                    <div class="h2">Not an Afterthought</div>
+                </div>
+
+            </div>
+
+            <div class="flow" style="flex: 1 1 400px;">
+
+                <div class="ds-font-showcase">
+                    <strong>Subtitle Landing - Sofia Pro - 38.4px - 500</strong>
+                    <div class="subtitle-landing-page">I'm a larger subtitle</div>
+                </div>
+
+                <div class="ds-font-showcase">
+                    <strong>Subtitle Blog - Sofia Pro - 38.4px - 500</strong>
+                    <div class="subtitle-blog-doc">I'm a normal subtitle</div>
+                </div>
+
+                <div class="ds-font-showcase">
+                    <strong>Body Text Normal - Sofia Pro - 16px - 400</strong>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque. Est lorem ipsum dolor sit amet consectetur adipiscing elit. Diam quam nulla porttitor massa. Hendrerit dolor magna eget est lorem ipsum dolor. Dictum sit amet justo donec. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. Posuere urna nec tincidunt praesent semper feugiat nibh. Elementum integer enim neque volutpat ac. Neque convallis a cras semper auctor neque vitae tempus. Lorem dolor sed viverra ipsum nunc aliquet. Lobortis scelerisque fermentum dui faucibus in.</div>
+                </div>
+
+                 <div class="ds-font-showcase">
+                    <strong>Body Text Small - Sofia Pro - 14px - 400</strong>
+                    <div class="fs-body-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque. Est lorem ipsum dolor sit amet consectetur adipiscing elit. Diam quam nulla porttitor massa. Hendrerit dolor magna eget est lorem ipsum dolor. Dictum sit amet justo donec. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. Posuere urna nec tincidunt praesent semper feugiat nibh. Elementum integer enim neque volutpat ac. Neque convallis a cras semper auctor neque vitae tempus. Lorem dolor sed viverra ipsum nunc aliquet. Lobortis scelerisque fermentum dui faucibus in.</div>
+                </div>
+
+            </div>
+
+            </div>
+
+    </section>
+
+     <section id="interactive_elements">
+
+            <h2 class="grid design-system-seperator" style="grid-template-columns: 20px auto;"><span class="text-accent">3.</span>Interactive Elements</h2>
+            <div class="flex" style="background-color: white; padding: 3rem 1rem; flex-wrap: wrap; align-items: center;">
+            <CallToActionButton />
+            <InternalLink />
+            <div style="width: 100%">
+            <!-- <Dropdown label="I'm a Dropdown" client:load><p>Hello</p></Dropdown> -->
+            <Dropdown label="I'm a Dropdown Menu">
+                <ul class="grid" style="list-style: none; padding: 0">
+                    <li><a href="/">Overleaf</a></li>
+                    <li><a href="/">RStudio</a></li>
+                </ul>
+            </Dropdown>
+            </div>
+            </div>
+    </section>
+
+    </div>
+
+</Layout>
+
+<style>
+
+.design-system-seperator {
+	padding: .5rem 1rem;
+	background-color: rgb(236, 226, 226);
+	max-width: 80%;
+}
+
+.ds-font-showcase > strong {
+	font-size: .7rem;
+}
+   
+</style>
+

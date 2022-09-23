@@ -1,0 +1,48 @@
+---
+const { label } = Astro.props
+---
+
+<li class="dropdown">
+<button class="dropdown-item">{Astro.props.label}</button>
+<div class="dropdown-menu">
+<slot />
+</div>
+</li>
+<style>
+
+.dropdown {
+    position: relative;
+    list-style: none;
+}
+
+.dropdown-item {
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: hsl(var(--clr-light-text));
+}
+
+.dropdown-item:after {
+    content: "";
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    border: 1px solid grey;
+    padding: 1rem 2rem;
+    background-color: white;
+}
+
+.dropdown:hover > div {
+    display: block;
+}
+
+</style>
+
+<script>
+
+</script>

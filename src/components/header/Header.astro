@@ -1,58 +1,43 @@
 ---
-import '../../styles/theme.css';
-import '../../styles/index.css';
-import SEO from "./SEO.astro"
+// import '../../styles/theme.css';
+// import '../../styles/index.css';
+// import SEO from "./SEO.astro"
 import Logo from "./Logo.astro"
+import Navigation from "./Navigation.astro";
 const { title, lang, dir } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html dir={dir ?? 'ltr'} lang={lang} class="initial">
+<!-- <html dir={dir ?? 'ltr'} lang={lang} class="initial">
 <head>
    <SEO title={title} lang={lang} ></SEO>
-</head>
-<header class="header">
-   <a href= `/${lang == "en" ? "" : lang + "/"}` + >
+</head> -->
+
+<header>
+   <!-- <a href= `/${lang == "en" ? "" : lang + "/"}` + > -->
+   <!-- <Logo class="logo"/> -->
+   <!-- </a> -->
+   <!-- <div class="navbar__items"><a href="/overleaf/" class= "navbar__item">Overleaf </a> <a href="/overleaf/" class= "navbar__item">RStudio </a> <a href="/docs/" class= "navbar__item">Docs </a>  <a href="/blog/" class= "navbar__item">Blog </a> <a href="/overleaf/" class= "navbar__item">Pricing </a>  </div>
+   <div class="navbar__items"> <button class= "navbar__item">Get started</button> <a href="/blog" class= "navbar__item">Login </a></div> -->
+   <div class="header flex" style="justify-content: space-between; align-items: center;">
+   <a href="/">
    <Logo class="logo"/>
    </a>
-   <div class="navbar__items"><a href="/overleaf/" class= "navbar__item">Overleaf </a> <a href="/overleaf/" class= "navbar__item">RStudio </a> <a href="/docs/" class= "navbar__item">Docs </a>  <a href="/blog/" class= "navbar__item">Blog </a> <a href="/overleaf/" class= "navbar__item">Pricing </a>  </div>
-   <div class="navbar__items"> <button class= "navbar__item">Get started</button> <a href="/blog" class= "navbar__item">Login </a></div>
+   <Navigation />
+   <div>
+      <a href="">Sign-in</a>
+      <a href="">Log-in</a>
+   </div>
+   </div>
+
 </header>
-<slot />
-</html>
+
 <style>
-   .header{
-   width: 100%;
-   position: fixed;
-   display: flex;
-   -webkit-box-pack: justify;
-   justify-content: space-between;
-   -webkit-box-align: center;
-   align-items: center;
-   top: 0px;
-   z-index: 9999;
-   color: rgb(42, 42, 42);
-   transition: all 0.5s ease 0s;
-   box-shadow: none;
-   background-color: var(--theme-bg);
-   padding: 1rem 16px;
+   .header {
+      padding: 2rem 4rem;
    }
-   .nav{
-   display: flex;
-   }
-   .navbar__items{
-   display: flex;
-   align-items: center;
-   min-width: 0;
-   }
-   .navbar__item {
-   display: inline-block;
-   padding: 0.25rem 0.75rem;
-   text-decoration: none;
-   color: #1c1e21;
-   font-weight: 500;
-   }
+
    .logo{
-   width: "10%";
-   }
+   width: 36px;
+   } 
+
 </style>

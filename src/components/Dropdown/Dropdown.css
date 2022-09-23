@@ -1,0 +1,28 @@
+/* Btn Reset? */
+
+.dropdown-li {
+    position: relative;
+}
+
+.dropdown-btn {
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background: inherit;
+    color: hsl(var(--clr-light-text));
+}
+
+.dropdown-btn:after {
+    content: "^";
+    transform: rotate(180deg);
+}
+
+.dropdown {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border: 1px solid grey;
+    padding:1rem 2rem;
+    transform: translateY(50px);
+    transition: 2s;
+}
