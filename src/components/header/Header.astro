@@ -18,26 +18,62 @@ const { title, lang, dir } = Astro.props;
    <!-- </a> -->
    <!-- <div class="navbar__items"><a href="/overleaf/" class= "navbar__item">Overleaf </a> <a href="/overleaf/" class= "navbar__item">RStudio </a> <a href="/docs/" class= "navbar__item">Docs </a>  <a href="/blog/" class= "navbar__item">Blog </a> <a href="/overleaf/" class= "navbar__item">Pricing </a>  </div>
    <div class="navbar__items"> <button class= "navbar__item">Get started</button> <a href="/blog" class= "navbar__item">Login </a></div> -->
-   <div class="header flex" style="justify-content: space-between; align-items: center;">
+   <nav class="header flex" style="justify-content: space-between; align-items: center;">
    <a href="/">
    <Logo class="logo"/>
    </a>
    <Navigation />
-   <div>
-      <a href="">Sign-in</a>
-      <a href="">Log-in</a>
-   </div>
-   </div>
+
+   <ul class="flex pill" style="--gap: 0">
+      <li><a href="">Sign-in</a></li>
+      <li><a href="">Log-in</a></li>
+   </ul>
+
+   </nav>
 
 </header>
 
 <style>
    .header {
-      padding: 2rem 4rem;
+      padding: 1rem 4rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: 100%;
+
+      /* background-color: hsl(var(--clr-background-light-top)); */
    }
 
-   .logo{
+   .logo {
    width: 36px;
    } 
+
+   .pill {
+      list-style: none;
+      padding: 0;
+      border: 1px solid black;
+      border-radius: 100vw;
+   }
+
+   .pill li:first-child {
+      border-right: 1px solid black;
+   }
+
+   .pill li:last-child {
+      background-color: hsl(var(--clr-secondary));
+      border-radius: 100vw;
+   }
+
+    .pill li:last-child > a {
+      color: white;
+      padding: .5rem 1rem;
+   }
+
+   .pill li:last-child:hover {
+      background-color: red;
+      border-radius: 100vw;
+
+   }
 
 </style>

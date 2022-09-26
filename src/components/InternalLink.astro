@@ -1,8 +1,8 @@
 ---
-const { title, lang, dir } = Astro.props;
+const { label, link } = Astro.props;
 ---
 
-<a class="internal-link link">I'm a link</a>
+<a href={link} class="internal-link link">{label}</a>
 
 <style>
 

@@ -1,11 +1,9 @@
 ---
-import Layout from '../layouts/LandingLayout.astro';
+import Layout from '../layouts/BaseLayout.astro';
 import CallToActionButton from '../components/CTA.astro';
-import '../styles/index.css';
-import '../styles/theme.css';
 import InternalLink from '../components/InternalLink.astro';
-// import Dropdown from '../components/Dropdown/Dropdown';
-import Dropdown from '../components/Dropdown/Dropdown.astro';
+import ReactDropdown from '../components/Dropdown/ReactDropdown.tsx';
+import ReactAccordion from '../components/Accordion/ReactAccordion.tsx';
 ---
 
 <Layout title="CiteDrive | Design System" lang="en">
@@ -90,14 +88,27 @@ import Dropdown from '../components/Dropdown/Dropdown.astro';
             <div class="flex" style="background-color: white; padding: 3rem 1rem; flex-wrap: wrap; align-items: center;">
             <CallToActionButton />
             <InternalLink />
-            <div style="width: 100%">
-            <!-- <Dropdown label="I'm a Dropdown" client:load><p>Hello</p></Dropdown> -->
-            <Dropdown label="I'm a Dropdown Menu">
-                <ul class="grid" style="list-style: none; padding: 0">
-                    <li><a href="/">Overleaf</a></li>
-                    <li><a href="/">RStudio</a></li>
-                </ul>
-            </Dropdown>
+            <div class="flex" style="width: 100%; --gap: 2.5rem; justify-content: space-between;">
+                <!-- <Dropdown label="I'm a Dropdown" client:load><p>Hello</p></Dropdown> -->
+                <ReactDropdown label="I'm a Dropdown Menu" client:load>
+                    <ul class="grid" style="list-style: none; padding: 0">
+                        <li><a href="/">Overleaf</a></li>
+                        <li><a href="/">RStudio</a></li>
+                    </ul>
+                </ReactDropdown>
+
+                 <div class="grid">
+
+                <ReactAccordion label="How to cite in Overleaf?" client:load>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque. Est lorem ipsum dolor sit amet consectetur adipiscing elit. Diam quam nulla porttitor massa. Hendrerit dolor magna eget est lorem ipsum dolor. Dictum sit amet justo donec. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. Posuere urna nec tincidunt praesent semper feugiat nibh. Elementum integer enim neque volutpat ac. Neque convallis a cras semper auctor neque vitae tempus. Lorem dolor sed viverra ipsum nunc aliquet. Lobortis scelerisque fermentum dui faucibus in.</p>
+                </ReactAccordion>
+
+                <ReactAccordion label="How to cite in R-Markdown?" client:load>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque. Est lorem ipsum dolor sit amet consectetur adipiscing elit. Diam quam nulla porttitor massa. Hendrerit dolor magna eget est lorem ipsum dolor. Dictum sit amet justo donec. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. Posuere urna nec tincidunt praesent semper feugiat nibh. Elementum integer enim neque volutpat ac. Neque convallis a cras semper auctor neque vitae tempus. Lorem dolor sed viverra ipsum nunc aliquet. Lobortis scelerisque fermentum dui faucibus in.</p>
+                </ReactAccordion>
+
+                </div>
+        
             </div>
             </div>
     </section>

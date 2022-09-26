@@ -38,6 +38,7 @@ This file holds all Custom Properties to keep our Theme consistent:
 
 	--clr-background-light-top: 270 8.3% 90.6%;
 	--clr-background-light-middle: 53 100.0% 98.4%;
+	--clr-background-light-bottom: 45 1.6% 49.4%;
 	--clr-light-heading: 246 43.7% 13.9%;
 	--clr-light-text: 246 43.7% 13.9%;
 	--clr-primary: 171 66.5% 37.5%;
@@ -50,11 +51,13 @@ This file holds all Custom Properties to keep our Theme consistent:
 	--clr-background-dark: rgb(0, 0, 0);
 	--clr-dark-heading: rgb(255, 255, 255);
 	--clr-dark-text: rgb(255, 255, 255);
-}
+
 
 /* Margins */
 
+	--border-radius: 16px;
 
+}
 
 
 

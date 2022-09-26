@@ -1,0 +1,90 @@
+---
+import InternalLink from "../InternalLink.astro";
+
+export interface Props {
+  icon?: any;
+  radius?: string;
+  title: string;
+  text: string;
+  // map array
+  link?: string;
+  linklabel?: string;
+}
+
+const { icon, radius, title, text, link, linklabel  } = Astro.props
+
+---
+
+<div class="flex">
+
+      <div class={`icon-pipe ${Astro.props.radius}`}>
+         <div class="circle grid" style="place-items: center;">
+         <i>Icon</i>
+         </div>
+      </div>
+
+      <div class="grid inner-feature-grid">
+
+         <div class="feature-text" style="max-width: 75ch;">
+         <h3>{Astro.props.title}</h3>
+         <p class="fs-body-sm">{Astro.props.text}</p>
+         </div>
+
+         <div class="bullet-points" style="padding-bottom: 12.5rem;">
+         <ul style="margin: 0; padding-left: 2rem;">
+            <li><InternalLink link={Astro.props.link}  label={Astro.props.linklabel}></InternalLink></li>
+            <li><InternalLink link={Astro.props.link}  label={Astro.props.linklabel}>Get started with RStudio</InternalLink></li>
+         </ul>
+         </div>
+
+      </div>
+
+    </div>
+
+<style>
+
+.icon-pipe {
+   background-color: rgb(250, 215, 167);
+   background-color: hsl(var(--clr-secondary));
+   padding: 1rem;
+}
+
+.radius-top {
+   border-top-left-radius: 90px;
+   border-top-right-radius: 90px;
+}
+
+.radius-bottom {
+   border-bottom-left-radius: 90px;
+   border-bottom-right-radius: 90px;
+}
+
+.circle {
+   width: 120px;
+   height: 120px;
+   background-color: white;
+   border-radius: 100vw;
+}
+
+.bullet-points {
+   grid-area: bp;
+   border-left: 1px solid hsl(var(--clr-light-text));
+   padding-left: 1rem;
+}
+
+.bullet-points:not(:last-child) {
+   grid-area: bp;
+   border-left: 1px solid hsl(var(--clr-light-text));
+   padding-left: 1rem;
+}
+
+.inner-feature-grid {
+   grid-template-columns: repeat(8, 1fr);
+   grid-template-areas: ". t t t . bp bp bp";
+}
+
+.feature-text {
+   grid-area: t;
+}
+
+</style>

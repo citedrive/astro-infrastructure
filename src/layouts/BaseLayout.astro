@@ -1,15 +1,52 @@
 ---
+import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+import '../styles/index.css';
+import '../styles/theme.css';
+interface Props {
+  lang?: string;
+  desc?: string;
+  title?: string;
+  type?: string;
+  thumbnail?: string;
+//   schemaHomepage?: object;
+//   schemaOverleaf?: object;
+//   schemaBlog?: object;
+//   schemaBlogPost?: object;
+}
+const { title, lang, dir, desc, type, frontmatter, headings } = Astro.props;
 ---
 
-<html lang="en">
+<html lang={Astro.props.lang}>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- import font here -->
+
+    <!-- SEO Komponente ja oder nein? -->
+
+    <title>{Astro.props.title}</title>
+    <meta name="description" content={desc} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:type" content={type} />
+    <meta property="twitter:card" content={type} />
+    <meta property="twitter:site" content="CiteDrive" />
+    <meta property="twitter:description" content={desc} />
+    <meta property="twitter:title" content={title} />
+
+    <!-- import fonts here -->
+
 </head>
+
 <body>
-    
+    <Header  />
+        <main style="margin-top: 10rem">
+            <slot />
+            <CookieConsent />
+   </main>
+   <Footer />
 </body>
 </html>

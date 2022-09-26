@@ -1,6 +1,7 @@
 ---
+import ReactAccordion from '../Accordion/ReactAccordion';
 import TableOfContents from './TableOfContents';
-const { headings, githubEditUrl, lang } = Astro.props as Props;
+const { headings, githubEditUrl, lang } = Astro.props;
 
 const docs = (await Astro.glob('../../pages/docs/*.{md,mdx}'));
 
@@ -35,66 +36,98 @@ const NATBIB = docs.filter(function(item){
 ---
 
   
-<nav >
-   <div >
-      <h4>Quick start</h4>
-      <ul class="ova" >
-         {QUICKSTART.map((doc) => (
-         <li class="list">
-            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
-         </li>
-         ))}
-      </ul>
-      <h4>Add References</h4>
-      <ul class="ova" >
-         {ADDREFERENCES.map((doc) => (
-         <li class="list">
-            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
-         </li>
-         ))}
-      </ul>
-      <h4>Overleaf Setup</h4>
-      <ul class="ova" >
-         {OVERLEAFSETUP.map((doc) => (
-         <li class="list">
-            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
-         </li>
-         ))}
-      </ul>
-      <h4>How-Tos</h4>
-      <ul class="ova" >
-         {HOWTOS.map((doc) => (
-         <li class="list">
-            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
-         </li>
-         ))}
-      </ul>
-      <h4>BibLaTeX Basics</h4>
-      <ul class="ova" >
-         {BIBLATEX.map((doc) => (
-         <li class="list">
-            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
-         </li>
-         ))}
-      </ul>
-      <h4>BibTeX Basics</h4>
-      <ul class="ova" >
-         {BIBTEX.map((doc) => (
-         <li class="list">
-            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
-         </li>
-         ))}
-      </ul>
-      <h4>Natbib Basics</h4>
-      <ul class="ova" >
-         {NATBIB.map((doc) => (
-         <li class="list">
-            <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
-         </li>
-         ))}
-      </ul>
+<nav>
+
+   <div>
+
+      <ReactAccordion label="Quick Start" client:load>
+
+         <ul class="ova" >
+            {QUICKSTART.map((doc) => (
+            <li class="list">
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+
+      </ReactAccordion>
+
+       <ReactAccordion label="Add References" client:load>
+     
+         <ul class="ova" >
+            {ADDREFERENCES.map((doc) => (
+            <li class="list">
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+
+      </ReactAccordion>
+      
+      <ReactAccordion label="Overleaf Setup" client:load>
+
+         <ul class="ova" >
+            {OVERLEAFSETUP.map((doc) => (
+            <li class="list">
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+
+      </ReactAccordion>
+      
+      <ReactAccordion label="Howtos" client:load>
+
+         <ul class="ova" >
+            {HOWTOS.map((doc) => (
+            <li class="list">
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+
+      </ReactAccordion>
+
+      <ReactAccordion label="BibTex Basics" client:load>
+
+         <ul class="ova" >
+            {BIBTEX.map((doc) => (
+            <li class="list">
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+
+      </ReactAccordion>
+
+      <ReactAccordion label="BibLaTeX Basics" client:load>
+
+         <ul class="ova" >
+            {BIBLATEX.map((doc) => (
+            <li class="list">
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+
+      </ReactAccordion>
+
+      <ReactAccordion label="Natbib Basics" client:load>
+
+         <ul class="ova" >
+            {NATBIB.map((doc) => (
+            <li class="list">
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+         
+      </ReactAccordion>
+
    </div>
+
 </nav>
+
 <style>
    .list{
    font-size: 14px;

@@ -1,0 +1,56 @@
+---
+const { label } = Astro.props
+---
+
+<li class="accordion" style="list-style: none;" role="button" aria-expanded="false">
+    <h3 class="accordion-label" style="cursor: pointer;">{Astro.props.label}</h3>
+    <div class="accordion-content">
+        <slot />
+    </div>
+</li>
+
+<style>
+
+.accordion {
+    width: 100%;
+    max-width: 500px;
+    border-radius: var(--border-radius);
+}
+
+.accordion-content {
+    margin-left: 20px;
+    max-height: 0;
+    overflow: hidden;  
+    transition: .5s;
+    transition-timing-function: ease-in;
+} 
+
+.expanded {
+    max-height: 100%;
+}
+
+.accordion h3 {
+   margin-top: 8px;
+}
+
+.accordion h3::before {
+    content: url(../../../assets/Decoration/DownArrow.svg);
+    display: inline-block;
+    width: 14px;
+    margin-right: 6px;
+}
+
+</style>
+
+<script>
+
+    const accordionLabel = document.querySelector('.accordion-label');
+    const accordionContent = document.querySelector('.accordion-content');
+
+    const handleClick = () => {
+        accordionContent.classList.toggle('expanded');
+    }
+    
+    accordionLabel.addEventListener('click', handleClick);
+
+</script>

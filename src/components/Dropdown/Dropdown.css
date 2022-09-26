@@ -1,28 +1,40 @@
 /* Btn Reset? */
 
-.dropdown-li {
+/* Styles for the React Dropdown */
+
+.react-dropdown {
     position: relative;
 }
 
-.dropdown-btn {
+.react-dropdown-item {
     padding: 0;
     cursor: pointer;
     border: none;
-    background: inherit;
+    background: none;
     color: hsl(var(--clr-light-text));
+    position: relative;
 }
 
-.dropdown-btn:after {
-    content: "^";
-    transform: rotate(180deg);
-}
-
-.dropdown {
+.react-dropdown-item::after {
+    content: url(../../../assets/Decoration/DownArrow.svg);
+    display: inline-block;
+    width: 12px;
     position: absolute;
-    top: 0px;
-    left: 0;
-    border: 1px solid grey;
-    padding:1rem 2rem;
-    transform: translateY(50px);
-    transition: 2s;
+    top: -6px;
+    right: -14px;
+    transition: .4s;
+    transition-delay: .2s;
+}
+
+.react-dropdown-item:hover::after {
+    top: -4px;
+}
+
+.react-dropdown-menu {
+    position: absolute;
+    top: 35px;
+    border: 1px solid hsl(var(--clr-background-light-top));
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: var(--border-radius);
 }

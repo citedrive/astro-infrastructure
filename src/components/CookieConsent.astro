@@ -1,0 +1,57 @@
+---
+import InternalLink from "./InternalLink.astro";
+
+---
+
+<div id="consent-popup" class="hidden">
+    <p>By using this site you agree to our <InternalLink link="/terms-and-conditions/" label="Terms and Conditions"></InternalLink>.</p>
+    <button>I decline</button>
+    <button>I accept</button>
+</div>
+
+<style>
+
+#consent-popup {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 9999;
+    background: white;
+    border: 1px solid hsl(var(--clr-background-light-top));
+    border-radius: var(--border-radius);
+    padding: 1rem 2rem;
+}
+
+</style>
+
+<script>
+
+const cookieStorage = {
+    getItem: (key) => {
+        const cookies = document.cookie
+        .split(';')
+        .map(cookie => cookie.split('='))
+        .reduce((acc, [key, value]) => ({...acc, [key.trim()]: value }), {})
+        return cookies[key];
+    },
+    setItem: (key, value) => {
+        document.cookie = `${key}=${value}`;
+    }
+}
+
+const storageType = cookieStorage;
+const consentPropertyName = 'citedrive_consent';
+// return false when consent has been given
+const showPopUp = () => !storageType.getItem(consentPropertyName);
+const safeToStorage = () => storageType.setItem(consentPropertyName, true);
+
+window.onload = () => {
+    if(showPopUp()) {
+        const consent = confirm('Agree to our Terms and Conditions?');
+        if (consent) {
+            safeToStorage();
+        }
+    }
+}
+
+</script>

@@ -1,22 +1,28 @@
 ---
 import Dropdown from "../Dropdown/Dropdown.astro";
+import ReactDropdown from "../Dropdown/ReactDropdown.tsx";
 
 ---
 
-<nav>
-    <ul class="flex" style="list-style: none; margin: 0; padding-left: 65px;">
-        <Dropdown label="Features"></Dropdown>
-        <Dropdown label="Integrations">
+
+    <ul class="flex" style="list-style: none; padding-left: 65px; --gap: 2rem;">
+        <ReactDropdown label="Features" client:load></ReactDropdown>
+        <ReactDropdown label="Integrations" client:load>
             <ul class="grid" style="list-style: none; padding: 0">
                 <li><a href="/">Overleaf</a></li>
                 <li><a href="/">RStudio</a></li>
             </ul>
-        </Dropdown>
-        <Dropdown label="Resources"></Dropdown>
+        </ReactDropdown>
+        <ReactDropdown label="Resources" client:load>
+            <ul class="grid" style="list-style: none; padding: 0">
+                <li><a href="/docs/quick-start/">Documentaion</a></li>
+                <li><a href="/blog/">Blog</a></li>
+            </ul>
+        </ReactDropdown>
         <li><a class="header-link" href="#">Pricing</a></li>
         <li><a class="header-link" href="/design-system/">Design System</a></li>
     </ul>
-</nav>
+
 
 <style>
 
@@ -26,6 +32,10 @@ import Dropdown from "../Dropdown/Dropdown.astro";
 
     /* .header-link:hover {
         color: hsl(var(--clr-light-text, 0.1))
+    } */
+
+    /* .main-nav-ul li:not(:first-child) {
+        margin-left: .5rem;
     } */
 
 

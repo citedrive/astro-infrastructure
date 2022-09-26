@@ -1,0 +1,36 @@
+.react-accordion {
+    width: 100%;
+    max-width: 75ch;
+    border-radius: var(--border-radius);
+    list-style: none;
+    cursor: pointer;
+}
+
+.react-accordion-content {
+    margin-top: 20px;
+    margin-left: 28px;
+    max-height: 0;
+    overflow: hidden;  
+    transition: .3s;
+    transition-timing-function: ease-in;
+} 
+
+.expanded {
+    max-height: 250px;
+}
+
+.react-accordion h3 {
+   transition: .4s;
+}
+
+.react-accordion h3:hover {
+    color: hsl(var(--clr-secondary));
+ }
+
+.react-accordion h3::before {
+    content: url(../../../assets/Decoration/DownArrow.svg);
+    display: inline-block;
+    width: 14px;
+    margin-right: 12px;
+    rotate: -90deg;
+}

@@ -1,31 +1,38 @@
 ---
-import Header from '../components/header/Header.astro';
+import BaseLayout from './BaseLayout.astro';
 const { title, lang, dir, frontmatter, headings } = Astro.props;
 import RightSidebar from '../components/docs/RightSidebar.astro';
-import LeftSidebar from '../components/docs/LeftSidebar.astro';
-import Footer from '../components/footer/Footer.astro';
+import LeftSidebar from '../components/docs/LeftSidebar.astro'
 ---
 
-<Header title={title ?? frontmatter.title} lang={lang ?? frontmatter.lang}>
-<body>
-   <main>
-      <section class="docs">
+<BaseLayout>
+
+   <div style="padding: 0 4rem;">
+
+   <section class="docs">
       <aside class="leftSideBar">
          <LeftSidebar lang={lang ?? frontmatter.lang} />
       </aside>
+      
       <article class="article" >
-      <div class= "test">
-         <slot />
+         <div class= "test">
+            <slot />
          </div>
       </article>
+
       <aside class="rightSidebar">
          <RightSidebar headings={headings} githubEditUrl={"githubEditUrl"} />
       </aside>
-   </main>
-   <Footer lang={lang ?? frontmatter.lang}/>
-</body>
-</Header>
+
+      </section>
+
+   </div>
+
+</BaseLayout>
+
+
 <style>
+
 @media only screen and (min-width: 1028px) {
    .docs{
    margin: 80px 0px;
@@ -36,14 +43,12 @@ import Footer from '../components/footer/Footer.astro';
 }
 
 
-
-
    @media only screen and (min-width: 1028px) {
    .leftSideBar{
    display: block;
    position: fixed;
    width: 390px;
-   padding: 1rem;
+   /* padding: 1rem; */
    overflow-x: hidden;
    height: calc(100vh - 120px);
    }

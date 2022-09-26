@@ -1,7 +1,15 @@
 ---
-import Layout from '../layouts/LandingLayout.astro';
+import Accordion from '../components/Accordion/Accordion.astro';
+import CTA from '../components/CTA.astro';
+import FeatureListItem from '../components/FeatureList/FeatureListItem.astro';
+import InternalLink from '../components/InternalLink.astro';
+import Layout from '../layouts/BaseLayout.astro';
 import '../styles/index.css';
 import '../styles/theme.css';
+
+// const data = await fetch('https://example.com/movies.json').then((response) =>
+//   response.json()
+// );
 
 const testimonials =[
    {
@@ -35,187 +43,116 @@ const testimonials =[
 
 <Layout title="Welcome to CiteDrive" lang="en">
 
+   <div class="container grid" style="--gap: 5rem; margin-bottom: 5rem;"> 
 
-
-
-
-
-<!-- Legacy Test -->
-
-<!-- <div class="container grid" style="--gap: 2.5rem">
-<div class="box">a</div>
-<div class="box">b</div>
-<div class="box">c</div>
-<div class="box sr-only">d</div>
-</div> -->
-
-
-
-
-
-   <!--
-<main class="main">
-
- <section class="hero">
-      <h1 class="hero_headline">Pipeline Your Research Data</h1>
-      <p>Keep your references and teams organized in projects with the world's most straightforward BibTeX-first reference management tool. Built from the ground up to stay out of your way and help you focus on writing.
+   <section class="grid" style="place-items: center;">
+      <div class="grid" style="place-items: center; --gap: 22px">
+      <i class="eyebrow">Add Eyebrow</i>
+      <h1 class="h1-landing letter-spacing-h1 letter-spacing-text" style="line-height: 100%">Pipeline Your Research Data</h1>
+      <p class="subtitle-landing-page" style="text-align: center; max-width: 66ch;">Keep your references and teams organized in projects with the world's most straightforward BibTeX reference management tool. Built from the ground up to stay out of your way and help you focus on writing.
       </p>
-      <button>Get started!</button>
-      <p>Overleaf, BibLaTeX, RStudio, R Markdown and Quarto
-are great options for getting started. More options. </p>
+      <CTA label="LET's .bib YOUR FIRST PROJECT" />
+      <p><InternalLink link="#" label="Overleaf"></InternalLink>, <InternalLink link="#" label="RStudio"></InternalLink> and <InternalLink link="#" label="Quarto"></InternalLink> are great options for getting started.</p>
+      </div>
    </section>
 
-   <section class="testimonials">
-
-    todo: university list  
-      
-      <div class= "testimonial-grid">
+   <!-- <section class="testimonials">
+      // todo: university list 
       {testimonials.map((testimonial) => (
-      <div class="testimonial">
+      <div>
          <span>{testimonial.feedback}</span>
          <span>{testimonial.author}</span>
       </div>
       ))}
-      <div>
+   </section> -->
+
+   <section class="video">
+
    </section>
 
-   <section class="features">
-      <h2>Streamline Your bibliographic research</h2>
-      <p>
-      Many reference management systems are jam-packed with features and include many plugins,
-allowing them to do everything that CiteDrive can. This comes at the cost of a steeper learning curve.
+   <section class="features grid">
 
-CiteDrive attempts to streamline bibliographic management by being laser-focused and BibTeX-empowered,
-as well as reducing clicks and general tedium. We focus on one thing and do it well - being the best
-reference management tool for LaTeX and Markdown users.
-      </p>
-      <div class="feature">
-         <h3>BibTeX</h3>
-         <p>explainer</p>
-         <div class="sub_feature">
-            <h4>Magic .bib-file</h4>
-            sub feature 1
-         </div>
-         <div class="sub_feature">
-            <h4>BibTeX editor</h4>
-            sub feature 2
-         </div>
-         <div class="sub_feature">
-            <h4>Error controll</h4>
-            sub feature 3
-         </div>
-      </div>
-      <div class="feature">
-         <h3>Cite in context</h3>
-         <p>explainer</p>
-         <div class="sub_feature">
-            <h4>SUB</h4>
-            sub feature 1
-         </div>
-         <div class="sub_feature">
-            <h4>SUB</h4>s
-            sub feature 2
-         </div>
-         <div class="sub_feature">
-            <h4>SUB</h4>
-            sub feature 3
-         </div>
-      </div>
-      <div class="feature">
-         <h3>Collaborator</h3>
-         <p>explainer</p>
-         <div class="sub_feature">
-            <h4>SUB</h4>
-            sub feature 1
-         </div>
-         <div class="sub_feature">
-            <h4>SUB</h4>
-            sub feature 2
-         </div>
-         <div class="sub_feature">
-            <h4>SUB</h4>
-            sub feature 3
-         </div>
+   <div class="grid" style="place-items: center;">
+   <h2 class="fs-h2 text-accent">Streamline Your Bibliographic Research</h2>
+   <!-- <p style="max-width: 75ch;">CiteDrive streamlines bibliographic management by being laser-focused and reducing clicks and general tedium. We focus on one thing and do it great - not being an “everything for everyone” reference management tool.  
+   </p>
+   -->
+   </div>
+
+   <div>
+
+   <FeatureListItem 
+      radius="radius-top" 
+      title="Cite in Context" 
+      text="Use the CiteDrive Companion browser add-on to seamlessly collect references as you conduct research across popular platforms including Google Scholar and Pubmed, or even non-DOI websites– all without leaving the page." 
+      link="https://chrome.google.com/webstore/detail/citedrive-bibtex-companio/gmmonfphegngpcbcapfbgembkjeookik"
+      linklabel="CiteDrive Companion for Chrome"
+   />
+
+   <FeatureListItem 
+      title="Connect your bibliography" 
+      text="CiteDrive links with Overleaf and RStudio seamlessly. When you or your teammates alter your project, the BiBTeX .bib file will automatically update your bibliography in your Overleaf or RStudio project if you use CiteDrive to manage it." 
+      link="#"
+      linklabel="Get started with Overleaf"
+   />
+
+    <FeatureListItem 
+      title="Compose in your Browser" 
+      text="Access your project from any browser. No more software to install, licenses to track, or clunky upgrades. You can make changes on the go, collaborate with team members in real time, and never worry about losing your work." 
+   />
+
+   <FeatureListItem 
+      title="Collaborate Seamlessly" 
+      text="Add collaborators to your CiteDrive project with a couple of clicks. Collect references, revise and generate citations together and stop sharing stale bibliography files and databases." 
+   />
+
+    <FeatureListItem 
+      title="BibTeX empowered" 
+      text="Do you keep your bibliography in a big text file? If that’s the case, CiteDrive is for you, with a user interface to go alongside it. We didn’t build CiteDrive as an afterthought for BibTeX users; we built it with them in mind." 
+   />
+
+    <FeatureListItem 
+      title="Customize" 
+      text="Want to leverage extended BibLaTeX or your OWN? bespoke fields? Customize your BibTeX code as you see fit while collecting and editing references, rather than BibTeX support as an afterthought. With our in-built editor, you handle your bibliography, not with opinionated forms." 
+   />
+
+   <FeatureListItem 
+      radius="radius-bottom"
+      title="Control and Error-Handling" 
+      text="CiteDrive will notify you if your format is erroneous and there are duplicate papers so that you can collaborate without interfering with one another." 
+   />
+
+   </div>
+   
+   </section>
+
+    <section class="grid" style="place-items: center;">
+      <div class="grid" style="place-items: center; --gap: 22px">
+      <h1 class="h1-landing letter-spacing-h1 letter-spacing-text" style="line-height: 100%">Pipeline Your Research Data</h1>
+      <CTA label="LET's .bib YOUR FIRST PROJECT" />
+      <p><InternalLink link="#" label="Overleaf"></InternalLink>, <InternalLink link="#" label="RStudio"></InternalLink> and <InternalLink link="#" label="Quarto"></InternalLink> are great options for getting started.</p>
       </div>
    </section>
 
-   <section class="get_started">
-    <h2>Get started</h2>
-    <p>Let's do it</p>
-    <button>start now</button>
-   </section> 
+</div>
 
-</main>
--->
 
 </Layout>
 
 
 <style>
-    /* .main{
-    max-width: 1200px;
-    padding-top: 5rem;
-    margin: auto;
-    }
-    .hero{
-        width: 800px;
-    margin: 0 auto;
-    max-width: 100%;
-    }
-    .hero_headline{
 
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 86px;
-    margin-bottom: 24px;
+.video {
+   width: 100%;
+   height: 600px;
+   box-shadow: 1px 2px 4px grey;
+   background-color: white;
+   border-radius: var(--border-radius);
+}
 
-    }
-   .testimonials{
-   padding: 1rem;
-   margin: 1rem;
-   }
-   .testimonial-grid{
-    display: flex;
-    padding: 10px 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-   }
-  .testimonial{
-    background: #F2F2F2;
-    border-radius: 30px;
-    padding: 25px 30px;
-    margin: 10px 20px 20px 20px;
-    font-size: 17px;
-    line-height: 1.5;
-    max-width: 700px;
-    color: var(--text-muted);
-    width: calc(50% - 60px);
-  }
-  @media only screen and (max-width: 720px){
-.testimonial {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 20px;
-    margin: 20px 10px;
-}}
-   .features{
-   background: #d0ceee;
-   padding: 1rem;
-   margin: 1rem;
-   }
-   .feature{
-   background: #b68e8e;
-   padding: 1rem;
-   margin: 1rem;
-   }
-   .sub_feature{
-   background: #dfe0c0;
-   padding: 1rem;
-   margin: 1rem;
-   }
-   .get_started{
-   background: #cee5ee;
-   padding: 1rem;
-   margin: 1rem;
-   } */
+.stream {
+   padding: 3.5rem 0;
+   background-color: gainsboro;
+}
+
 </style>

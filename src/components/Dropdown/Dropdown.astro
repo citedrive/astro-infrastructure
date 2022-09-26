@@ -13,6 +13,10 @@ const { label } = Astro.props
 .dropdown {
     position: relative;
     list-style: none;
+    max-width: 154px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .dropdown-item {
@@ -21,20 +25,33 @@ const { label } = Astro.props
     border: none;
     background: none;
     color: hsl(var(--clr-light-text));
+    position: relative;
 }
 
-.dropdown-item:after {
-    content: "";
+.dropdown-item::after {
+    content: url(../../../assets/Decoration/DownArrow.svg);
+    display: inline-block;
+    width: 12px;
+    position: absolute;
+    top: -6px;
+    right: -14px;
+    transition: .4s;
+}
+
+.dropdown-item:hover::after {
+    top: -4px;
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
     top: 25px;
-    left: 0px;
-    border: 1px solid grey;
+    left: 50%;
+    transform: translate(-45%);
+    border: 1px solid hsl(var(--clr-background-light-top));
     padding: 1rem 2rem;
     background-color: white;
+    border-radius: 16px;
 }
 
 .dropdown:hover > div {
