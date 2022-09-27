@@ -1,4 +1,4 @@
-function TableOfContents({headings}) {
+function TableOfContents({ headings }) {
 	return (
 		<>
 		{headings.length > 1 &&

@@ -4,24 +4,24 @@
 // import SEO from "./SEO.astro"
 import Logo from "./Logo.astro"
 import Navigation from "./Navigation.astro";
-const { title, lang, dir } = Astro.props;
+const { title, lang, dir, blog } = Astro.props;
 ---
-
-<!-- <html dir={dir ?? 'ltr'} lang={lang} class="initial">
-<head>
-   <SEO title={title} lang={lang} ></SEO>
-</head> -->
-
 <header>
-   <!-- <a href= `/${lang == "en" ? "" : lang + "/"}` + > -->
-   <!-- <Logo class="logo"/> -->
-   <!-- </a> -->
-   <!-- <div class="navbar__items"><a href="/overleaf/" class= "navbar__item">Overleaf </a> <a href="/overleaf/" class= "navbar__item">RStudio </a> <a href="/docs/" class= "navbar__item">Docs </a>  <a href="/blog/" class= "navbar__item">Blog </a> <a href="/overleaf/" class= "navbar__item">Pricing </a>  </div>
-   <div class="navbar__items"> <button class= "navbar__item">Get started</button> <a href="/blog" class= "navbar__item">Login </a></div> -->
+
    <nav class="header flex" style="justify-content: space-between; align-items: center;">
+
+   <div class="flex" style="align-items: center;">
+
    <a href="/">
    <Logo class="logo"/>
    </a>
+
+   {blog && 
+   <span style="font-size: 1rem; border-left: 1px solid black; color: hsl(var(--clr-secondary)); padding-left: 1rem;">Blog</span>
+   }
+   
+   </div>
+
    <Navigation />
 
    <ul class="flex pill" style="--gap: 0">
@@ -46,7 +46,7 @@ const { title, lang, dir } = Astro.props;
    }
 
    .logo {
-   width: 36px;
+      width: 36px;
    } 
 
    .pill {
@@ -75,5 +75,4 @@ const { title, lang, dir } = Astro.props;
       border-radius: 100vw;
 
    }
-
 </style>

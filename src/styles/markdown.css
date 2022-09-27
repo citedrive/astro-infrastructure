@@ -1,0 +1,63 @@
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+figure,
+picture {
+	margin: 0;
+} */
+
+h1 {
+    font-size: 1.75rem;
+    font-family: var(--ff-h1);
+    line-height: 2.5rem;
+    margin-bottom: .5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+i {
+    display: block;
+    margin-top: 2rem;
+}
+
+.internal-link {
+    cursor: pointer;
+    color: hsl(var(--clr-secondary));
+    z-index: 1;
+}
+
+.internal-link:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: -11;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: hsl(var(--clr-secondary));
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .4s;
+}
+
+.internal-link:hover:after {
+    background-color: hsl(var(--clr-secondary));
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+.internal-link:active {
+    opacity: .75;
+}

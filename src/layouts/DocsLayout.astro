@@ -2,12 +2,13 @@
 import BaseLayout from './BaseLayout.astro';
 const { title, lang, dir, frontmatter, headings } = Astro.props;
 import RightSidebar from '../components/docs/RightSidebar.astro';
-import LeftSidebar from '../components/docs/LeftSidebar.astro'
+import LeftSidebar from '../components/docs/LeftSidebar.astro';
+import '../styles/markdown.css';
 ---
 
 <BaseLayout>
 
-   <div style="padding: 0 4rem;">
+   <div>
 
    <section class="docs">
       <aside class="leftSideBar">
@@ -34,8 +35,7 @@ import LeftSidebar from '../components/docs/LeftSidebar.astro'
 <style>
 
 @media only screen and (min-width: 1028px) {
-   .docs{
-   margin: 80px 0px;
+   .docs {
    display: grid;
    box-sizing: border-box;
    grid-template: "sb main al" / 390px 1fr 290px;

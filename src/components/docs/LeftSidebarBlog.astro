@@ -1,25 +1,20 @@
 ---
 import TableOfContents from './TableOfContents';
-const { headings, githubEditUrl, lang } = Astro.props as Props;
-
+const { headings, githubEditUrl, lang } = Astro.props;
 const thisLang = lang === 'en' ? '' : '/' + lang;
-
 const path = '../../pages' + "thisLang" + '/blog/*.{md,mdx}'
-
 const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
-
+// const posts = await Astro.glob('../../pages/blog/*.{md,mdx}');
 ---
 
-<nav >
-	<div >
-      <h4>Latest posts</h4>
-	<ul class="ova" >
-
-
-{posts.map((post) => (
-						<li class="post">
+<nav style="margin-left: 1rem;">
+<div>
+	<h4 style="margin-bottom: 1rem; font-weight: 500; color: hsl(var(--clr-secondary));">All Blog Post</h4>
+	<ul class="list">
+		{posts.map((post) => (
+			<li>
             {/*
 							<time datetime={post.frontmatter.pubDate}>
 								{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
@@ -28,39 +23,54 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 									day: 'numeric',
 								})}
 							</time>
-*/}
-
-							<a href={post.url}>{post.frontmatter.title}</a>
-						</li>
-					))}
+			*/}
+				<a class="link truncate" href={post.url}>{post.frontmatter.title}</a>
+			</li>
+		))}
 
   </ul>
-
-
-
-	</div>
+</div>
 </nav>
-
 
 <style>
 
-.list{
-font-size: 14px;
-    list-style: none;
-    margin-bottom: 6px;
+.list {
+	font-size: 14px;
+	list-style: none;
 }
 
-.post{
-margin-bottom: 1rem;
+.link {
+	display: block;
+	padding: .5rem 0;
+	padding-left: 1rem;
+	color: hsl(var(--clr-light-text));
+	border-left: 1px solid rgb(177, 177, 177);
 }
 
-.ova{
-padding: 5px;
+.link:hover {
+	color: hsl(var(--clr-secondary));
+	border-left: 1px solid hsl(var(--clr-secondary));
 }
 
-.link{
-  text-decoration: none;
+.truncate {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
 
 </style>
+
+<script>
+
+	const location = window.location.pathname;
+	const links = document.querySelectorAll('.link');
+
+	links.forEach(link => {
+		if(link.href.includes(`${location}`)) {
+			link.style.color = 'hsl(var(--clr-secondary))';
+			link.style.borderLeft = '1px solid hsl(var(--clr-secondary))';
+		}
+	});
+
+</script>

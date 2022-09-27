@@ -8,7 +8,7 @@ lang: en
 
 # CiteDrive 3.0: Information on the upcoming version
 
-<p class="subtitle-blog-doc">For months we have been working on CiteDrive 3.0, a complete revision of the previous version. We are happy to announce that the new version will be released soon! Here is some information about the changes to give you the first insight.</p>
+For months we have been working on CiteDrive 3.0, a complete revision of the previous version. We are happy to announce that the new version will be released soon! Here is some information about the changes to give you the first insight.
 
 ## We are bringing reference management to R Markdown. 
 

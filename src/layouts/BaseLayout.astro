@@ -10,12 +10,13 @@ interface Props {
   title?: string;
   type?: string;
   thumbnail?: string;
+  blog?: boolean;
 //   schemaHomepage?: object;
 //   schemaOverleaf?: object;
 //   schemaBlog?: object;
 //   schemaBlogPost?: object;
 }
-const { title, lang, dir, desc, type, frontmatter, headings } = Astro.props;
+const { title, lang, dir, desc, type, frontmatter, headings, blog } = Astro.props;
 ---
 
 <html lang={Astro.props.lang}>
@@ -42,11 +43,11 @@ const { title, lang, dir, desc, type, frontmatter, headings } = Astro.props;
 </head>
 
 <body>
-    <Header  />
-        <main style="margin-top: 10rem">
+    <Header blog={blog}  />
+        <main style="margin-top: 7.5rem">
             <slot />
-            <CookieConsent />
+            <!-- <CookieConsent /> -->
    </main>
-   <Footer />
+
 </body>
 </html>

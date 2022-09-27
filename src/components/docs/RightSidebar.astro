@@ -1,10 +1,43 @@
 ---
+import InternalLink from '../InternalLink.astro';
 import TableOfContents from './TableOfContents';
-const { headings, githubEditUrl } = Astro.props as Props;
+const { headings, githubEditUrl } = Astro.props;
 ---
 
 <nav >
 	<div >
-	<TableOfContents headings={headings} />
+	{headings.length > 1 &&
+			<>
+			<h4>On this page</h4>
+			<ul>
+				{headings
+					.filter(({ depth }) => depth > 1 && depth < 4)
+					.map((heading) => (
+						<li style="list-style: none;">
+							<a class="anchor" href={`#${heading.slug}`}>{heading.text}</a>
+						</li>
+					))}
+			</ul>
+			</>
+			}
 	</div>
 </nav>
+
+<style>
+
+.anchor {
+	font-size: 12px;
+	text-decoration: none;
+	color: hsl(var(--clr-secondary));
+}
+
+.anchor:hover {
+	
+}
+
+</style>
+
+<script>
+
+
+</script>

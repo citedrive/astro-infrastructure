@@ -4,10 +4,11 @@ import './accordion.css';
 type AccordionProps = {
     children: JSX.Element;
     label: string;
+    isOpen: boolean;
 }
  
-export default function ReactAccordion({ children, label}: AccordionProps) {
-    const [open, setOpen] = useState(false);
+export default function ReactAccordion({ children, label, isOpen}: AccordionProps) {
+    const [open, setOpen] = useState(isOpen);
     const handleClick = () => setOpen(!open);
     return(
     <li className='react-accordion'aria-expanded="false">

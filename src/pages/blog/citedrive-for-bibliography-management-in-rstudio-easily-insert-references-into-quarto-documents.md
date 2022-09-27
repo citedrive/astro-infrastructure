@@ -8,6 +8,8 @@ lang: en
 
 # CiteDrive for Bibliography Management in RStudio: Easily Insert References into Quarto Documents
 
+<i>August 23, 2022 by Gareth</i>
+
 Do you need to insert citations into your Quarto documents? If so, then you’ll want to check out CiteDrive for RStudio. With CiteDrive, you can easily manage your bibliography and insert references into your documents. In this tutorial, we’ll show you how to get started.
 
 We’ll walk you through the steps of setting up a CiteDrive account and importing references into RStudio. Then we’ll show you how to insert citations into a Quarto document. Let’s get started!

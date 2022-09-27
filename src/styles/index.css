@@ -10,6 +10,11 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 7.5rem;
+}
+
 body,
 h1,
 h2,
@@ -19,8 +24,10 @@ h5,
 h6,
 p,
 figure,
-picture {
+picture,
+ul {
 	margin: 0;
+	padding: 0;
 }
 
 /* Unnecessary? */
@@ -33,10 +40,6 @@ h5,
 h6,
 p {
 	font-weight: 400;
-}
-
-ul {
-	padding: 0;
 }
 
 a {

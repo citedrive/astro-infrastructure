@@ -7,7 +7,6 @@
 }
 
 .react-accordion-content {
-    margin-top: 20px;
     margin-left: 28px;
     max-height: 0;
     overflow: hidden;  
@@ -33,4 +32,9 @@
     width: 14px;
     margin-right: 12px;
     rotate: -90deg;
+}
+
+.react-accordion-label {
+    font-size: 1rem;
+    font-weight: 500;
 }

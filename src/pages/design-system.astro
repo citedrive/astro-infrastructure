@@ -85,11 +85,15 @@ import ReactAccordion from '../components/Accordion/ReactAccordion.tsx';
      <section id="interactive_elements">
 
             <h2 class="grid design-system-seperator" style="grid-template-columns: 20px auto;"><span class="text-accent">3.</span>Interactive Elements</h2>
+           
             <div class="flex" style="background-color: white; padding: 3rem 1rem; flex-wrap: wrap; align-items: center;">
+            
             <CallToActionButton />
-            <InternalLink />
+
+            <InternalLink link="#" label="I'm a label" />
+
             <div class="flex" style="width: 100%; --gap: 2.5rem; justify-content: space-between;">
-                <!-- <Dropdown label="I'm a Dropdown" client:load><p>Hello</p></Dropdown> -->
+
                 <ReactDropdown label="I'm a Dropdown Menu" client:load>
                     <ul class="grid" style="list-style: none; padding: 0">
                         <li><a href="/">Overleaf</a></li>
@@ -99,18 +103,20 @@ import ReactAccordion from '../components/Accordion/ReactAccordion.tsx';
 
                  <div class="grid">
 
-                <ReactAccordion label="How to cite in Overleaf?" client:load>
+                <!-- <ReactAccordion label="How to cite in Overleaf?" isOpen={false} client:load>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque. Est lorem ipsum dolor sit amet consectetur adipiscing elit. Diam quam nulla porttitor massa. Hendrerit dolor magna eget est lorem ipsum dolor. Dictum sit amet justo donec. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. Posuere urna nec tincidunt praesent semper feugiat nibh. Elementum integer enim neque volutpat ac. Neque convallis a cras semper auctor neque vitae tempus. Lorem dolor sed viverra ipsum nunc aliquet. Lobortis scelerisque fermentum dui faucibus in.</p>
                 </ReactAccordion>
 
-                <ReactAccordion label="How to cite in R-Markdown?" client:load>
+                <ReactAccordion label="How to cite in R-Markdown?" isOpen={false} client:load>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque. Est lorem ipsum dolor sit amet consectetur adipiscing elit. Diam quam nulla porttitor massa. Hendrerit dolor magna eget est lorem ipsum dolor. Dictum sit amet justo donec. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. Posuere urna nec tincidunt praesent semper feugiat nibh. Elementum integer enim neque volutpat ac. Neque convallis a cras semper auctor neque vitae tempus. Lorem dolor sed viverra ipsum nunc aliquet. Lobortis scelerisque fermentum dui faucibus in.</p>
-                </ReactAccordion>
+                </ReactAccordion> -->
 
                 </div>
         
             </div>
+
             </div>
+
     </section>
 
     </div>

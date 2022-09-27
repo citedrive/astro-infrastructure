@@ -40,11 +40,11 @@ const NATBIB = docs.filter(function(item){
 
    <div>
 
-      <ReactAccordion label="Quick Start" client:load>
+      <ReactAccordion label="Quick Start" isOpen={true} client:load>
 
-         <ul class="ova" >
+         <ul class="list" >
             {QUICKSTART.map((doc) => (
-            <li class="list">
+            <li>
                <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
             </li>
             ))}
@@ -52,11 +52,11 @@ const NATBIB = docs.filter(function(item){
 
       </ReactAccordion>
 
-       <ReactAccordion label="Add References" client:load>
+       <ReactAccordion label="Add References" isOpen={true} client:load>
      
-         <ul class="ova" >
+         <ul class="list" >
             {ADDREFERENCES.map((doc) => (
-            <li class="list">
+            <li>
                <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
             </li>
             ))}
@@ -64,11 +64,11 @@ const NATBIB = docs.filter(function(item){
 
       </ReactAccordion>
       
-      <ReactAccordion label="Overleaf Setup" client:load>
+      <ReactAccordion label="Overleaf Setup" isOpen={true} client:load>
 
-         <ul class="ova" >
+         <ul class="list" >
             {OVERLEAFSETUP.map((doc) => (
-            <li class="list">
+            <li>
                <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
             </li>
             ))}
@@ -76,11 +76,11 @@ const NATBIB = docs.filter(function(item){
 
       </ReactAccordion>
       
-      <ReactAccordion label="Howtos" client:load>
+      <ReactAccordion label="Howtos" isOpen={true} client:load>
 
-         <ul class="ova" >
+         <ul class="list" >
             {HOWTOS.map((doc) => (
-            <li class="list">
+            <li>
                <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
             </li>
             ))}
@@ -88,11 +88,11 @@ const NATBIB = docs.filter(function(item){
 
       </ReactAccordion>
 
-      <ReactAccordion label="BibTex Basics" client:load>
+      <ReactAccordion label="BibTex Basics" isOpen={true} client:load>
 
-         <ul class="ova" >
+         <ul class="list" >
             {BIBTEX.map((doc) => (
-            <li class="list">
+            <li>
                <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
             </li>
             ))}
@@ -100,11 +100,11 @@ const NATBIB = docs.filter(function(item){
 
       </ReactAccordion>
 
-      <ReactAccordion label="BibLaTeX Basics" client:load>
+      <ReactAccordion label="BibLaTeX Basics" isOpen={true} client:load>
 
-         <ul class="ova" >
+         <ul class="list" >
             {BIBLATEX.map((doc) => (
-            <li class="list">
+            <li>
                <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
             </li>
             ))}
@@ -112,11 +112,11 @@ const NATBIB = docs.filter(function(item){
 
       </ReactAccordion>
 
-      <ReactAccordion label="Natbib Basics" client:load>
+      <ReactAccordion label="Natbib Basics" isOpen={true} client:load>
 
-         <ul class="ova" >
+         <ul class="list" >
             {NATBIB.map((doc) => (
-            <li class="list">
+            <li>
                <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
             </li>
             ))}
@@ -129,15 +129,37 @@ const NATBIB = docs.filter(function(item){
 </nav>
 
 <style>
-   .list{
-   font-size: 14px;
-   list-style: none;
-   margin-bottom: 6px;
+
+  .list {
+	font-size: 14px;
+	list-style: none;
    }
-   .ova{
-   padding: 5px;
+
+   .link {
+	display: block;
+	padding: .2rem 0;
+	padding-left: 1rem;
+	color: hsl(var(--clr-light-text));
+	border-left: 1px solid rgb(177, 177, 177);
    }
-   .link{
-   text-decoration: none;
+
+   .link:hover {
+	color: hsl(var(--clr-secondary));
+	border-left: 1px solid hsl(var(--clr-secondary));
    }
+
 </style>
+
+<script>
+
+   const location = window.location.pathname;
+	const links = document.querySelectorAll('.link');
+
+	links.forEach(link => {
+		if(link.href.includes(`${location}`)) {
+			link.style.color = 'hsl(var(--clr-secondary))';
+			link.style.borderLeft = '1px solid hsl(var(--clr-secondary))';
+		}
+	});
+
+</script>
