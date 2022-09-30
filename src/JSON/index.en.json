@@ -1,0 +1,22 @@
+{
+    "hero": {
+        "heroTitle": "Pipeline Your Research Data",
+        "heroSubtitle": "Keep your references and teams organized in projects with the world's most straightforward BibTeX reference management tool. Built from the ground up to stay out of your way and help you focus on writing.",
+        "heroBtn": "LET's .bib YOUR FIRST PROJECT",
+        "starter": [
+            {
+            "label": "Overleaf",
+            "link": "fs"
+            },
+            {
+                "label": "RStudio",
+                "link": "fs"
+            },
+            {
+                "label": "and Quatro",
+                "link": "fs"
+            }
+        ],
+        "start-leftovers": "are great options for getting started."
+    }
+}

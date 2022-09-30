@@ -1,7 +1,7 @@
 ---
-import TableOfContents from './TableOfContents';
-const { headings, githubEditUrl, lang } = Astro.props;
-const thisLang = lang === 'en' ? '' : '/' + lang;
+// import TableOfContents from './TableOfContents';
+// const { headings, githubEditUrl, lang } = Astro.props;
+// const thisLang = lang === 'en' ? '' : '/' + lang;
 const path = '../../pages' + "thisLang" + '/blog/*.{md,mdx}'
 const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
@@ -9,9 +9,8 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 // const posts = await Astro.glob('../../pages/blog/*.{md,mdx}');
 ---
 
-<nav style="margin-left: 1rem;">
-<div>
-	<h4 style="margin-bottom: 1rem; font-weight: 500; color: hsl(var(--clr-secondary));">All Blog Post</h4>
+<nav>
+<div style="padding-bottom: 4rem">
 	<ul class="list">
 		{posts.map((post) => (
 			<li>
@@ -33,7 +32,6 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 </nav>
 
 <style>
-
 .list {
 	font-size: 14px;
 	list-style: none;
@@ -58,6 +56,7 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 
 </style>
 

@@ -1,44 +1,34 @@
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p
-figure,
-picture {
-	margin: 0;
-} */
-
 h1 {
-    font-size: 1.75rem;
+    font-size: 2.75rem;
     font-family: var(--ff-h1);
-    line-height: 2.5rem;
-    margin-bottom: .5rem;
+    line-height: 3.5rem;
+    margin-bottom: .5rem !important;
 }
 
 h2 {
+    font-weight: 500;
     font-size: 1.25rem;
-    margin-bottom: .5rem;
+    margin-bottom: .5rem !important;
 }
 
 p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    font-size: .9rem;
+    margin-bottom: 2rem !important;
 }
 
 i {
     display: block;
-    margin-top: 2rem;
+    margin-top: 2rem !important;
 }
 
-.internal-link {
+p a {
     cursor: pointer;
     color: hsl(var(--clr-secondary));
     z-index: 1;
+    position: relative;
 }
 
-.internal-link:after {
+p a::after {
     content: "";
     width: 100%;
     position: absolute;
@@ -52,12 +42,8 @@ i {
     transition: transform .4s;
 }
 
-.internal-link:hover:after {
+p a:hover::after {
     background-color: hsl(var(--clr-secondary));
     transform-origin: bottom left;
     transform: scaleX(1);
-}
-
-.internal-link:active {
-    opacity: .75;
 }

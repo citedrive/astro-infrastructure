@@ -2,7 +2,7 @@
 import InternalLink from "../InternalLink.astro";
 
 export interface Props {
-  icon?: any;
+  icon?: string;
   radius?: string;
   title: string;
   text: string;
@@ -11,15 +11,15 @@ export interface Props {
   linklabel?: string;
 }
 
-const { icon, radius, title, text, link, linklabel  } = Astro.props
+const { icon, radius, title, text, link, linklabel } = Astro.props
 
 ---
 
-<div class="flex">
+<div class="flex" style="--gap: 0">
 
       <div class={`icon-pipe ${Astro.props.radius}`}>
          <div class="circle grid" style="place-items: center;">
-         <i>Icon</i>
+            <img class="icon" src={icon}/>
          </div>
       </div>
 
@@ -30,7 +30,7 @@ const { icon, radius, title, text, link, linklabel  } = Astro.props
          <p class="fs-body-sm">{Astro.props.text}</p>
          </div>
 
-         <div class="bullet-points" style="padding-bottom: 12.5rem;">
+         <div class="bullet-points">
          <ul style="margin: 0; padding-left: 2rem;">
             <li><InternalLink link={Astro.props.link}  label={Astro.props.linklabel}></InternalLink></li>
             <li><InternalLink link={Astro.props.link}  label={Astro.props.linklabel}>Get started with RStudio</InternalLink></li>
@@ -46,7 +46,11 @@ const { icon, radius, title, text, link, linklabel  } = Astro.props
 .icon-pipe {
    background-color: rgb(250, 215, 167);
    background-color: hsl(var(--clr-secondary));
-   padding: 1rem;
+   padding: .5rem;
+}
+
+.icon {
+   width: 24px;
 }
 
 .radius-top {
@@ -60,31 +64,69 @@ const { icon, radius, title, text, link, linklabel  } = Astro.props
 }
 
 .circle {
-   width: 120px;
-   height: 120px;
+   width: 60px;
+   height: 60px;
    background-color: white;
    border-radius: 100vw;
 }
 
 .bullet-points {
    grid-area: bp;
-   border-left: 1px solid hsl(var(--clr-light-text));
-   padding-left: 1rem;
+   padding-bottom: 5.5rem;
 }
 
 .bullet-points:not(:last-child) {
-   grid-area: bp;
-   border-left: 1px solid hsl(var(--clr-light-text));
-   padding-left: 1rem;
+   padding-bottom: 5.5rem;
 }
 
 .inner-feature-grid {
-   grid-template-columns: repeat(8, 1fr);
-   grid-template-areas: ". t t t . bp bp bp";
+   grid-template-columns: 1fr;
+   grid-template-areas: 
+   "t"
+   "bp"
+   ;
 }
 
 .feature-text {
    grid-area: t;
+   padding-left: 1rem;
 }
+
+@media only screen and (min-width: 1024px) {
+
+   .icon-pipe {
+      padding: 1rem;
+   }
+
+   .icon {
+      width: 48px;
+   }
+
+   .circle {
+      width: 120px;
+      height: 120px;
+      background-color: white;
+      border-radius: 100vw;
+   }
+
+.bullet-points {
+   grid-area: bp;
+   border-left: 1px solid hsl(var(--clr-light-text));
+   padding-left: 1rem;
+   padding-bottom: 12.5rem;
+}
+
+
+.bullet-points:not(:last-child) {
+   padding-bottom: 12.5rem;
+}
+
+
+.inner-feature-grid {
+   grid-template-columns: repeat(8, 1fr);
+   grid-template-areas: ". t t t . bp bp bp";
+   }
+}
+
 
 </style>

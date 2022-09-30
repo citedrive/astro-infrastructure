@@ -1,0 +1,92 @@
+---
+import MobileMenu from "../MobileMenu/MobileMenu";
+import Logo from "./Logo.astro"
+import Navigation from "./Navigation.astro";
+const { title, lang, dir } = Astro.props;
+const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+---
+<header>
+
+   <nav class="header flex" style="justify-content: space-between; align-items: center;">
+
+   <div class="flex" style="align-items: center;">
+
+   <a href="/">
+   <Logo class="logo"/>
+   <span>CiteDrive</span>
+   </a>
+
+
+   <span style="font-size: 1rem; border-left: 1px solid black; color: hsl(var(--clr-secondary)); padding-left: 1rem;">Blog</span>
+   
+   
+   </div>
+
+
+   <MobileMenu blog={true} client:load>
+        <h3 style="margin-bottom: 2rem">All posts</h3>
+        <ul class="list">
+        {posts.map((post) => (
+                <li style="list-style: none">
+                {/*
+                                <time datetime={post.frontmatter.pubDate}>
+                                    {new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+                                        year: 'numeric',
+                                        month: 'short',
+                                        day: 'numeric',
+                                    })}
+                                </time>
+                */}
+                    <a class="link" href={post.url}>{post.frontmatter.title}</a>
+                </li>
+                
+            ))}
+        </ul>
+   </MobileMenu>
+
+   </nav>
+
+</header>
+
+<style>
+.list {
+	font-size: 14px;
+	list-style: none;
+}
+
+.link {
+	display: block;
+	padding: .5rem 0;
+	padding-left: 1rem;
+	color: hsl(var(--clr-light-text));
+	border-left: 1px solid rgb(177, 177, 177);
+}
+
+.link:hover {
+	color: hsl(var(--clr-secondary));
+	border-left: 1px solid hsl(var(--clr-secondary));
+}
+
+.truncate {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
+
+<script>
+
+	const location = window.location.pathname;
+	const links = document.querySelectorAll('.link');
+
+	links.forEach(link => {
+		if(link.href.includes(`${location}`)) {
+			link.style.color = 'hsl(var(--clr-secondary))';
+			link.style.borderLeft = '1px solid hsl(var(--clr-secondary))';
+		}
+	});
+
+</script>

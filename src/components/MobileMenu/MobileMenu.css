@@ -1,0 +1,88 @@
+.mobile-menu {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9998;
+    background-color: white;
+    padding: 5rem 1rem 1rem 1rem;
+}
+
+.mm-container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+.absolute-button {
+    z-index: 9999;
+    position: absolute;
+    right: 1rem;
+    background-color: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+.line {
+    height: 2px;
+    width: 32px;
+    background-color: black;
+    margin: 10px 0;
+    border-radius: 15px;
+}
+
+.rotate-left {
+    transform: translateY(6px) rotate(45deg);
+    transform-origin: center;
+}
+
+.rotate-right {
+    transform: translateY(-6px) rotate(-45deg);
+    transform-origin: center;
+}
+
+.mm-list {
+    margin-top: 5rem;
+}
+
+.mm-list-item {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.mm-list-item a {
+    color: inherit;
+}
+
+/* .pill {
+    list-style: none;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 100vw;
+ }
+
+ .pill li:first-child {
+    border-right: 1px solid black;
+ }
+
+ .pill li:last-child {
+    background-color: hsl(var(--clr-secondary));
+    border-radius: 100vw;
+ }
+
+  .pill li:last-child > a {
+    color: white;
+    padding: .5rem 1rem;
+ }
+
+ .pill li:last-child:hover {
+    background-color: red;
+    border-radius: 100vw;
+ } */
+
+@media only screen and (min-width: 1280px) {
+    .absolute-button {
+      display: none;
+    }
+ }

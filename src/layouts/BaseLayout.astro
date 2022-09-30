@@ -1,5 +1,7 @@
 ---
 import Header from '../components/header/Header.astro';
+import DocHeader from '../components/header/DocHeader.astro';
+import BlogHeader from '../components/header/BlogHeader.astro';
 import Footer from '../components/footer/Footer.astro';
 import CookieConsent from '../components/CookieConsent.astro';
 import '../styles/index.css';
@@ -10,13 +12,15 @@ interface Props {
   title?: string;
   type?: string;
   thumbnail?: string;
+  site?: boolean;
+  doc?: boolean;
   blog?: boolean;
 //   schemaHomepage?: object;
 //   schemaOverleaf?: object;
 //   schemaBlog?: object;
 //   schemaBlogPost?: object;
 }
-const { title, lang, dir, desc, type, frontmatter, headings, blog } = Astro.props;
+const { title, lang, dir, desc, type, frontmatter, headings, site, doc, blog } = Astro.props;
 ---
 
 <html lang={Astro.props.lang}>
@@ -43,11 +47,15 @@ const { title, lang, dir, desc, type, frontmatter, headings, blog } = Astro.prop
 </head>
 
 <body>
-    <Header blog={blog}  />
-        <main style="margin-top: 7.5rem">
+<>
+{site && <Header />}
+{doc && <DocHeader />}
+{blog && <BlogHeader />}
+
+ <main style="margin-top: 3.5rem">
             <slot />
             <!-- <CookieConsent /> -->
-   </main>
-
+</main>
+</>
 </body>
 </html>

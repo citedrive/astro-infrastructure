@@ -4,11 +4,10 @@ import TableOfContents from './TableOfContents';
 const { headings, githubEditUrl } = Astro.props;
 ---
 
-<nav >
-	<div >
+<nav>
+	<div>
 	{headings.length > 1 &&
 			<>
-			<h4>On this page</h4>
 			<ul>
 				{headings
 					.filter(({ depth }) => depth > 1 && depth < 4)
@@ -26,13 +25,17 @@ const { headings, githubEditUrl } = Astro.props;
 <style>
 
 .anchor {
-	font-size: 12px;
+	font-size: .9rem;
 	text-decoration: none;
 	color: hsl(var(--clr-secondary));
 }
 
-.anchor:hover {
-	
+@media only screen and (min-width: 1028px) {
+   .anchor {
+	font-size: 12px;
+	text-decoration: none;
+	color: hsl(var(--clr-secondary));
+}
 }
 
 </style>

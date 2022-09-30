@@ -1,0 +1,170 @@
+---
+// import '../../styles/theme.css';
+// import '../../styles/index.css';
+// import SEO from "./SEO.astro"
+import ReactAccordion from "../Accordion/ReactAccordion";
+import MobileMenu from "../MobileMenu/MobileMenu";
+import Logo from "./Logo.astro"
+import Navigation from "./Navigation.astro";
+const { title, lang, dir } = Astro.props;
+
+const docs = (await Astro.glob('../../pages/docs/*.{md,mdx}'));
+
+const QUICKSTART = docs.filter(function(item){
+    return item.frontmatter.cat == "quick-start";
+})
+
+const ADDREFERENCES = docs.filter(function(item){
+    return item.frontmatter.cat == "add-references";
+})
+
+const OVERLEAFSETUP = docs.filter(function(item){
+    return item.frontmatter.cat == "overleaf-setup";
+})
+
+const HOWTOS = docs.filter(function(item){
+    return item.frontmatter.cat == "how-tos";
+})
+
+const BIBLATEX = docs.filter(function(item){
+    return item.frontmatter.cat == "biblatex";
+})
+
+const BIBTEX = docs.filter(function(item){
+    return item.frontmatter.cat == "bibtex";
+})
+
+const NATBIB = docs.filter(function(item){
+    return item.frontmatter.cat == "natbib";
+})
+
+---
+<header>
+
+   <nav class="header flex" style="justify-content: space-between; align-items: center;">
+
+   <div class="flex" style="align-items: center;">
+
+   <a href="/">
+   <Logo class="logo"/>
+   <span>CiteDrive</span>
+   </a>
+
+
+   <span style="font-size: 1rem; border-left: 1px solid black; color: hsl(var(--clr-secondary)); padding-left: 1rem;">Docs</span>
+   
+   
+   </div>
+
+
+   <MobileMenu doc={true} client:load>
+      <h3 style="margin-bottom: 2rem">In this Doc</h3>
+      <ReactAccordion label="Quick Start" isOpen={true} client:load>
+         <ul class="list" >
+            {QUICKSTART.map((doc) => (
+            <li>
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+
+      </ReactAccordion>
+
+       <ReactAccordion label="Add References" isOpen={true} client:load>
+     
+         <ul class="list" >
+            {ADDREFERENCES.map((doc) => (
+            <li>
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+
+      </ReactAccordion>
+      
+      <ReactAccordion label="Overleaf Setup" isOpen={true} client:load>
+
+         <ul class="list" >
+            {OVERLEAFSETUP.map((doc) => (
+            <li>
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+
+      </ReactAccordion>
+      
+      <ReactAccordion label="Howtos" isOpen={true} client:load>
+
+         <ul class="list" >
+            {HOWTOS.map((doc) => (
+            <li>
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+
+      </ReactAccordion>
+
+      <ReactAccordion label="BibTex Basics" isOpen={true} client:load>
+
+         <ul class="list" >
+            {BIBTEX.map((doc) => (
+            <li>
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+
+      </ReactAccordion>
+
+      <ReactAccordion label="BibLaTeX Basics" isOpen={true} client:load>
+
+         <ul class="list" >
+            {BIBLATEX.map((doc) => (
+            <li>
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+
+      </ReactAccordion>
+
+      <ReactAccordion label="Natbib Basics" isOpen={true} client:load>
+
+         <ul class="list" >
+            {NATBIB.map((doc) => (
+            <li>
+               <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
+            </li>
+            ))}
+         </ul>
+         
+      </ReactAccordion>
+   </MobileMenu>
+
+   </nav>
+
+</header>
+
+<style>
+
+  .list {
+	font-size: 14px;
+	list-style: none;
+   }
+
+   .link {
+	display: block;
+	padding: .2rem 0;
+	padding-left: 1rem;
+	color: hsl(var(--clr-light-text));
+	border-left: 1px solid rgb(177, 177, 177);
+   }
+
+   .link:hover {
+	color: hsl(var(--clr-secondary));
+	border-left: 1px solid hsl(var(--clr-secondary));
+   }
+
+</style>

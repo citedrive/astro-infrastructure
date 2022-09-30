@@ -7,6 +7,14 @@ This file holds all Custom Properties to keep our Theme consistent:
 
 /* Fonts */
 
+::selection {
+	background: #ffb7b7;
+	color: #212121;
+  }
+::-moz-selection {
+	background: #ffb7b7;
+}
+
 :root {
 
 	/* Fonts */
@@ -39,10 +47,14 @@ This file holds all Custom Properties to keep our Theme consistent:
 	--clr-background-light-top: 270 8.3% 90.6%;
 	--clr-background-light-middle: 53 100.0% 98.4%;
 	--clr-background-light-bottom: 45 1.6% 49.4%;
-	--clr-light-heading: 246 43.7% 13.9%;
-	--clr-light-text: 246 43.7% 13.9%;
+	/* --clr-light-heading: 246 43.7% 13.9%; */
+	--clr-light-heading: 0 100% 86%;
+	/* --clr-light-text: 246 43.7% 13.9%; */
+	--clr-light-text: 240 100% 7%;
 	--clr-primary: 171 66.5% 37.5%;
 	--clr-secondary: 247 100.0% 70.2%;
+
+	-webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 
 
 /* Dark Theme Theme */

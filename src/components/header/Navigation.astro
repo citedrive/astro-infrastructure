@@ -5,22 +5,26 @@ import ReactDropdown from "../Dropdown/ReactDropdown.tsx";
 ---
 
 
-    <ul class="flex" style="list-style: none; padding-left: 65px; --gap: 2rem;">
-        <ReactDropdown label="Features" client:load></ReactDropdown>
-        <ReactDropdown label="Integrations" client:load>
+    <ul class="flex hidden" style="list-style: none; --gap: 2rem; margin-right: 2rem; align-items: center;">
+        <!-- <ReactDropdown label="Features" client:load></ReactDropdown> -->
+        <!-- <ReactDropdown label="Integrations" client:load>
             <ul class="grid" style="list-style: none; padding: 0">
                 <li><a href="/">Overleaf</a></li>
                 <li><a href="/">RStudio</a></li>
             </ul>
-        </ReactDropdown>
-        <ReactDropdown label="Resources" client:load>
+        </ReactDropdown> -->
+        <li><a class="header-link" href="/overleaf/">Overleaf Integration</a></li>
+        <li><a class="header-link" href="/docs/quick-start/">Documentation</a></li>
+        <li><a class="header-link" href="/blog/">Blog</a></li>
+
+        <!-- <ReactDropdown label="Resources" client:load>
             <ul class="grid" style="list-style: none; padding: 0">
                 <li><a href="/docs/quick-start/">Documentaion</a></li>
                 <li><a href="/blog/">Blog</a></li>
             </ul>
-        </ReactDropdown>
-        <li><a class="header-link" href="#">Pricing</a></li>
-        <li><a class="header-link" href="/design-system/">Design System</a></li>
+        </ReactDropdown> -->
+
+        <!-- <li><a class="header-link" href="#">Pricing</a></li> -->
     </ul>
 
 
@@ -28,16 +32,12 @@ import ReactDropdown from "../Dropdown/ReactDropdown.tsx";
 
     .header-link {
         color: hsl(var( --clr-light-text));
+        transition: .5s;
     }
 
-    /* .header-link:hover {
-        color: hsl(var(--clr-light-text, 0.1))
-    } */
-
-    /* .main-nav-ul li:not(:first-child) {
-        margin-left: .5rem;
-    } */
-
+    .header-link:hover {
+        color: rgb(121, 128, 219);
+    }
 
 </style>
 

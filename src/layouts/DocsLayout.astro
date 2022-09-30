@@ -4,24 +4,38 @@ const { title, lang, dir, frontmatter, headings } = Astro.props;
 import RightSidebar from '../components/docs/RightSidebar.astro';
 import LeftSidebar from '../components/docs/LeftSidebar.astro';
 import '../styles/markdown.css';
+import ReactAccordion from '../components/Accordion/ReactAccordion';
 ---
 
-<BaseLayout>
+<BaseLayout doc={true}>
 
    <div>
 
-   <section class="docs">
-      <aside class="leftSideBar">
+   <section class="grid">
+
+      <aside class="left" style="position: fixed;">
+         <h4 style="margin-bottom: 1rem; font-weight: 500; color: hsl(var(--clr-secondary));;">In this doc</h4>
+         <div class="leftSideBar">
          <LeftSidebar lang={lang ?? frontmatter.lang} />
+         </div>
       </aside>
       
       <article class="article" >
-         <div class= "test">
+         <div class="mobileAnchor">
+               <ReactAccordion label="On this page" isOpen={true} client:load>
+                  <div style="margin-top: .75rem;">
+                     <RightSidebar headings={headings} githubEditUrl={"githubEditUrl"} />
+                  </div>
+               </ReactAccordion>
+            </div>
+
+         <div>
             <slot />
          </div>
       </article>
 
       <aside class="rightSidebar">
+         <h4>On this page</h4>
          <RightSidebar headings={headings} githubEditUrl={"githubEditUrl"} />
       </aside>
 
@@ -34,59 +48,62 @@ import '../styles/markdown.css';
 
 <style>
 
-@media only screen and (min-width: 1028px) {
-   .docs {
-   display: grid;
-   box-sizing: border-box;
-   grid-template: "sb main al" / 390px 1fr 290px;
- }
+.left {
+   display: none;
+}
+
+.rightSidebar{
+    display: none;
+}
+
+.mobileAnchor {
+   margin-bottom: 2rem;
 }
 
 
-   @media only screen and (min-width: 1028px) {
+.article{
+   padding-inline: 1rem;
+   margin-inline: auto;
+   width: 100%;
+   max-width: 75ch;
+}
+
+@media only screen and (min-width: 1280px) {
+
+   .grid {
+      display: grid;
+      box-sizing: border-box;
+      grid-template: "sb main ab" / 260px 1fr 300px;
+      padding-inline: 2rem;
+   }
+
+   .article {
+      grid-area: main;
+      margin-top: 2rem;
+      
+   }
+
+   .left {
+      display: block;
+   }
+
    .leftSideBar{
-   display: block;
-   position: fixed;
-   width: 390px;
-   /* padding: 1rem; */
-   overflow-x: hidden;
-   height: calc(100vh - 120px);
+      overflow-x: hidden;
+      width: 260px;
+      height: calc(100vh - 120px);
    }
- }
 
-    @media only screen and (max-width: 1028px) {
-    .leftSideBar{
-    display: none;
-    }
-  }
-
-
-   .article{
-   grid-area: main / main / main / main;
-    margin: 0px auto;
-
-   }
-    @media only screen and (min-width: 1028px) {
-   .test{
-   max-width: 800px;
-   }
-}
-
-
-@media only screen and (min-width: 1028px) {
    .rightSidebar{
-    width: 290px;
-    left: unset;
-    right: 0px;
-    display: block;
-    position: fixed;
+      width: 300px;
+      display: block;
+      position: fixed;
+      right: 1rem;
    }
 
-}
-    @media only screen and (max-width: 1028px) {
-    .rightSidebar{
-    display: none;
-    }
+   .mobileAnchor {
+      display: none;
   }
+
+}
 
 </style>

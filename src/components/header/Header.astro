@@ -2,9 +2,10 @@
 // import '../../styles/theme.css';
 // import '../../styles/index.css';
 // import SEO from "./SEO.astro"
+import MobileMenu from "../MobileMenu/MobileMenu";
 import Logo from "./Logo.astro"
 import Navigation from "./Navigation.astro";
-const { title, lang, dir, blog } = Astro.props;
+const { title, lang, dir, site, doc, blog } = Astro.props;
 ---
 <header>
 
@@ -19,60 +20,24 @@ const { title, lang, dir, blog } = Astro.props;
    {blog && 
    <span style="font-size: 1rem; border-left: 1px solid black; color: hsl(var(--clr-secondary)); padding-left: 1rem;">Blog</span>
    }
-   
+
    </div>
+
+   <div class="flex" style="--gap: 0">
 
    <Navigation />
 
-   <ul class="flex pill" style="--gap: 0">
+   <ul class="flex pill hidden" style="--gap: 0">
       <li><a href="">Sign-in</a></li>
       <li><a href="">Log-in</a></li>
    </ul>
+
+   </div>
+
+   <MobileMenu site={true} client:load>
+   </MobileMenu>
 
    </nav>
 
 </header>
 
-<style>
-   .header {
-      padding: 1rem 4rem;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 9999;
-      width: 100%;
-
-      /* background-color: hsl(var(--clr-background-light-top)); */
-   }
-
-   .logo {
-      width: 36px;
-   } 
-
-   .pill {
-      list-style: none;
-      padding: 0;
-      border: 1px solid black;
-      border-radius: 100vw;
-   }
-
-   .pill li:first-child {
-      border-right: 1px solid black;
-   }
-
-   .pill li:last-child {
-      background-color: hsl(var(--clr-secondary));
-      border-radius: 100vw;
-   }
-
-    .pill li:last-child > a {
-      color: white;
-      padding: .5rem 1rem;
-   }
-
-   .pill li:last-child:hover {
-      background-color: red;
-      border-radius: 100vw;
-
-   }
-</style>

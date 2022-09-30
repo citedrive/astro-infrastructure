@@ -3,55 +3,51 @@ import Accordion from '../components/Accordion/Accordion.astro';
 import CTA from '../components/CTA.astro';
 import FeatureListItem from '../components/FeatureList/FeatureListItem.astro';
 import InternalLink from '../components/InternalLink.astro';
-import Layout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/index.css';
 import '../styles/theme.css';
+import json from '../JSON/index.en.json';
 
-// const data = await fetch('https://example.com/movies.json').then((response) =>
-//   response.json()
-// );
+// const testimonials =[
+//    {
+//       "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+//       "author":"Josh (Standford)"
+//    },
+//    {
+//       "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+//       "author":"gosh (MIT)"
+//    },
+//     {
+//        "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+//        "author":"Josh (Standford)"
+//     },
+//     {
+//        "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+//        "author":"gosh (MIT)"
+//     },
+//      {
+//         "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+//         "author":"Josh (Standford)"
+//      },
+//      {
+//         "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+//         "author":"gosh (MIT)"
+//      },
 
-const testimonials =[
-   {
-      "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-      "author":"Josh (Standford)"
-   },
-   {
-      "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-      "author":"gosh (MIT)"
-   },
-    {
-       "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-       "author":"Josh (Standford)"
-    },
-    {
-       "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-       "author":"gosh (MIT)"
-    },
-     {
-        "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        "author":"Josh (Standford)"
-     },
-     {
-        "feedback":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        "author":"gosh (MIT)"
-     },
-
-]
+// ]
 
 ---
 
-<Layout title="Welcome to CiteDrive" lang="en">
+<BaseLayout title="Welcome to CiteDrive" lang="en" site>
 
    <div class="container grid" style="--gap: 5rem; margin-bottom: 5rem;"> 
 
    <section class="grid" style="place-items: center;">
       <div class="grid" style="place-items: center; --gap: 22px">
       <i class="eyebrow">Add Eyebrow</i>
-      <h1 class="h1-landing letter-spacing-h1 letter-spacing-text" style="line-height: 100%">Pipeline Your Research Data</h1>
-      <p class="subtitle-landing-page" style="text-align: center; max-width: 66ch;">Keep your references and teams organized in projects with the world's most straightforward BibTeX reference management tool. Built from the ground up to stay out of your way and help you focus on writing.
-      </p>
-      <CTA label="LET's .bib YOUR FIRST PROJECT" />
+      <h1 class="h1-landing letter-spacing-h1 letter-spacing-text" style="margin-bottom: 0 !important;">{json.hero.heroTitle}</h1>
+      <p class="subtitle-landing-page" style="margin-bottom: 0 !important; max-width: 66ch;">{json.hero.heroSubtitle}</p>
+      <CTA label={json.hero.heroBtn} />
       <p><InternalLink link="#" label="Overleaf"></InternalLink>, <InternalLink link="#" label="RStudio"></InternalLink> and <InternalLink link="#" label="Quarto"></InternalLink> are great options for getting started.</p>
       </div>
    </section>
@@ -78,6 +74,7 @@ const testimonials =[
    </p>
    -->
    </div>
+   
 
    <div>
 
@@ -87,6 +84,7 @@ const testimonials =[
       text="Use the CiteDrive Companion browser add-on to seamlessly collect references as you conduct research across popular platforms including Google Scholar and Pubmed, or even non-DOI websites– all without leaving the page." 
       link="https://chrome.google.com/webstore/detail/citedrive-bibtex-companio/gmmonfphegngpcbcapfbgembkjeookik"
       linklabel="CiteDrive Companion for Chrome"
+      icon="../../public/assets/Decoration/SVG/Quote.svg"
    />
 
    <FeatureListItem 
@@ -94,35 +92,41 @@ const testimonials =[
       text="CiteDrive links with Overleaf and RStudio seamlessly. When you or your teammates alter your project, the BiBTeX .bib file will automatically update your bibliography in your Overleaf or RStudio project if you use CiteDrive to manage it." 
       link="#"
       linklabel="Get started with Overleaf"
+      icon="../../public/assets/Decoration/SVG/Connect.svg"
    />
 
     <FeatureListItem 
       title="Compose in your Browser" 
       text="Access your project from any browser. No more software to install, licenses to track, or clunky upgrades. You can make changes on the go, collaborate with team members in real time, and never worry about losing your work." 
+      icon="../../public/assets/Decoration/SVG/Browser.svg"
    />
 
    <FeatureListItem 
       title="Collaborate Seamlessly" 
       text="Add collaborators to your CiteDrive project with a couple of clicks. Collect references, revise and generate citations together and stop sharing stale bibliography files and databases." 
+      icon="../../public/assets/Decoration/SVG/Collab.svg"
    />
 
     <FeatureListItem 
       title="BibTeX empowered" 
       text="Do you keep your bibliography in a big text file? If that’s the case, CiteDrive is for you, with a user interface to go alongside it. We didn’t build CiteDrive as an afterthought for BibTeX users; we built it with them in mind." 
+      icon="../../public/assets/Decoration/SVG/Bib.svg"
    />
 
     <FeatureListItem 
       title="Customize" 
       text="Want to leverage extended BibLaTeX or your OWN? bespoke fields? Customize your BibTeX code as you see fit while collecting and editing references, rather than BibTeX support as an afterthought. With our in-built editor, you handle your bibliography, not with opinionated forms." 
+      icon="../../public/assets/Decoration/SVG/Edit.svg"
    />
 
    <FeatureListItem 
       radius="radius-bottom"
       title="Control and Error-Handling" 
       text="CiteDrive will notify you if your format is erroneous and there are duplicate papers so that you can collaborate without interfering with one another." 
+      icon="../../public/assets/Decoration/SVG/Error.svg"
    />
 
-   </div>
+   </div> 
    
    </section>
 
@@ -137,7 +141,7 @@ const testimonials =[
 </div>
 
 
-</Layout>
+</BaseLayout>
 
 
 <style>

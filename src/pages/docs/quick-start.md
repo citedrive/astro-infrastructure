@@ -13,7 +13,8 @@ We built CiteDrive from the ground up with a relentless focus on simplicity-- to
 
 ## Create a Project
 
-Once you’ve [signed up for a CiteDrive account](https://app.citedrive.com/sign-up), begin by creating your first project. CiteDrive supports a few flavors of projects including BibTex, Overleaf and R-Markdown, as well as a Standard project type. Choose the flavor that is best suited to where you ultimately intend to write and edit your paper.
+Once you’ve [signed up for a CiteDrive account](https://app.citedrive.com/sign-up),
+begin by creating your first project. CiteDrive supports a few flavors of projects including BibTex, Overleaf and R-Markdown, as well as a Standard project type. Choose the flavor that is best suited to where you ultimately intend to write and edit your paper.
 
 ![](/assets/create-citedrive-project.png)
 

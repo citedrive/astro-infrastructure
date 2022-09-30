@@ -12,7 +12,7 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 7.5rem;
+	scroll-padding-top: 6.5rem;
 }
 
 body,
@@ -32,14 +32,14 @@ ul {
 
 /* Unnecessary? */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1 {
 	font-weight: 400;
+}
+
+h3 {
+	font-weight: 500;
+	line-height: 1rem;
+	margin-bottom: 1rem;
 }
 
 a {
@@ -108,7 +108,7 @@ select {
 
 .container {
 	margin-inline: auto;
-	padding-inline: 2em;
+	padding-inline: 1rem;
 	max-width: 80rem; /* Or Custom Prop? */
 }
 
@@ -221,8 +221,11 @@ select {
 }
 
 .h1-landing {
-	font-size: 3.5rem;
+	font-size: clamp(3rem, 5vw, 4rem);
 	font-family: var(--ff-h1);
+	line-height: 3.5rem;
+	text-align: center;
+	font-weight: 400;
 }
 
 .h2 {
@@ -236,6 +239,7 @@ select {
 	font-size: 1rem;
 	font-family: var(--ff-body);
 	font-weight: 400;
+	text-align: center;
 }
 
 .subtitle-blog-doc {
@@ -282,13 +286,88 @@ select {
 	margin-bottom: 1rem; 
 } */
 
+.hidden {
+	display: none;
+ }
+
+ @media only screen and (min-width: 1280px) {
+  .hidden {
+	display: flex;
+  }
+}
+
 /* End Utility Classes */
 
 
 
+/* Shared Style */
 
+.header {
 
+	padding: 1rem 1rem;
+	/* position: fixed; */
+	top: 0;
+	left: 0;
+	z-index: 8999;
+	width: 100%;
+	/* background-color: hsl(var(--clr-background-light-top));
+	background-color: white; */
+ }
 
+ @media only screen and (min-width: 1280px) {
+	.header {
+		padding: 1rem 2rem;
+	}
+  }
+
+ .logo {
+	width: 36px;
+ } 
+
+ .pill {
+	list-style: none;
+	padding: 0;
+	border: 1px solid rgb(49, 49, 49);
+	border-radius: 100vw;
+	width: 202px;
+ }
+
+ .pill li {
+	 cursor: pointer;
+	 display: grid;
+	 place-items: center;
+ }
+
+ .pill li a {
+	width: 100px;
+	padding: .5rem 1rem;
+	text-align: center;
+}
+
+ .pill li:first-child {
+	border-right: 1px solid rgb(49, 49, 49);
+	width: 100px;
+	color: hsl( var( --clr-light-text ));
+ }
+
+ .pill li:first-child > a {
+	color: hsl( var( --clr-light-text ));
+ }
+
+ .pill li:last-child {
+	background-color: hsl(var(--clr-secondary));
+	border-radius: 0 100vw 100vw 0;
+	width: 100px;
+	transition: .5s;
+ }
+
+  .pill li:last-child > a {
+	color: white;
+ }
+
+ /* .pill li:last-child:hover {
+	background-color: rgb(141, 100, 187);
+ } */
 
 
 

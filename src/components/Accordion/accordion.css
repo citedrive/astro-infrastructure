@@ -7,7 +7,7 @@
 }
 
 .react-accordion-content {
-    margin-left: 28px;
+    margin-left: 7.5px;
     max-height: 0;
     overflow: hidden;  
     transition: .3s;
@@ -26,15 +26,23 @@
     color: hsl(var(--clr-secondary));
  }
 
-.react-accordion h3::before {
+/* .react-accordion h3::before {
     content: url(../../../assets/Decoration/DownArrow.svg);
     display: inline-block;
     width: 14px;
     margin-right: 12px;
     rotate: -90deg;
-}
+} */
 
 .react-accordion-label {
     font-size: 1rem;
     font-weight: 500;
+}
+
+.arrow {
+    transition: .4s;
+}
+
+.accordion-closed {
+    rotate: -90deg;
 }
