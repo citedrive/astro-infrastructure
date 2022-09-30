@@ -4,6 +4,7 @@ import DocHeader from '../components/header/DocHeader.astro';
 import BlogHeader from '../components/header/BlogHeader.astro';
 import Footer from '../components/footer/Footer.astro';
 import CookieConsent from '../components/CookieConsent.astro';
+import { SITE } from "../config.ts"
 import '../styles/index.css';
 import '../styles/theme.css';
 interface Props {
@@ -20,28 +21,27 @@ interface Props {
 //   schemaBlog?: object;
 //   schemaBlogPost?: object;
 }
-const { title, lang, dir, desc, type, frontmatter, headings, site, doc, blog } = Astro.props;
+const { title, lang, dir, description, type, frontmatter, headings, site, doc, blog } = Astro.props;
 ---
 
-<html lang={Astro.props.lang}>
-
+<html lang={lang}>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Komponente ja oder nein? -->
 
-    <title>{Astro.props.title}</title>
-    <meta name="description" content={desc} />
+
+    <title>{title} | CiteDrive - Citation and Bibliographic management for Overleaf and RStudio</title>
+    <meta name="description" content={description} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={desc} />
+    <meta property="og:description" content={description} />
     <meta property="og:type" content={type} />
     <meta property="twitter:card" content={type} />
     <meta property="twitter:site" content="CiteDrive" />
-    <meta property="twitter:description" content={desc} />
+    <meta property="twitter:description" content={description} />
     <meta property="twitter:title" content={title} />
-
+    <link rel="canonical" href={SITE.url + Astro.url.pathname} />
     <!-- import fonts here -->
 
 </head>

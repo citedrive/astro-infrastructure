@@ -17,9 +17,8 @@ interface Props {
 }
 const { title, lang, dir, desc, type, frontmatter, headings } = Astro.props;
 ---
+<BaseLayout title={frontmatter.title} lang={frontmatter.lang} description={frontmatter.description} blog={true}>
 
-<BaseLayout blog={true}>
-   
    <div>
 
       <section class="grid">
@@ -39,7 +38,7 @@ const { title, lang, dir, desc, type, frontmatter, headings } = Astro.props;
                   <ReactAccordion label="On this page" isOpen={true} client:load>
                      <div style="margin-top: .75rem;">
                         <RightSidebar headings={headings} githubEditUrl={"githubEditUrl"} />
-                     </div>               
+                     </div>
                   </ReactAccordion>
                </div>
 

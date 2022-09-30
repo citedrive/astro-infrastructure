@@ -7,7 +7,7 @@ import '../styles/markdown.css';
 import ReactAccordion from '../components/Accordion/ReactAccordion';
 ---
 
-<BaseLayout doc={true}>
+<BaseLayout title={frontmatter.title} description={frontmatter.description}  lang={frontmatter.lang} doc={true}>
 
    <div>
 
@@ -19,7 +19,7 @@ import ReactAccordion from '../components/Accordion/ReactAccordion';
          <LeftSidebar lang={lang ?? frontmatter.lang} />
          </div>
       </aside>
-      
+
       <article class="article" >
          <div class="mobileAnchor">
                <ReactAccordion label="On this page" isOpen={true} client:load>
@@ -80,7 +80,7 @@ import ReactAccordion from '../components/Accordion/ReactAccordion';
    .article {
       grid-area: main;
       margin-top: 2rem;
-      
+
    }
 
    .left {
