@@ -50,7 +50,7 @@ const MobileMenuInner = () => {
         variants={container}
         initial="hidden"
         animate="visible">
-            <m.li className='mm-list-item' variants={item}><a href="">Overleaf Integration</a></m.li>
+            <m.li className='mm-list-item' variants={item}><a href="/overleaf/">Overleaf Integration</a></m.li>
             <m.li className='mm-list-item' variants={item}><a href="/docs/quick-start/">Documentation</a></m.li>
             <m.li className='mm-list-item' variants={item}><a href="/blog/">Blog</a></m.li>
         </m.ul>

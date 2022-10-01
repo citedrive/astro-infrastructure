@@ -10,9 +10,10 @@ const { label, link } = Astro.props;
     cursor: pointer;
     color: hsl(var(--clr-secondary));
     z-index: 1;
+    position: relative;
 }
 
-.internal-link:after {
+.internal-link::after {
     content: "";
     width: 100%;
     position: absolute;
@@ -26,13 +27,10 @@ const { label, link } = Astro.props;
     transition: transform .4s;
 }
 
-.internal-link:hover:after {
+.internal-link:hover::after {
     background-color: hsl(var(--clr-secondary));
     transform-origin: bottom left;
     transform: scaleX(1);
 }
 
-.internal-link:active {
-    opacity: .75;
-}
 </style>

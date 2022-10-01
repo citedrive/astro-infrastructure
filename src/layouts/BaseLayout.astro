@@ -3,7 +3,7 @@ import Header from '../components/header/Header.astro';
 import DocHeader from '../components/header/DocHeader.astro';
 import BlogHeader from '../components/header/BlogHeader.astro';
 import Footer from '../components/footer/Footer.astro';
-import CookieConsent from '../components/CookieConsent.astro';
+// import CookieConsent from '../components/CookieConsent.astro';
 import { SITE } from "../config.ts"
 import '../styles/index.css';
 import '../styles/theme.css';
@@ -52,10 +52,12 @@ const { title, lang, dir, description, type, frontmatter, headings, site, doc, b
 {doc && <DocHeader />}
 {blog && <BlogHeader />}
 
- <main style="margin-top: 3.5rem">
+ <main style="margin-top: 6.5rem">
             <slot />
             <!-- <CookieConsent /> -->
 </main>
+{site && <Footer />}
+{blog && <Footer />}
 </>
 </body>
 </html>

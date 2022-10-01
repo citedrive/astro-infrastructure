@@ -303,9 +303,21 @@ select {
 /* Shared Style */
 
 .header {
-
+	transition: 1s;
 	padding: 1rem 1rem;
-	/* position: fixed; */
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 8999;
+	width: 100%;
+	/* background-color: hsl(var(--clr-background-light-top));
+	background-color: white; */
+ }
+
+ .alternative-header {
+	transition: 1s;
+	padding: 1rem 1rem;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 8999;
@@ -315,10 +327,14 @@ select {
  }
 
  @media only screen and (min-width: 1280px) {
-	.header {
+
+.header {
 		padding: 1rem 2rem;
 	}
-  }
+.alternative-header {
+	padding: 1rem 2rem;
+	}
+}
 
  .logo {
 	width: 36px;

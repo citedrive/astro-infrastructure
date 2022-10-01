@@ -39,28 +39,20 @@ const NATBIB = docs.filter(function(item){
 })
 
 ---
-<header>
+<header >
 
-   <nav class="header flex" style="justify-content: space-between; align-items: center;">
+   <nav class="alternative-header flex" style="justify-content: space-between; align-items: center;">
 
    <div class="flex" style="align-items: center;">
-
-   <a href="/">
-   <Logo class="logo"/>
-   <span>CiteDrive</span>
-   </a>
-
-
-   <span style="font-size: 1rem; border-left: 1px solid black; color: hsl(var(--clr-secondary)); padding-left: 1rem;">Docs</span>
-   
-   
+   <Logo/>
+   <span style="font-size: 1rem; border-left: 1px solid black; color: hsl(var(--clr-secondary)); padding-left: 1rem;">Documentation</span>
    </div>
 
 
    <MobileMenu doc={true} client:load>
       <h3 style="margin-bottom: 2rem">In this Doc</h3>
       <ReactAccordion label="Quick Start" isOpen={true} client:load>
-         <ul class="list" >
+         <ul class="list">
             {QUICKSTART.map((doc) => (
             <li>
                <a class="link" href={doc.url}>{doc.frontmatter.side}</a>
@@ -152,6 +144,7 @@ const NATBIB = docs.filter(function(item){
   .list {
 	font-size: 14px;
 	list-style: none;
+   margin-top: .5rem;
    }
 
    .link {
@@ -167,4 +160,28 @@ const NATBIB = docs.filter(function(item){
 	border-left: 1px solid hsl(var(--clr-secondary));
    }
 
+
+
+.bg-white {
+      background-color: white;
+   }
+
+
+
+
 </style>
+
+<script>
+
+const header = document.querySelector('.alternative-header');
+
+const handleScroll = () => {
+   if (window.pageYOffset > 100 && window.innerWidth < 1028) {
+      header.classList.add('bg-white');
+   } else if (window.pageYOffset === 0) {
+      header.classList.remove('bg-white');
+   }
+}
+
+window.addEventListener('scroll', handleScroll);
+</script>

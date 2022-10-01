@@ -13,9 +13,9 @@ const { title, lang, dir, site, doc, blog } = Astro.props;
 
    <div class="flex" style="align-items: center;">
 
-   <a href="/">
+
    <Logo class="logo"/>
-   </a>
+
 
    {blog && 
    <span style="font-size: 1rem; border-left: 1px solid black; color: hsl(var(--clr-secondary)); padding-left: 1rem;">Blog</span>
@@ -28,8 +28,8 @@ const { title, lang, dir, site, doc, blog } = Astro.props;
    <Navigation />
 
    <ul class="flex pill hidden" style="--gap: 0">
-      <li><a href="">Sign-in</a></li>
-      <li><a href="">Log-in</a></li>
+      <li><a href="https://app.citedrive.com/">Sign-in</a></li>
+      <li><a href="https://app.citedrive.com/sign-up/">Log-in</a></li>
    </ul>
 
    </div>
@@ -41,3 +41,25 @@ const { title, lang, dir, site, doc, blog } = Astro.props;
 
 </header>
 
+<style>
+
+   .bg-white {
+      background-color: white;
+   }
+
+</style>
+
+<script>
+
+const header = document.querySelector('.header');
+
+const handleScroll = () => {
+   if (window.pageYOffset > 100) {
+      header.classList.add('bg-white');
+   } else if (window.pageYOffset === 0) {
+      header.classList.remove('bg-white');
+   }
+}
+
+window.addEventListener('scroll', handleScroll);
+</script>

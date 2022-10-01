@@ -9,16 +9,12 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 ---
 <header>
 
-   <nav class="header flex" style="justify-content: space-between; align-items: center;">
+   <nav class="alternative-header flex" style="justify-content: space-between; align-items: center;">
 
    <div class="flex" style="align-items: center;">
 
-   <a href="/">
-   <Logo class="logo"/>
-   <span>CiteDrive</span>
-   </a>
 
-
+   <Logo/>
    <span style="font-size: 1rem; border-left: 1px solid black; color: hsl(var(--clr-secondary)); padding-left: 1rem;">Blog</span>
    
    
@@ -75,6 +71,10 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.bg-white {
+      background-color: white;
+   }
 </style>
 
 <script>
@@ -88,5 +88,21 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 			link.style.borderLeft = '1px solid hsl(var(--clr-secondary))';
 		}
 	});
+
+
+
+    const header = document.querySelector('.alternative-header');
+
+        const handleScroll = () => {
+        if (window.pageYOffset > 100 && window.innerWidth < 1028) {
+            header.classList.add('bg-white');
+        } else if (window.pageYOffset === 0) {
+            header.classList.remove('bg-white');
+        }
+        }
+
+window.addEventListener('scroll', handleScroll);
+
+    
 
 </script>

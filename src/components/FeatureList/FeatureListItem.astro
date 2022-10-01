@@ -9,13 +9,16 @@ export interface Props {
   // map array
   link?: string;
   linklabel?: string;
+  hasMargin?: boolean;
 }
 
-const { icon, radius, title, text, link, linklabel } = Astro.props
+const { icon, radius, title, text, link, linklabel, hasMargin } = Astro.props
 
 ---
 
-<div class="flex" style="--gap: 0">
+
+
+<div class="flex" style="--gap: 0;">
 
       <div class={`icon-pipe ${Astro.props.radius}`}>
          <div class="circle grid" style="place-items: center;">
@@ -30,16 +33,21 @@ const { icon, radius, title, text, link, linklabel } = Astro.props
          <p class="fs-body-sm">{Astro.props.text}</p>
          </div>
 
-         <div class="bullet-points">
-         <ul style="margin: 0; padding-left: 2rem;">
+         <div class={hasMargin ? "bullet-points item-margin" : "bullet-points"}>
+         <div>
+         <slot />
+         <!-- <ul style="margin: 0; padding-left: 2rem;">
             <li><InternalLink link={Astro.props.link}  label={Astro.props.linklabel}></InternalLink></li>
             <li><InternalLink link={Astro.props.link}  label={Astro.props.linklabel}>Get started with RStudio</InternalLink></li>
-         </ul>
+         </ul> -->
+         </div>
          </div>
 
       </div>
 
     </div>
+
+ 
 
 <style>
 
@@ -63,6 +71,10 @@ const { icon, radius, title, text, link, linklabel } = Astro.props
    border-bottom-right-radius: 90px;
 }
 
+.item-margin {
+   height: 200px;
+}
+
 .circle {
    width: 60px;
    height: 60px;
@@ -72,11 +84,7 @@ const { icon, radius, title, text, link, linklabel } = Astro.props
 
 .bullet-points {
    grid-area: bp;
-   padding-bottom: 5.5rem;
-}
-
-.bullet-points:not(:last-child) {
-   padding-bottom: 5.5rem;
+   padding-left: 2rem;
 }
 
 .inner-feature-grid {
@@ -109,24 +117,20 @@ const { icon, radius, title, text, link, linklabel } = Astro.props
       border-radius: 100vw;
    }
 
-.bullet-points {
-   grid-area: bp;
-   border-left: 1px solid hsl(var(--clr-light-text));
-   padding-left: 1rem;
-   padding-bottom: 12.5rem;
-}
-
-
-.bullet-points:not(:last-child) {
-   padding-bottom: 12.5rem;
-}
-
-
-.inner-feature-grid {
-   grid-template-columns: repeat(8, 1fr);
-   grid-template-areas: ". t t t . bp bp bp";
+   .item-margin {
+      height: 300px;
    }
-}
+
+   .bullet-points {
+      grid-area: bp;
+      border-left: 1px solid hsl(var(--clr-light-text));
+   }
+
+   .inner-feature-grid {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-areas: ". t t t . bp bp bp";
+      }
+   }
 
 
 </style>

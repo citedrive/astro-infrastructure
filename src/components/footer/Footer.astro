@@ -1,21 +1,104 @@
 ---
+import InternalLink from '../InternalLink.astro';
 import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from '../utils/languages';
 import LanguageSelect from './LanguageSelect';
 const {  lang } = Astro.props;
 //	{KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
 ---
 
-  <footer class="footer">
-      CiteDrive, INC
+  <footer style="background-color: white;">
+
+  <div class="container grid footer-grid">
+
+  <div class="grid">
+
+    <div>
+    <h4>CiteDrive Companion</h4>
+    <ul class="footer-list">
+      <li><InternalLink link="https://chrome.google.com/webstore/detail/citedrive-bibtex-companio/gmmonfphegngpcbcapfbgembkjeookik" label="CiteDrive Companion for Chrome" /></li>
+      <li><InternalLink link="https://addons.mozilla.org/af/firefox/addon/citedrive-companion/" label="CiteDrive Companion for Firefox" label="CiteDrive Companion for Firefox" /></li>
+      <li><InternalLink link="https://microsoftedge.microsoft.com/addons/detail/citedrive-bibtex-compan/kpmepfpbjehnlgfbcnbmgihklkkmfnpo" label="CiteDrive Companion for Edge" /></li>
+    </ul>
+    </div>
+
+    <div>
+    <h4>Resources</h4>
+    <ul class="footer-list">
+      <li><InternalLink link="/docs/quick-start/" label="Documentation" /></li>
+      <li><InternalLink link="/blog/" label="Blog" /></li>
+    </ul>
+    </div>
+
+
+    <div>
+    <h4>Featured</h4>
+    <ul class="footer-list">
+       <li><InternalLink link="/citedrive-recommends/" label="CiteDrive Recomends" /></li>
+    </ul>
+    </div>
+
+  </div>
+
+  <div class="grid">
+
+    <div>
+    <h4>Follow us</h4>
+    <ul class="footer-list">
+      <li><InternalLink link="https://twitter.com/CiteDrive" label="Twitter" /></li>
+      <li><InternalLink link="https://www.youtube.com/channel/UC3ouAJ9bMVs4wti5cRUd9ag" label="Youtube" /></li>
+    </ul>
+    </div>
+
+
+    <div>
+    <h4>Feedback</h4>
+    <ul class="footer-list">
+      <li><a class="email-link" href="mailto:hello@citedrive.com">hello@citedrive.com</a></li>
+    </ul>
+    </div>
+
+  </div>
+
+  <div class="grid">
+
+    <div>
+    <h4>Legal</h4>
+    <ul class="footer-list">
+      <li><InternalLink link="/terms-and-conditions/" label="Terms and Conditions" /></li>
+      <li><InternalLink link="/privacy-policy/" label="Privacy Policy" /></li>
+    </ul>
+    </div>
+
+  </div>
+  </div>      
+    <span style="display: inline-block; margin-bottom: 1rem; width: 100%; text-align: center;">© 2022 CiteDrive. All rights reserved.</span>
   </footer>
 
 
 <style>
-  .footer{
-  background: rgb(255, 255, 255);
-  padding: 4rem;
-  height: calc(520px - 5rem);
-  color: rgb(0, 0, 0);
-}
+  .footer-grid{
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    </style>
+  .column {
+
+  }
+
+  .footer-list {
+    list-style: none;
+  }
+
+  .email-link {
+    text-decoration: underline;
+    color: hsl(var(--clr-background-dark));
+  }
+
+  @media only screen and (min-width: 1028px) {
+    .footer-grid{
+      padding: 2rem 0;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+</style>
