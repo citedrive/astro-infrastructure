@@ -39,180 +39,168 @@ import json from '../JSON/index.en.json';
 ---
 
 <BaseLayout title="Welcome to CiteDrive" lang="en" site>
-
    <div class="container grid" style="--gap: 5rem; margin-bottom: 5rem;">
-
-   <section class="grid" style="place-items: center;">
-      <div class="grid" style="place-items: center; --gap: 22px">
-      <img width="164px" src="/assets/hero.svg" alt="citedrive-hero-graphic" />
-      <h1 class="h1-landing letter-spacing-h1 letter-spacing-text" style="margin-bottom: 0 !important;">{json.hero.heroTitle}</h1>
-      <p class="subtitle-landing-page" style="margin-bottom: 0 !important; max-width: 66ch;">{json.hero.heroSubtitle}</p>
-      <CTA label={json.hero.heroBtn} />
-      <p><InternalLink link="#" label="Overleaf"></InternalLink>, <InternalLink link="#" label="RStudio"></InternalLink> and <InternalLink link="#" label="Quarto"></InternalLink> are great options for getting started.</p>
-      </div>
-   </section>
-
-   <!-- <section class="testimonials">
-      // todo: university list
-      {testimonials.map((testimonial) => (
-      <div>
-         <span>{testimonial.feedback}</span>
-         <span>{testimonial.author}</span>
-      </div>
-      ))}
-   </section> -->
-
-   <section class="video">
-        <img src="assets/theapp.png">
-   </section>
-
-   <section class="features grid">
-
-   <div class="grid" style="place-items: center;">
-   <h2 class="fs-h2 text-accent">Streamline Your Bibliographic Research</h2>
-   <!-- <p style="max-width: 75ch;">CiteDrive streamlines bibliographic management by being laser-focused and reducing clicks and general tedium. We focus on one thing and do it great - not being an “everything for everyone” reference management tool.
-   </p>
-   -->
+      <section class="grid" style="place-items: center;">
+         <div class="grid" style="place-items: center; --gap: 22px">
+            <img width="164px" src="/assets/hero.svg" alt="citedrive-hero-graphic" />
+            <h1 class="h1-landing letter-spacing-h1 letter-spacing-text" style="margin-bottom: 0 !important;">{json.hero.heroTitle}</h1>
+            <p class="subtitle-landing-page" style="margin-bottom: 0 !important; max-width: 66ch;">{json.hero.heroSubtitle}</p>
+            <CTA label={json.hero.heroBtn} />
+            <p>
+               <InternalLink link="overleaf/" label="Overleaf"></InternalLink>
+               ,
+               <InternalLink link="r-markdown/" label="R Markdown"></InternalLink>
+               and
+               <InternalLink link="quarto/" label="Quarto"></InternalLink>
+               are great options for getting started.
+            </p>
+         </div>
+      </section>
+      <!-- <section class="testimonials">
+         // todo: university list
+         {testimonials.map((testimonial) => (
+         <div>
+            <span>{testimonial.feedback}</span>
+            <span>{testimonial.author}</span>
+         </div>
+         ))}
+         </section> -->
+      <section class="video">
+         <img src="assets/theapp.png">
+      </section>
+      <section class="features grid">
+         <div class="grid" style="place-items: center;">
+            <h2 class="fs-h2 text-accent">Streamline Your Bibliographic Research</h2>
+            <!-- <p style="max-width: 75ch;">CiteDrive streamlines bibliographic management by being laser-focused and reducing clicks and general tedium. We focus on one thing and do it great - not being an “everything for everyone” reference management tool.
+               </p>
+               -->
+         </div>
+         <div class="feature-list">
+            <FeatureListItem
+               hasMargin
+               radius="radius-top"
+               title="Cite in Context"
+               text="Use the CiteDrive Companion browser add-on to seamlessly collect references as you conduct research across popular platforms including Google Scholar and Pubmed, or even non-DOI websites– all without leaving the page."
+               link="https://chrome.google.com/webstore/detail/citedrive-bibtex-companio/gmmonfphegngpcbcapfbgembkjeookik"
+               linklabel="CiteDrive Companion for Chrome"
+               icon="assets/Decoration/SVG/Quote.svg"
+               >
+               <ul class="flex" style="flex-direction: column;">
+                  <li>
+                     <InternalLink link="https://chrome.google.com/webstore/detail/citedrive-bibtex-companio/gmmonfphegngpcbcapfbgembkjeookik" label="CiteDrive Companion for Chrome" />
+                  </li>
+                  <li>
+                     <InternalLink link="https://addons.mozilla.org/af/firefox/addon/citedrive-companion/" label="CiteDrive Companion for Firefox" />
+                  </li>
+                  <li>
+                     <InternalLink link="https://microsoftedge.microsoft.com/addons/detail/citedrive-bibtex-compan/kpmepfpbjehnlgfbcnbmgihklkkmfnpo" label="CiteDrive Companion for Edge" />
+                  </li>
+               </ul>
+            </FeatureListItem>
+            <FeatureListItem
+               hasMargin
+               title="Connect your bibliography"
+               text="CiteDrive links with Overleaf and RStudio seamlessly. When you or your teammates alter your project, the BiBTeX .bib file will automatically update your bibliography in your Overleaf or RStudio project if you use CiteDrive to manage it."
+               link="#"
+               linklabel="Get started with Overleaf"
+               icon="/assets/Decoration/SVG/Connect.svg"
+               >
+               <ul class="flex" style="flex-direction: column;">
+                  <li>
+                     <InternalLink link="/overleaf/" label="Get started with Overleaf" />
+                  </li>
+               </ul>
+            </FeatureListItem>
+            <FeatureListItem
+               hasMargin
+               title="Compose in your Browser"
+               text="Access your project from any browser. No more software to install, licenses to track, or clunky upgrades. You can make changes on the go, collaborate with team members in real time, and never worry about losing your work."
+               icon="/assets/Decoration/SVG/Browser.svg"
+               >
+               <ul>
+                  <li>Chrome</li>
+                  <li>Firefox</li>
+                  <li>Edge</li>
+                  <li>Safari</li>
+               </ul>
+            </FeatureListItem>
+            <FeatureListItem
+               hasMargin
+               title="Collaborate Seamlessly"
+               text="Add collaborators to your CiteDrive project with a couple of clicks. Collect references, revise and generate citations together and stop sharing stale bibliography files and databases."
+               icon="/assets/Decoration/SVG/Collab.svg"
+               >
+               <ul>
+                  <li>Revise and generate Citations together</li>
+                  <li>Stop sharing stale bibliography files and databases</li>
+               </ul>
+            </FeatureListItem>
+            <FeatureListItem
+               hasMargin
+               title="BibTeX empowered"
+               text="Do you keep your bibliography in a big text file? If that’s the case, CiteDrive is for you, with a user interface to go alongside it. We didn’t build CiteDrive as an afterthought for BibTeX users; we built it with them in mind."
+               icon="/assets/Decoration/SVG/Bib.svg"
+               >
+               <ul>
+                  <li>Project based</li>
+               </ul>
+            </FeatureListItem>
+            <FeatureListItem
+               hasMargin
+               title="Customize"
+               text="Want to leverage extended BibLaTeX or your own bespoke fields? Customize your BibTeX code as you see fit while collecting and editing references, rather than BibTeX support as an afterthought. With our in-built editor, you handle your bibliography, not with opinionated forms."
+               icon="/assets/Decoration/SVG/Edit.svg"
+               >
+               <ul>
+                  <li>Custom Citation Keys</li>
+                  <li>Built-in BibTeX Editor</li>
+                  <li>BibLaTeX</li>
+                  <li>Natbib</li>
+                  <li>Jurabib</li>
+               </ul>
+            </FeatureListItem>
+            <FeatureListItem
+               radius="radius-bottom"
+               title="Control and Error-Handling"
+               text="CiteDrive will notify you if your format is erroneous and there are duplicate papers so that you can collaborate without interfering with one another."
+               icon="/assets/Decoration/SVG/Error.svg"
+               >
+               <ul>
+                  <li>Errorhandling</li>
+                  <li>Duplicate Controls</li>
+               </ul>
+            </FeatureListItem>
+         </div>
+      </section>
+      <section class="grid" style="place-items: center;">
+         <div class="grid" style="place-items: center; --gap: 22px">
+            <h1 class="h1-landing letter-spacing-h1 letter-spacing-text" style="line-height: 100%">Pipeline Your Research Data</h1>
+            <CTA label="LET's .bib YOUR FIRST PROJECT" />
+            <p>
+               <InternalLink link="overleaf/" label="Overleaf"></InternalLink>
+               ,
+               <InternalLink link="r-markdown/" label="R Markdown"></InternalLink>
+               and
+               <InternalLink link="quarto/" label="Quarto"></InternalLink>
+               are great options for getting started.
+            </p>
+         </div>
+      </section>
    </div>
-
-
-   <div class="feature-list">
-
-   <FeatureListItem
-      hasMargin
-      radius="radius-top"
-      title="Cite in Context"
-      text="Use the CiteDrive Companion browser add-on to seamlessly collect references as you conduct research across popular platforms including Google Scholar and Pubmed, or even non-DOI websites– all without leaving the page."
-      link="https://chrome.google.com/webstore/detail/citedrive-bibtex-companio/gmmonfphegngpcbcapfbgembkjeookik"
-      linklabel="CiteDrive Companion for Chrome"
-      icon="assets/Decoration/SVG/Quote.svg"
-   >
-
-   <ul class="flex" style="flex-direction: column;">
-   <li><InternalLink link="https://chrome.google.com/webstore/detail/citedrive-bibtex-companio/gmmonfphegngpcbcapfbgembkjeookik" label="CiteDrive Companion for Chrome" /></li>
-   <li><InternalLink link="https://addons.mozilla.org/af/firefox/addon/citedrive-companion/" label="CiteDrive Companion for Firefox" /></li>
-   <li><InternalLink link="https://microsoftedge.microsoft.com/addons/detail/citedrive-bibtex-compan/kpmepfpbjehnlgfbcnbmgihklkkmfnpo" label="CiteDrive Companion for Edge" /></li>
-   </ul>
-
-   </FeatureListItem>
-
-
-   <FeatureListItem
-      hasMargin
-      title="Connect your bibliography"
-      text="CiteDrive links with Overleaf and RStudio seamlessly. When you or your teammates alter your project, the BiBTeX .bib file will automatically update your bibliography in your Overleaf or RStudio project if you use CiteDrive to manage it."
-      link="#"
-      linklabel="Get started with Overleaf"
-      icon="/assets/Decoration/SVG/Connect.svg"
-   >
-   <ul class="flex" style="flex-direction: column;">
-      <li><InternalLink link="/overleaf/" label="Get started with Overleaf" /></li>
-   </ul>
-
-   </FeatureListItem>
-
-    <FeatureListItem
-      hasMargin
-      title="Compose in your Browser"
-      text="Access your project from any browser. No more software to install, licenses to track, or clunky upgrades. You can make changes on the go, collaborate with team members in real time, and never worry about losing your work."
-      icon="/assets/Decoration/SVG/Browser.svg"
-   >
-   <ul>
-   <li>Chrome</li>
-   <li>Firefox</li>
-   <li>Edge</li>
-   <li>Safari</li>
-   </ul>
-   </FeatureListItem>
-
-   <FeatureListItem
-      hasMargin
-      title="Collaborate Seamlessly"
-      text="Add collaborators to your CiteDrive project with a couple of clicks. Collect references, revise and generate citations together and stop sharing stale bibliography files and databases."
-      icon="/assets/Decoration/SVG/Collab.svg"
-   >
-
-   <ul>
-   <li>Revise and generate Citations together</li>
-   <li>Stop sharing stale bibliography files and databases</li>
-   </ul>
-
-   </FeatureListItem>
-
-    <FeatureListItem
-      hasMargin
-      title="BibTeX empowered"
-      text="Do you keep your bibliography in a big text file? If that’s the case, CiteDrive is for you, with a user interface to go alongside it. We didn’t build CiteDrive as an afterthought for BibTeX users; we built it with them in mind."
-      icon="/assets/Decoration/SVG/Bib.svg"
-   >
-   <ul>
-   <li>Project based</li>
-   </ul>
-   </FeatureListItem>
-
-
-    <FeatureListItem
-      hasMargin
-      title="Customize"
-      text="Want to leverage extended BibLaTeX or your own bespoke fields? Customize your BibTeX code as you see fit while collecting and editing references, rather than BibTeX support as an afterthought. With our in-built editor, you handle your bibliography, not with opinionated forms."
-      icon="/assets/Decoration/SVG/Edit.svg"
-   >
-      <ul>
-         <li>Custom Citation Keys</li>
-         <li>Built-in BibTeX Editor</li>
-         <li>BibLaTeX</li>
-         <li>Natbib</li>
-         <li>Jurabib</li>
-      </ul>
-   </FeatureListItem>
-
-   <FeatureListItem
-      radius="radius-bottom"
-      title="Control and Error-Handling"
-      text="CiteDrive will notify you if your format is erroneous and there are duplicate papers so that you can collaborate without interfering with one another."
-      icon="/assets/Decoration/SVG/Error.svg"
-   >
-      <ul>
-         <li>Errorhandling</li>
-         <li>Duplicate Controls</li>
-      </ul>
-   </FeatureListItem>
-
-   </div>
-
-   </section>
-
-    <section class="grid" style="place-items: center;">
-      <div class="grid" style="place-items: center; --gap: 22px">
-      <h1 class="h1-landing letter-spacing-h1 letter-spacing-text" style="line-height: 100%">Pipeline Your Research Data</h1>
-      <CTA label="LET's .bib YOUR FIRST PROJECT" />
-      <p><InternalLink link="#" label="Overleaf"></InternalLink>, <InternalLink link="#" label="RStudio"></InternalLink> and <InternalLink link="#" label="Quarto"></InternalLink> are great options for getting started.</p>
-      </div>
-   </section>
-
-</div>
-
-
 </BaseLayout>
-
-
 <style>
-
-.video {
+   .video {
    width: 100%;
-  /* height: 600px; */
+   /* height: 600px; */
    box-shadow: 1px 2px 4px grey;
-  /* background-color: white; */
-  /* border-radius: var(--border-radius); */
-}
-
-.stream {
+   /* background-color: white; */
+   /* border-radius: var(--border-radius); */
+   }
+   .stream {
    padding: 3.5rem 0;
    background-color: gainsboro;
-}
-
-.feature-list div {
+   }
+   .feature-list div {
    padding-bottom: 12.5rem;
-}
-
+   }
 </style>
