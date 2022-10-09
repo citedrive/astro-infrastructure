@@ -1,6 +1,6 @@
-/* 
+/*
 This file holds all Custom Properties to keep our Theme consistent:
-- RGB and HSL Colors 
+- RGB and HSL Colors
 - Fonts
 - Padding and Margins
 */
@@ -53,8 +53,8 @@ This file holds all Custom Properties to keep our Theme consistent:
 	--clr-light-text: 240 100% 7%;
 	--clr-primary: 171 66.5% 37.5%;
 	--clr-secondary: 247 100.0% 70.2%;
-
-	-webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+	--clr-secondary-dimmed: 247 100.0% 66.2%;
+	-webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 
 
 /* Dark Theme Theme */
@@ -209,5 +209,3 @@ body {
 }
 
 */
-
-

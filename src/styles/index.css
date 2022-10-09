@@ -382,10 +382,14 @@ select {
 	color: white;
  }
 
- /* .pill li:last-child:hover {
-	background-color: rgb(141, 100, 187);
- } */
 
+ .pill li:last-child:hover {
+	background-color: hsl(var(--clr-secondary-dimmed)); 
+ }
+
+ .pill li:first-child  > a:hover {
+	color: hsl(var(--clr-secondary));
+ }
 
 
 
