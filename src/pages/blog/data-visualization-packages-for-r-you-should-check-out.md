@@ -1,7 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "Data Visualization Packages for R you should check out in 2022"
-description: "Lorem ipsum dolor sit amet"
 pubDate: "May 09 2022"
 lang: en
 ---

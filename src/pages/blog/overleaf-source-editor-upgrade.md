@@ -1,7 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "Overleaf Source Editor Upgrade"
-description: "Lorem ipsum dolor sit amet"
 pubDate: "June 16 2022"
 lang: en
 ---

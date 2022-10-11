@@ -1,7 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "Literature management with Overleaft"
-description: "Lorem ipsum dolor sit amet"
 pubDate: "Feb 21 2022"
 lang: en
 ---

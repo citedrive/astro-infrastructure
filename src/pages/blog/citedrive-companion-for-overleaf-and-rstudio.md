@@ -1,7 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "The CiteDrive Companion for Overleaf and RStudio"
-description: "Lorem ipsum dolor sit amet"
 pubDate: "June 01 2022"
 lang: en
 ---

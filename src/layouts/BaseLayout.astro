@@ -22,25 +22,34 @@ interface Props {
 //   schemaBlogPost?: object;
 }
 const { title, lang, dir, description, type, frontmatter, headings, site, doc, blog } = Astro.props;
+
+const TITLE_TAG = typeof title !== "undefined"
+  ? title + " | CiteDrive - Citation and Bibliographic management for Overleaf and RStudio"
+  : "UNTITLED | CiteDrive - Citation and Bibliographic management for Overleaf and RStudio";
+
+const DESCRIPTION_TAG =
+  typeof description !== "undefined"
+    ? description
+    : "Read more about " +
+      "'" +
+      title +
+      "' | CiteDrive - BibTeX-supported citation and reference management for your bibliographies on Overleaf and RStudio";
 ---
 
-<html lang={lang}>
+<html lang={lang} dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-    <title>{title} | CiteDrive - Citation and Bibliographic management for Overleaf and RStudio</title>
-    <meta name="description" content={description} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <title>{TITLE_TAG}</title>
+    <meta name="description" content={DESCRIPTION_TAG} />
+    <meta property="og:title" content={TITLE_TAG} />
+    <meta property="og:description" content={DESCRIPTION_TAG} />
     <meta property="og:type" content={type} />
     <meta property="twitter:card" content={type} />
     <meta property="twitter:site" content="CiteDrive" />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={DESCRIPTION_TAG} />
+    <meta property="twitter:title" content={TITLE_TAG} />
     <link rel="canonical" href={SITE.url + Astro.url.pathname} />
     <!-- import fonts here -->
 
@@ -51,7 +60,6 @@ const { title, lang, dir, description, type, frontmatter, headings, site, doc, b
 {site && <Header />}
 {doc && <DocHeader />}
 {blog && <BlogHeader />}
-
  <main style="margin-top: 6.5rem">
             <slot />
             <!-- <CookieConsent /> -->

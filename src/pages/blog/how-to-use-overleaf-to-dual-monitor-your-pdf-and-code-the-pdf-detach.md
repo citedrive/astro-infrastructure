@@ -1,7 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "How to Use Overleaf to Dual-Monitor Your PDF and Code: the PDF detach!"
-description: "Lorem ipsum dolor sit amet"
 pubDate: "Aug 11 2022"
 lang: en
 ---

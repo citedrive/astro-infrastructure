@@ -1,7 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "CiteDrive for Bibliography Management in RStudio: Easily Insert References into Quarto Documents"
-description: "Lorem ipsum dolor sit amet"
 pubDate: "Aug 23 2022"
 lang: en
 ---

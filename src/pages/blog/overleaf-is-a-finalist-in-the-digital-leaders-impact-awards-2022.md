@@ -1,7 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "Overleaf is a finalist in the Digital Leaders Impact Awards 2022"
-description: "Lorem ipsum dolor sit amet"
 pubDate: "Feb 28 2022"
 lang: en
 ---

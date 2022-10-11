@@ -1,7 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "CiteDrive November 2021 Release"
-description: "Lorem ipsum dolor sit amet"
 pubDate: "Feb 22 2022"
 lang: en
 ---

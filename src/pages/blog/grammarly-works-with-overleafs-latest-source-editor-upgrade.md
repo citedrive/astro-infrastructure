@@ -1,7 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "Grammarly Works with Overleaf's Latest Source Editor Upgrade"
-description: "Lorem ipsum dolor sit amet"
 pubDate: "Aug 12 2022"
 lang: en
 ---
