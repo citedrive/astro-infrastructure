@@ -27,6 +27,10 @@ const TITLE_TAG = typeof title !== "undefined"
   ? title + " | CiteDrive - Citation and Bibliographic management for Overleaf and RStudio"
   : "UNTITLED | CiteDrive - Citation and Bibliographic management for Overleaf and RStudio";
 
+  const TYPE_TAG = typeof title !== "undefined"
+    ? type
+    : "website";
+
 const DESCRIPTION_TAG =
   typeof description !== "undefined"
     ? description
@@ -41,15 +45,25 @@ const DESCRIPTION_TAG =
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{TITLE_TAG}</title>
     <meta name="description" content={DESCRIPTION_TAG} />
+
+    <meta property="og:locale" content={lang}/>
     <meta property="og:title" content={TITLE_TAG} />
     <meta property="og:description" content={DESCRIPTION_TAG} />
     <meta property="og:type" content={type} />
-    <meta property="twitter:card" content={type} />
-    <meta property="twitter:site" content="CiteDrive" />
-    <meta property="twitter:description" content={DESCRIPTION_TAG} />
-    <meta property="twitter:title" content={TITLE_TAG} />
+    <meta property="og:url" content="https://citedrive.com/"/>
+    <meta property="og:site_name" content="CiteDrive"/>
+
+    <meta property="og:image" content="https://www.citedrive.com/assets/theapp.png"/>
+    <meta property="og:image:width" content="1260"/>
+    <meta property="og:image:height" content="628"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="@CiteDrive"/>
+    <meta name="twitter:site" content="@CiteDrive"/>
+
     <link rel="canonical" href={SITE.url + Astro.url.pathname} />
     <!-- import fonts here -->
 
