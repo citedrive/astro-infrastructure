@@ -1,0 +1,33 @@
+---
+export async function getStaticPaths() {
+  const pages = [
+     {
+        "bibtex":"abbrv",
+        "download":"https://packages.oth-regensburg.de/ctan/biblio/bibtex/base/abbrv.bst",
+        "overleaf":true
+     },
+     {
+        "bibtex":"acm",
+        "download":"https://ftp.mpi-inf.mpg.de/pub/tex/mirror/ftp.dante.de/pub/tex/biblio/bibtex/base/acm.bst",
+        "overleaf":true
+     }
+  ]
+;
+  return pages.map(({ bibtex }) => {
+    return {
+      params: { bibtex },
+      props: { bibtex },
+    };
+  });
+}
+
+const { bibtex } = Astro.props;
+---
+<html>
+  <head>
+    <title>{bibtex}</title>
+  </head>
+  <body>
+    <h1>{bibtex}</h1>
+  </body>
+</html>

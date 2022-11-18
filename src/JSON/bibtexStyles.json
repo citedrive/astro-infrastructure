@@ -1,0 +1,12 @@
+[
+   {
+      "name":"abbrv",
+      "download":"https://packages.oth-regensburg.de/ctan/biblio/bibtex/base/abbrv.bst",
+      "overleaf":true
+   },
+   {
+      "name":"acm",
+      "download":"https://ftp.mpi-inf.mpg.de/pub/tex/mirror/ftp.dante.de/pub/tex/biblio/bibtex/base/acm.bst",
+      "overleaf":true
+   }
+]
