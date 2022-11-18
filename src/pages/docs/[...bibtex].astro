@@ -24,7 +24,21 @@ export async function getStaticPaths() {
 
 const { bibtex } = Astro.props;
 ---
-<BaseLayout title={bibtex}>
-    <h1>{bibtex}</h1>
-    dasa
+<BaseLayout title={bibtex} site>
+    <h1>Can you use the {bibtex} BibTeX bibliography style in Overleaf?</h1>
+    The answer is yes! The {bibtex} (STYLEYYY) bibliography style is one of many built-in styles in Overleaf. Use this style by typing \bibliographystyle{{bibtex}} in your tex-document, or open the following example on Overleaf.
+
+BibTeX is a powerful bibliographic tool used to create bibliographies in LaTeX documents. It is one of the most widely used bibliography tools and supports many different bibliography styles and citation formats.
+
+While Overleaf does not currently support all bibliography styles compatible with BibTeX, many bibliography styles are included in the bibtex bibliography style library. These bibliography styles include APA, IEEE, CSE, and Chicago citation formats. You can also use custom bibliography styles by creating your bibtex bibliography format file or importing one from another source.
+
+
+Whether using BibTeX on your own or through Overleaf, it is an essential tool for creating bibliographies in scientific and technical documents. To learn more about bibliography management with bibtex and Overleaf, visit bibtex.eu or our docs!
+
+<h2>Are you looking for a Collaborative Online tool to manage your BibTeX reference, which connects to Overleaf?</h2>
+If you're looking for an online tool to help manage your references, citations, and bibliography in Overleaf, CiteDrive may be perfect! It allows you to collect and organize teams and references in projects while keeping your BibTeX entries up to date in your Overleaf project. You can also use CiteDrive to create bibliographies and citations in various styles, including {bibtex}. So if you're looking for an easy way to manage your bibliography in Overleaf, give CiteDrive a try today!
+
+You can find more information on how to do this in our online help documentation.
+
+
 </BaseLayout>
