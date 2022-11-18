@@ -16,13 +16,23 @@ To start using CiteDrive, you first need to create an account by going to the we
 
 
 
-(fig)
+![](https://images.prismic.io/citedrive/6aaaeb72-adf1-476e-aa26-fe9f480bf865_FZ-PoGiXwAE35Bi.jpg?auto=compress,format)
 
 
 
 ## Step 2: Synchronize your R Markdown document with CiteDrive
 
-To sync your new CiteDrive with your R Markdown document, follow these steps: click on the “bib” button, which will open a new tab containing all of your BibTeX entries. From there, copy the URL and paste it into the YAML section of your RMD file.
+To sync your new CiteDrive with your R Markdown document, follow these steps: click on the “bib” button, which will open a new tab containing all of your BibTeX entries.
+
+
+From there, copy the URL and paste it after 'bibliography' into the YAML section of your RMD file.
+
+
+```md
+---
+bibliography: 'URL'
+---
+```
 
 
 
@@ -30,11 +40,11 @@ To sync your new CiteDrive with your R Markdown document, follow these steps: cl
 
 After you finish importing your references, return to your CiteDrive project. Select one or more references you want to include in your document, then click the cite button. This copies the citation key, so all you have to do is paste it into your R Markdown document!
 
-(fig)
+![](https://images.prismic.io/citedrive/1f3b71e6-9746-4c33-91b9-df87be5415be_1_4KGAOkDIyUnvxOYDB58hQw.gif?auto=compress,format)
 
 In your R Markdown document, insert your citation key where you want the passage to appear.
 
-(fig)
+![](https://images.prismic.io/citedrive/a7483d1e-c708-4bad-b62c-2bb0ecb6d559_Screen_Recording_2022-08-23_at_10_47_45_AdobeExpress.gif?auto=compress,format)
 
 
 
