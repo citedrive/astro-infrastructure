@@ -1,1552 +1,1552 @@
 [
    {
       "type":"Base styles",
-      "name":"acm",
+      "bibtex":"acm",
       "overleaf":true
    },
    {
       "type":"Base styles",
-      "name":"unsrt",
+      "bibtex":"unsrt",
       "overleaf":true
    },
    {
       "type":"Base styles",
-      "name":"acm",
+      "bibtex":"acm",
       "overleaf":true
    },
    {
       "type":"Base styles",
-      "name":"abbrv",
+      "bibtex":"abbrv",
       "overleaf":true
    },
    {
       "type":"Base styles",
-      "name":"siam",
+      "bibtex":"siam",
       "overleaf":true
    },
    {
       "type":"Base styles",
-      "name":"alpha",
+      "bibtex":"alpha",
       "overleaf":true
    },
    {
       "type":"Base styles",
-      "name":"apalike",
+      "bibtex":"apalike",
       "overleaf":true
    },
    {
       "type":"Base styles",
-      "name":"ieeetr",
+      "bibtex":"ieeetr",
       "overleaf":true
    },
    {
       "type":"Base styles",
-      "name":"plain",
+      "bibtex":"plain",
       "overleaf":true
    },
    {
       "type":"abntex2",
-      "name":"abntex2-num",
+      "bibtex":"abntex2-num",
       "overleaf":true
    },
    {
       "type":"abntex2",
-      "name":"abntex2-alf",
+      "bibtex":"abntex2-alf",
       "overleaf":true
    },
    {
       "type":"abstyles",
-      "name":"aplain",
+      "bibtex":"aplain",
       "overleaf":true
    },
    {
       "type":"abstyles",
-      "name":"aabbrv",
+      "bibtex":"aabbrv",
       "overleaf":true
    },
    {
       "type":"abstyles",
-      "name":"aalpha",
+      "bibtex":"aalpha",
       "overleaf":true
    },
    {
       "type":"abstyles",
-      "name":"anotit",
+      "bibtex":"anotit",
       "overleaf":true
    },
    {
       "type":"abstyles",
-      "name":"aunsnot",
+      "bibtex":"aunsnot",
       "overleaf":true
    },
    {
       "type":"abstyles",
-      "name":"aunsrt",
+      "bibtex":"aunsrt",
       "overleaf":true
    },
    {
       "type":"achemso",
-      "name":"achemso",
+      "bibtex":"achemso",
       "overleaf":true
    },
    {
       "type":"achemso",
-      "name":"biochem",
+      "bibtex":"biochem",
       "overleaf":true
    },
    {
       "type":"adfathesis",
-      "name":"adfathesis",
+      "bibtex":"adfathesis",
       "overleaf":true
    },
    {
       "type":"adrconv",
-      "name":"adrbirthday",
+      "bibtex":"adrbirthday",
       "overleaf":true
    },
    {
       "type":"adrconv",
-      "name":"adrfax",
+      "bibtex":"adrfax",
       "overleaf":true
    },
    {
       "type":"adrconv",
-      "name":"adrconv",
+      "bibtex":"adrconv",
       "overleaf":true
    },
    {
       "type":"afthesis",
-      "name":"thesnumb",
+      "bibtex":"thesnumb",
       "overleaf":true
    },
    {
       "type":"aguplus",
-      "name":"agufull",
+      "bibtex":"agufull",
       "overleaf":true
    },
    {
       "type":"aguplus",
-      "name":"agufull04",
+      "bibtex":"agufull04",
       "overleaf":true
    },
    {
       "type":"aguplus",
-      "name":"agu04",
+      "bibtex":"agu04",
       "overleaf":true
    },
    {
       "type":"aguplus",
-      "name":"agu",
+      "bibtex":"agu",
       "overleaf":true
    },
    {
       "type":"aiaa",
-      "name":"aiaa",
+      "bibtex":"aiaa",
       "overleaf":true
    },
    {
       "type":"aichej",
-      "name":"aichej",
+      "bibtex":"aichej",
       "overleaf":true
    },
    {
       "type":"ajl",
-      "name":"ajl",
+      "bibtex":"ajl",
       "overleaf":true
    },
    {
       "type":"ametsoc",
-      "name":"ametsoc",
+      "bibtex":"ametsoc",
       "overleaf":true
    },
    {
       "type":"ametsoc",
-      "name":"amsry",
+      "bibtex":"amsry",
       "overleaf":true
    },
    {
       "type":"amsrefs",
-      "name":"amsra",
+      "bibtex":"amsra",
       "overleaf":true
    },
    {
       "type":"amsrefs",
-      "name":"amsrn",
+      "bibtex":"amsrn",
       "overleaf":true
    },
    {
       "type":"amsrefs",
-      "name":"amsru",
+      "bibtex":"amsru",
       "overleaf":true
    },
    {
       "type":"amsrefs",
-      "name":"amsrs",
+      "bibtex":"amsrs",
       "overleaf":true
    },
    {
       "type":"amscls",
-      "name":"amsalpha",
+      "bibtex":"amsalpha",
       "overleaf":true
    },
    {
       "type":"amscls",
-      "name":"amsplain",
+      "bibtex":"amsplain",
       "overleaf":true
    },
    {
       "type":"aomart",
-      "name":"aomplain",
+      "bibtex":"aomplain",
       "overleaf":true
    },
    {
       "type":"aomart",
-      "name":"aomalpha",
+      "bibtex":"aomalpha",
       "overleaf":true
    },
    {
       "type":"apacite",
-      "name":"apacann",
+      "bibtex":"apacann",
       "overleaf":true
    },
    {
       "type":"apacite",
-      "name":"apacite",
+      "bibtex":"apacite",
       "overleaf":true
    },
    {
       "type":"apacite",
-      "name":"apacitex",
+      "bibtex":"apacitex",
       "overleaf":true
    },
    {
       "type":"apacite",
-      "name":"apacannx",
+      "bibtex":"apacannx",
       "overleaf":true
    },
    {
       "type":"apalike2",
-      "name":"apalike2",
+      "bibtex":"apalike2",
       "overleaf":true
    },
    {
       "type":"ascelike",
-      "name":"ascelike",
+      "bibtex":"ascelike",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"bababbrv-lf",
+      "bibtex":"bababbrv-lf",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babunsrt-fl",
+      "bibtex":"babunsrt-fl",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"bababbr3-lf",
+      "bibtex":"bababbr3-lf",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babalpha-fl",
+      "bibtex":"babalpha-fl",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"bababbr3",
+      "bibtex":"bababbr3",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babplai3-fl",
+      "bibtex":"babplai3-fl",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babplai3",
+      "bibtex":"babplai3",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babalpha-lf",
+      "bibtex":"babalpha-lf",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babplai3-lf",
+      "bibtex":"babplai3-lf",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babplain",
+      "bibtex":"babplain",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babunsrt-lf",
+      "bibtex":"babunsrt-lf",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babalpha",
+      "bibtex":"babalpha",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"bababbr3-fl",
+      "bibtex":"bababbr3-fl",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babunsrt",
+      "bibtex":"babunsrt",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"bababbrv-fl",
+      "bibtex":"bababbrv-fl",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babplain-fl",
+      "bibtex":"babplain-fl",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babamspl",
+      "bibtex":"babamspl",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"bababbrv",
+      "bibtex":"bababbrv",
       "overleaf":true
    },
    {
       "type":"babelbib",
-      "name":"babplain-lf",
+      "bibtex":"babplain-lf",
       "overleaf":true
    },
    {
       "type":"besjournals",
-      "name":"besjournals",
+      "bibtex":"besjournals",
       "overleaf":true
    },
    {
       "type":"bibexport",
-      "name":"export",
+      "bibtex":"export",
       "overleaf":true
    },
    {
       "type":"bibexport",
-      "name":"expkeys",
+      "bibtex":"expkeys",
       "overleaf":true
    },
    {
       "type":"bibexport",
-      "name":"expcites",
+      "bibtex":"expcites",
       "overleaf":true
    },
    {
       "type":"bib-fr",
-      "name":"unsrt-fr",
+      "bibtex":"unsrt-fr",
       "overleaf":true
    },
    {
       "type":"bib-fr",
-      "name":"siam-fr",
+      "bibtex":"siam-fr",
       "overleaf":true
    },
    {
       "type":"bib-fr",
-      "name":"alpha-fr",
+      "bibtex":"alpha-fr",
       "overleaf":true
    },
    {
       "type":"bib-fr",
-      "name":"abbrv-fr",
+      "bibtex":"abbrv-fr",
       "overleaf":true
    },
    {
       "type":"bib-fr",
-      "name":"unsrtnat-fr",
+      "bibtex":"unsrtnat-fr",
       "overleaf":true
    },
    {
       "type":"bib-fr",
-      "name":"abbrvnat-fr",
+      "bibtex":"abbrvnat-fr",
       "overleaf":true
    },
    {
       "type":"bib-fr",
-      "name":"apalike-fr",
+      "bibtex":"apalike-fr",
       "overleaf":true
    },
    {
       "type":"bib-fr",
-      "name":"plain-fr",
+      "bibtex":"plain-fr",
       "overleaf":true
    },
    {
       "type":"bib-fr",
-      "name":"ieeetr-fr",
+      "bibtex":"ieeetr-fr",
       "overleaf":true
    },
    {
       "type":"bib-fr",
-      "name":"plainnat-fr",
+      "bibtex":"plainnat-fr",
       "overleaf":true
    },
    {
       "type":"bibhtml",
-      "name":"alphahtmldater",
+      "bibtex":"alphahtmldater",
       "overleaf":true
    },
    {
       "type":"bibhtml",
-      "name":"alphahtml",
+      "bibtex":"alphahtml",
       "overleaf":true
    },
    {
       "type":"bibhtml",
-      "name":"alphahtmldate",
+      "bibtex":"alphahtmldate",
       "overleaf":true
    },
    {
       "type":"bibhtml",
-      "name":"abbrvhtml",
+      "bibtex":"abbrvhtml",
       "overleaf":true
    },
    {
       "type":"bibhtml",
-      "name":"plainhtml",
+      "bibtex":"plainhtml",
       "overleaf":true
    },
    {
       "type":"bibhtml",
-      "name":"plainhtmldater",
+      "bibtex":"plainhtmldater",
       "overleaf":true
    },
    {
       "type":"bibhtml",
-      "name":"unsrthtml",
+      "bibtex":"unsrthtml",
       "overleaf":true
    },
    {
       "type":"bibhtml",
-      "name":"plainhtmldate",
+      "bibtex":"plainhtmldate",
       "overleaf":true
    },
    {
       "type":"bgteubner",
-      "name":"bgteuabbr2",
+      "bibtex":"bgteuabbr2",
       "overleaf":true
    },
    {
       "type":"bgteubner",
-      "name":"bgteuabbr",
+      "bibtex":"bgteuabbr",
       "overleaf":true
    },
    {
       "type":"bgteubner",
-      "name":"bgteupln3",
+      "bibtex":"bgteupln3",
       "overleaf":true
    },
    {
       "type":"bgteubner",
-      "name":"bgteupln",
+      "bibtex":"bgteupln",
       "overleaf":true
    },
    {
       "type":"bgteubner",
-      "name":"bgteupln2",
+      "bibtex":"bgteupln2",
       "overleaf":true
    },
    {
       "type":"cascadilla",
-      "name":"cascadilla",
+      "bibtex":"cascadilla",
       "overleaf":true
    },
    {
       "type":"cell",
-      "name":"cell",
+      "bibtex":"cell",
       "overleaf":true
    },
    {
       "type":"chembst",
-      "name":"ChemCommun",
+      "bibtex":"ChemCommun",
       "overleaf":true
    },
    {
       "type":"chembst",
-      "name":"ChemEurJ",
+      "bibtex":"ChemEurJ",
       "overleaf":true
    },
    {
       "type":"chembst",
-      "name":"InorgChem",
+      "bibtex":"InorgChem",
       "overleaf":true
    },
    {
       "type":"chembst",
-      "name":"JAmChemSoc",
+      "bibtex":"JAmChemSoc",
       "overleaf":true
    },
    {
       "type":"chembst",
-      "name":"cv",
+      "bibtex":"cv",
       "overleaf":true
    },
    {
       "type":"chembst",
-      "name":"JAmChemSoc_all",
+      "bibtex":"JAmChemSoc_all",
       "overleaf":true
    },
    {
       "type":"chem-journal",
-      "name":"pccp",
+      "bibtex":"pccp",
       "overleaf":true
    },
    {
       "type":"chem-journal",
-      "name":"jcc",
+      "bibtex":"jcc",
       "overleaf":true
    },
    {
       "type":"chem-journal",
-      "name":"jpc",
+      "bibtex":"jpc",
       "overleaf":true
    },
    {
       "type":"chem-journal",
-      "name":"revcompchem",
+      "bibtex":"revcompchem",
       "overleaf":true
    },
    {
       "type":"chet",
-      "name":"chetref",
+      "bibtex":"chetref",
       "overleaf":true
    },
    {
       "type":"chscite",
-      "name":"chscite",
+      "bibtex":"chscite",
       "overleaf":true
    },
    {
       "type":"chicago",
-      "name":"chicago",
+      "bibtex":"chicago",
       "overleaf":true
    },
    {
       "type":"chicago-annote",
-      "name":"chicago-annote",
+      "bibtex":"chicago-annote",
       "overleaf":true
    },
    {
       "type":"cmpj",
-      "name":"cmpj",
+      "bibtex":"cmpj",
       "overleaf":true
    },
    {
       "type":"cnbwp",
-      "name":"abbrvcnb",
+      "bibtex":"abbrvcnb",
       "overleaf":true
    },
    {
       "type":"computational-complexity",
-      "name":"computational-complexity/cc",
+      "bibtex":"computational-complexity/cc",
       "overleaf":true
    },
    {
       "type":"computational-complexity",
-      "name":"computational-complexity/cc2",
+      "bibtex":"computational-complexity/cc2",
       "overleaf":true
    },
    {
       "type":"confproc",
-      "name":"newapave",
+      "bibtex":"newapave",
       "overleaf":true
    },
    {
       "type":"datatool",
-      "name":"databib",
+      "bibtex":"databib",
       "overleaf":true
    },
    {
       "type":"din1505",
-      "name":"alphadin",
+      "bibtex":"alphadin",
       "overleaf":true
    },
    {
       "type":"din1505",
-      "name":"natdin",
+      "bibtex":"natdin",
       "overleaf":true
    },
    {
       "type":"din1505",
-      "name":"abbrvdin",
+      "bibtex":"abbrvdin",
       "overleaf":true
    },
    {
       "type":"din1505",
-      "name":"plaindin",
+      "bibtex":"plaindin",
       "overleaf":true
    },
    {
       "type":"din1505",
-      "name":"unsrtdin",
+      "bibtex":"unsrtdin",
       "overleaf":true
    },
    {
       "type":"dinat",
-      "name":"dinat",
+      "bibtex":"dinat",
       "overleaf":true
    },
    {
       "type":"directory",
-      "name":"address-ldif",
+      "bibtex":"address-ldif",
       "overleaf":true
    },
    {
       "type":"directory",
-      "name":"address-vcard",
+      "bibtex":"address-vcard",
       "overleaf":true
    },
    {
       "type":"directory",
-      "name":"email-html",
+      "bibtex":"email-html",
       "overleaf":true
    },
    {
       "type":"directory",
-      "name":"address-html",
+      "bibtex":"address-html",
       "overleaf":true
    },
    {
       "type":"directory",
-      "name":"email",
+      "bibtex":"email",
       "overleaf":true
    },
    {
       "type":"directory",
-      "name":"birthday",
+      "bibtex":"birthday",
       "overleaf":true
    },
    {
       "type":"directory",
-      "name":"address",
+      "bibtex":"address",
       "overleaf":true
    },
    {
       "type":"directory",
-      "name":"letter",
+      "bibtex":"letter",
       "overleaf":true
    },
    {
       "type":"directory",
-      "name":"phone",
+      "bibtex":"phone",
       "overleaf":true
    },
    {
       "type":"disser",
-      "name":"gost705s",
+      "bibtex":"gost705s",
       "overleaf":true
    },
    {
       "type":"disser",
-      "name":"gost705",
+      "bibtex":"gost705",
       "overleaf":true
    },
    {
       "type":"dk-bib",
-      "name":"dk-alpha",
+      "bibtex":"dk-alpha",
       "overleaf":true
    },
    {
       "type":"dk-bib",
-      "name":"dk-apali",
+      "bibtex":"dk-apali",
       "overleaf":true
    },
    {
       "type":"dk-bib",
-      "name":"dk-unsrt",
+      "bibtex":"dk-unsrt",
       "overleaf":true
    },
    {
       "type":"dk-bib",
-      "name":"dk-plain",
+      "bibtex":"dk-plain",
       "overleaf":true
    },
    {
       "type":"dk-bib",
-      "name":"dk-abbrv",
+      "bibtex":"dk-abbrv",
       "overleaf":true
    },
    {
       "type":"dlfltxb",
-      "name":"dlfltxbbibtex",
+      "bibtex":"dlfltxbbibtex",
       "overleaf":true
    },
    {
       "type":"dtk",
-      "name":"dtk",
+      "bibtex":"dtk",
       "overleaf":true
    },
    {
       "type":"dvdcoll",
-      "name":"dcbib",
+      "bibtex":"dcbib",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"regstud",
+      "bibtex":"regstud",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"worlddev",
+      "bibtex":"worlddev",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"aer",
+      "bibtex":"aer",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"ecca",
+      "bibtex":"ecca",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"ier",
+      "bibtex":"ier",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"apecon",
+      "bibtex":"apecon",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"agecon",
+      "bibtex":"agecon",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"aertt",
+      "bibtex":"aertt",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"ecta",
+      "bibtex":"ecta",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"cje",
+      "bibtex":"cje",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"jss2",
+      "bibtex":"jss2",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"erae",
+      "bibtex":"erae",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"oega",
+      "bibtex":"oega",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"jpe",
+      "bibtex":"jpe",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"itaxpf",
+      "bibtex":"itaxpf",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"ajae",
+      "bibtex":"ajae",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"jae",
+      "bibtex":"jae",
       "overleaf":true
    },
    {
       "type":"economic",
-      "name":"tandfx",
+      "bibtex":"tandfx",
       "overleaf":true
    },
    {
       "type":"elsarticle",
-      "name":"elsarticle-harv",
+      "bibtex":"elsarticle-harv",
       "overleaf":true
    },
    {
       "type":"elsarticle",
-      "name":"elsarticle-num-names",
+      "bibtex":"elsarticle-num-names",
       "overleaf":true
    },
    {
       "type":"elsarticle",
-      "name":"elsarticle-num",
+      "bibtex":"elsarticle-num",
       "overleaf":true
    },
    {
       "type":"fbs",
-      "name":"fbs",
+      "bibtex":"fbs",
       "overleaf":true
    },
    {
       "type":"figbib",
-      "name":"figbib1",
+      "bibtex":"figbib1",
       "overleaf":true
    },
    {
       "type":"figbib",
-      "name":"figbib",
+      "bibtex":"figbib",
       "overleaf":true
    },
    {
       "type":"finbib",
-      "name":"finplain",
+      "bibtex":"finplain",
       "overleaf":true
    },
    {
       "type":"francais-bst",
-      "name":"francais",
+      "bibtex":"francais",
       "overleaf":true
    },
    {
       "type":"francais-bst",
-      "name":"francaissc",
+      "bibtex":"francaissc",
       "overleaf":true
    },
    {
       "type":"frankenstein",
-      "name":"achicago",
+      "bibtex":"achicago",
       "overleaf":true
    },
    {
       "type":"gatech-thesis",
-      "name":"gatech-thesis-losa",
+      "bibtex":"gatech-thesis-losa",
       "overleaf":true
    },
    {
       "type":"gatech-thesis",
-      "name":"gatech-thesis",
+      "bibtex":"gatech-thesis",
       "overleaf":true
    },
    {
       "type":"germbib",
-      "name":"gerapali",
+      "bibtex":"gerapali",
       "overleaf":true
    },
    {
       "type":"germbib",
-      "name":"gerabbrv",
+      "bibtex":"gerabbrv",
       "overleaf":true
    },
    {
       "type":"germbib",
-      "name":"geralpha",
+      "bibtex":"geralpha",
       "overleaf":true
    },
    {
       "type":"germbib",
-      "name":"gerplain",
+      "bibtex":"gerplain",
       "overleaf":true
    },
    {
       "type":"germbib",
-      "name":"gerunsrt",
+      "bibtex":"gerunsrt",
       "overleaf":true
    },
    {
       "type":"gloss",
-      "name":"glsplain",
+      "bibtex":"glsplain",
       "overleaf":true
    },
    {
       "type":"gloss",
-      "name":"glsshort",
+      "bibtex":"glsshort",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"gost2008s",
+      "bibtex":"gost2008s",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"ugost2008",
+      "bibtex":"ugost2008",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"gost2008l",
+      "bibtex":"gost2008l",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"gost2008",
+      "bibtex":"gost2008",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"ugost2008ls",
+      "bibtex":"ugost2008ls",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"gost2003",
+      "bibtex":"gost2003",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"ugost2008n",
+      "bibtex":"ugost2008n",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"ugost2008ns",
+      "bibtex":"ugost2008ns",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"ugost2003s",
+      "bibtex":"ugost2003s",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"gost2008ns",
+      "bibtex":"gost2008ns",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"ugost2003",
+      "bibtex":"ugost2003",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"ugost2008s",
+      "bibtex":"ugost2008s",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"gost780",
+      "bibtex":"gost780",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"gost2008ls",
+      "bibtex":"gost2008ls",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"ugost2008l",
+      "bibtex":"ugost2008l",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"gost780s",
+      "bibtex":"gost780s",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"gost2003s",
+      "bibtex":"gost2003s",
       "overleaf":true
    },
    {
       "type":"gost",
-      "name":"gost2008n",
+      "bibtex":"gost2008n",
       "overleaf":true
    },
    {
       "type":"gustlib",
-      "name":"plunsrt",
+      "bibtex":"plunsrt",
       "overleaf":true
    },
    {
       "type":"gustlib",
-      "name":"plalpha",
+      "bibtex":"plalpha",
       "overleaf":true
    },
    {
       "type":"gustlib",
-      "name":"plplain",
+      "bibtex":"plplain",
       "overleaf":true
    },
    {
       "type":"gustlib",
-      "name":"plabbrv",
+      "bibtex":"plabbrv",
       "overleaf":true
    },
    {
       "type":"harvard",
-      "name":"dcu",
+      "bibtex":"dcu",
       "overleaf":true
    },
    {
       "type":"harvard",
-      "name":"kluwer",
+      "bibtex":"kluwer",
       "overleaf":true
    },
    {
       "type":"harvard",
-      "name":"jphysicsB",
+      "bibtex":"jphysicsB",
       "overleaf":true
    },
    {
       "type":"harvard",
-      "name":"jmr",
+      "bibtex":"jmr",
       "overleaf":true
    },
    {
       "type":"harvard",
-      "name":"agsm",
+      "bibtex":"agsm",
       "overleaf":true
    },
    {
       "type":"harvard",
-      "name":"apsr",
+      "bibtex":"apsr",
       "overleaf":true
    },
    {
       "type":"harvard",
-      "name":"nederlands",
+      "bibtex":"nederlands",
       "overleaf":true
    },
    {
       "type":"hc",
-      "name":"hc-de",
+      "bibtex":"hc-de",
       "overleaf":true
    },
    {
       "type":"hc",
-      "name":"hc-en",
+      "bibtex":"hc-en",
       "overleaf":true
    },
    {
       "type":"ieeepes",
-      "name":"ieeepes",
+      "bibtex":"ieeepes",
       "overleaf":true
    },
    {
       "type":"ieeepes",
-      "name":"IEEEtranN",
+      "bibtex":"IEEEtranN",
       "overleaf":true
    },
    {
       "type":"ieeepes",
-      "name":"IEEEtranS",
+      "bibtex":"IEEEtranS",
       "overleaf":true
    },
    {
       "type":"ieeepes",
-      "name":"IEEEtran",
+      "bibtex":"IEEEtran",
       "overleaf":true
    },
    {
       "type":"ieeepes",
-      "name":"IEEEtranSA",
+      "bibtex":"IEEEtranSA",
       "overleaf":true
    },
    {
       "type":"ieeepes",
-      "name":"IEEEtranSN",
+      "bibtex":"IEEEtranSN",
       "overleaf":true
    },
    {
       "type":"ijmart",
-      "name":"ijmart",
+      "bibtex":"ijmart",
       "overleaf":true
    },
    {
       "type":"ijqc",
-      "name":"ijqc",
+      "bibtex":"ijqc",
       "overleaf":true
    },
    {
       "type":"imac",
-      "name":"imac",
+      "bibtex":"imac",
       "overleaf":true
    },
    {
       "type":"index",
-      "name":"xagsm",
+      "bibtex":"xagsm",
       "overleaf":true
    },
    {
       "type":"index",
-      "name":"xplain",
+      "bibtex":"xplain",
       "overleaf":true
    },
    {
       "type":"inlinebib",
-      "name":"inlinebib",
+      "bibtex":"inlinebib",
       "overleaf":true
    },
    {
       "type":"iopart-num",
-      "name":"iopart-num",
+      "bibtex":"iopart-num",
       "overleaf":true
    },
    {
       "type":"jneurosci",
-      "name":"jneurosci",
+      "bibtex":"jneurosci",
       "overleaf":true
    },
    {
       "type":"jurabib",
-      "name":"jurabib",
+      "bibtex":"jurabib",
       "overleaf":true
    },
    {
       "type":"jurabib",
-      "name":"jurunsrt",
+      "bibtex":"jurunsrt",
       "overleaf":true
    },
    {
       "type":"jurabib",
-      "name":"jureco",
+      "bibtex":"jureco",
       "overleaf":true
    },
    {
       "type":"jurabib",
-      "name":"jox",
+      "bibtex":"jox",
       "overleaf":true
    },
    {
       "type":"jurarsp",
-      "name":"jurarsp",
+      "bibtex":"jurarsp",
       "overleaf":true
    },
    {
       "type":"kluwer",
-      "name":"klunum",
+      "bibtex":"klunum",
       "overleaf":true
    },
    {
       "type":"kluwer",
-      "name":"klunamed",
+      "bibtex":"klunamed",
       "overleaf":true
    },
    {
       "type":"ksfh_nat",
-      "name":"ksfh_nat",
+      "bibtex":"ksfh_nat",
       "overleaf":true
    },
    {
       "type":"listbib",
-      "name":"listbib",
+      "bibtex":"listbib",
       "overleaf":true
    },
    {
       "type":"mciteplus",
-      "name":"IEEEtranMN",
+      "bibtex":"IEEEtranMN",
       "overleaf":true
    },
    {
       "type":"mciteplus",
-      "name":"apsrmpM",
+      "bibtex":"apsrmpM",
       "overleaf":true
    },
    {
       "type":"mciteplus",
-      "name":"apsrevM",
+      "bibtex":"apsrevM",
       "overleaf":true
    },
    {
       "type":"mciteplus",
-      "name":"IEEEtranM",
+      "bibtex":"IEEEtranM",
       "overleaf":true
    },
    {
       "type":"minitoc",
-      "name":"fr-mtc",
+      "bibtex":"fr-mtc",
       "overleaf":true
    },
    {
       "type":"minitoc",
-      "name":"en-mtc",
+      "bibtex":"en-mtc",
       "overleaf":true
    },
    {
       "type":"mslapa",
-      "name":"mslapa",
+      "bibtex":"mslapa",
       "overleaf":true
    },
    {
       "type":"multibib",
-      "name":"mbplain",
+      "bibtex":"mbplain",
       "overleaf":true
    },
    {
       "type":"multibib",
-      "name":"mbunsrtdin",
+      "bibtex":"mbunsrtdin",
       "overleaf":true
    },
    {
       "type":"multibibliography",
-      "name":"chronological",
+      "bibtex":"chronological",
       "overleaf":true
    },
    {
       "type":"munich",
-      "name":"munich",
+      "bibtex":"munich",
       "overleaf":true
    },
    {
       "type":"natbib",
-      "name":"abbrvnat",
+      "bibtex":"abbrvnat",
       "overleaf":true
    },
    {
       "type":"natbib",
-      "name":"unsrtnat",
+      "bibtex":"unsrtnat",
       "overleaf":true
    },
    {
       "type":"natbib",
-      "name":"plainnat",
+      "bibtex":"plainnat",
       "overleaf":true
    },
    {
       "type":"nature",
-      "name":"naturemag",
+      "bibtex":"naturemag",
       "overleaf":true
    },
    {
       "type":"nddiss",
-      "name":"nddiss2e",
+      "bibtex":"nddiss2e",
       "overleaf":true
    },
    {
       "type":"opcit",
-      "name":"opcit",
+      "bibtex":"opcit",
       "overleaf":true
    },
    {
       "type":"pbibtex",
-      "name":"jabbrv",
+      "bibtex":"jabbrv",
       "overleaf":true
    },
    {
       "type":"pbibtex",
-      "name":"jname",
+      "bibtex":"jname",
       "overleaf":true
    },
    {
       "type":"pbibtex",
-      "name":"jplain",
+      "bibtex":"jplain",
       "overleaf":true
    },
    {
       "type":"pbibtex",
-      "name":"tipsj",
+      "bibtex":"tipsj",
       "overleaf":true
    },
    {
       "type":"pbibtex",
-      "name":"junsrt",
+      "bibtex":"junsrt",
       "overleaf":true
    },
    {
       "type":"pbibtex",
-      "name":"jorsj",
+      "bibtex":"jorsj",
       "overleaf":true
    },
    {
       "type":"pbibtex",
-      "name":"tieice",
+      "bibtex":"tieice",
       "overleaf":true
    },
    {
       "type":"pbibtex",
-      "name":"jipsj",
+      "bibtex":"jipsj",
       "overleaf":true
    },
    {
       "type":"pbibtex",
-      "name":"jalpha",
+      "bibtex":"jalpha",
       "overleaf":true
    },
    {
       "type":"perception",
-      "name":"perception",
+      "bibtex":"perception",
       "overleaf":true
    },
    {
       "type":"persian-bib",
-      "name":"acm-fa",
+      "bibtex":"acm-fa",
       "overleaf":true
    },
    {
       "type":"persian-bib",
-      "name":"ieeetr-fa",
+      "bibtex":"ieeetr-fa",
       "overleaf":true
    },
    {
       "type":"persian-bib",
-      "name":"chicago-fa",
+      "bibtex":"chicago-fa",
       "overleaf":true
    },
    {
       "type":"persian-bib",
-      "name":"asa-fa",
+      "bibtex":"asa-fa",
       "overleaf":true
    },
    {
       "type":"persian-bib",
-      "name":"unsrt-fa",
+      "bibtex":"unsrt-fa",
       "overleaf":true
    },
    {
       "type":"persian-bib",
-      "name":"plainnat-fa",
+      "bibtex":"plainnat-fa",
       "overleaf":true
    },
    {
       "type":"persian-bib",
-      "name":"plain-fa",
+      "bibtex":"plain-fa",
       "overleaf":true
    },
    {
       "type":"pnas2009",
-      "name":"pnas2009",
+      "bibtex":"pnas2009",
       "overleaf":true
    },
    {
       "type":"przechlewski-book",
-      "name":"papalike",
+      "bibtex":"papalike",
       "overleaf":true
    },
    {
       "type":"psu-thesis",
-      "name":"psuthesis",
+      "bibtex":"psuthesis",
       "overleaf":true
    },
    {
       "type":"resphilosophica",
-      "name":"resphilosophica",
+      "bibtex":"resphilosophica",
       "overleaf":true
    },
    {
       "type":"revtex",
-      "name":"apsrmp4-1",
+      "bibtex":"apsrmp4-1",
       "overleaf":true
    },
    {
       "type":"revtex",
-      "name":"aipauth4-1",
+      "bibtex":"aipauth4-1",
       "overleaf":true
    },
    {
       "type":"revtex",
-      "name":"apsrev4-1",
+      "bibtex":"apsrev4-1",
       "overleaf":true
    },
    {
       "type":"revtex",
-      "name":"aipnum4-1",
+      "bibtex":"aipnum4-1",
       "overleaf":true
    },
    {
       "type":"revtex4",
-      "name":"apsrev",
+      "bibtex":"apsrev",
       "overleaf":true
    },
    {
       "type":"revtex4",
-      "name":"apsrmp",
+      "bibtex":"apsrmp",
       "overleaf":true
    },
    {
       "type":"rsc",
-      "name":"angew",
+      "bibtex":"angew",
       "overleaf":true
    },
    {
       "type":"rsc",
-      "name":"rsc",
+      "bibtex":"rsc",
       "overleaf":true
    },
    {
       "type":"sageep",
-      "name":"sageep",
+      "bibtex":"sageep",
       "overleaf":true
    },
    {
       "type":"sapthesis",
-      "name":"sapthesis",
+      "bibtex":"sapthesis",
       "overleaf":true
    },
    {
       "type":"savetrees",
-      "name":"savetrees",
+      "bibtex":"savetrees",
       "overleaf":true
    },
    {
       "type":"seuthesis",
-      "name":"seuthesis",
+      "bibtex":"seuthesis",
       "overleaf":true
    },
    {
       "type":"shipunov",
-      "name":"rusnat",
+      "bibtex":"rusnat",
       "overleaf":true
    },
    {
       "type":"sort-by-letters",
-      "name":"alpha-letters",
+      "bibtex":"alpha-letters",
       "overleaf":true
    },
    {
       "type":"sort-by-letters",
-      "name":"siam-letters",
+      "bibtex":"siam-letters",
       "overleaf":true
    },
    {
       "type":"sort-by-letters",
-      "name":"frplainnat-letters",
+      "bibtex":"frplainnat-letters",
       "overleaf":true
    },
    {
       "type":"sort-by-letters",
-      "name":"abbrv-letters",
+      "bibtex":"abbrv-letters",
       "overleaf":true
    },
    {
       "type":"sort-by-letters",
-      "name":"apalike-letters",
+      "bibtex":"apalike-letters",
       "overleaf":true
    },
    {
       "type":"sort-by-letters",
-      "name":"plain-letters",
+      "bibtex":"plain-letters",
       "overleaf":true
    },
    {
       "type":"sort-by-letters",
-      "name":"plainnat-letters",
+      "bibtex":"plainnat-letters",
       "overleaf":true
    },
    {
       "type":"spie",
-      "name":"spiebib",
+      "bibtex":"spiebib",
       "overleaf":true
    },
    {
       "type":"stellenbosch",
-      "name":"usmeg-a",
+      "bibtex":"usmeg-a",
       "overleaf":true
    },
    {
       "type":"stellenbosch",
-      "name":"ussagus",
+      "bibtex":"ussagus",
       "overleaf":true
    },
    {
       "type":"stellenbosch",
-      "name":"usmeg-n",
+      "bibtex":"usmeg-n",
       "overleaf":true
    },
    {
       "type":"swebib",
-      "name":"sweunsrt",
+      "bibtex":"sweunsrt",
       "overleaf":true
    },
    {
       "type":"swebib",
-      "name":"sweplnat",
+      "bibtex":"sweplnat",
       "overleaf":true
    },
    {
       "type":"swebib",
-      "name":"sweabbrv",
+      "bibtex":"sweabbrv",
       "overleaf":true
    },
    {
       "type":"swebib",
-      "name":"sweplain",
+      "bibtex":"sweplain",
       "overleaf":true
    },
    {
       "type":"swebib",
-      "name":"swealpha",
+      "bibtex":"swealpha",
       "overleaf":true
    },
    {
       "type":"texsis",
-      "name":"texsis",
+      "bibtex":"texsis",
       "overleaf":true
    },
    {
       "type":"thuthesis",
-      "name":"thubib",
+      "bibtex":"thubib",
       "overleaf":true
    },
    {
       "type":"tugboat",
-      "name":"ltugbib",
+      "bibtex":"ltugbib",
       "overleaf":true
    },
    {
       "type":"udesoftec",
-      "name":"udesoftec",
+      "bibtex":"udesoftec",
       "overleaf":true
    },
    {
       "type":"uestcthesis",
-      "name":"uestcthesis",
+      "bibtex":"uestcthesis",
       "overleaf":true
    },
    {
       "type":"unamthesis",
-      "name":"UNAMThesis",
+      "bibtex":"UNAMThesis",
       "overleaf":true
    },
    {
       "type":"urlbst",
-      "name":"abbrvurl",
+      "bibtex":"abbrvurl",
       "overleaf":true
    },
    {
       "type":"urlbst",
-      "name":"unsrturl",
+      "bibtex":"unsrturl",
       "overleaf":true
    },
    {
       "type":"urlbst",
-      "name":"alphaurl",
+      "bibtex":"alphaurl",
       "overleaf":true
    },
    {
       "type":"urlbst",
-      "name":"plainurl",
+      "bibtex":"plainurl",
       "overleaf":true
    },
    {
       "type":"vak",
-      "name":"vak",
+      "bibtex":"vak",
       "overleaf":true
    },
    {
       "type":"vancouver",
-      "name":"vancouver",
+      "bibtex":"vancouver",
       "overleaf":true
    }
 ]
