@@ -978,6 +978,11 @@ astring@^1.8.0:
   resolved "https://registry.yarnpkg.com/astring/-/astring-1.8.3.tgz#1a0ae738c7cc558f8e5ddc8e3120636f5cebcb85"
   integrity sha512-sRpyiNrx2dEYIMmUXprS8nlpRg2Drs8m9ElX9vVEXaCB4XEAJhKfs7IcX0IwShjuOAjLR6wzIrgoptz1n19i1A==
 
+astro-analytics@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/astro-analytics/-/astro-analytics-2.5.0.tgz#a6bea3b82a3cf444ffa3bff6b6897836474c7bcb"
+  integrity sha512-osywOVkeoX/Ia2vX1nUVy8PSU+VuvhHysHuE+WkFn1iQ5XismB0E/RjuxJH1JoWObKVasVLjS88nEu8SIEYCmw==
+
 astro@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/astro/-/astro-1.1.2.tgz"
