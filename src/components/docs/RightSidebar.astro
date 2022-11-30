@@ -22,6 +22,10 @@ const { headings, githubEditUrl } = Astro.props;
 	</div>
 </nav>
 
+<a class="banner" href="/">
+<img src="../../../public/assets/Banner/banner.svg" alt="Try CiteDrive!">
+</a>
+
 <style>
 
 .anchor {
@@ -30,12 +34,22 @@ const { headings, githubEditUrl } = Astro.props;
 	color: hsl(var(--clr-secondary));
 }
 
+.banner {
+	display: none;
+}
+
 @media only screen and (min-width: 1028px) {
    .anchor {
 	font-size: 12px;
 	text-decoration: none;
 	color: hsl(var(--clr-secondary));
 }
+
+.banner {
+	display: block;
+	margin-top: 3rem
+}
+
 }
 
 </style>
