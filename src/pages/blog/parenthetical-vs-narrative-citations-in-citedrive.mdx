@@ -1,0 +1,48 @@
+---
+layout: "../../layouts/BlogPost.astro"
+title: "Parenthetical vs. narrative citations in CiteDrive"
+pubDate: "Jan 15 2023"
+lang: en
+---
+
+# Parenthetical vs. narrative citations in CiteDrive
+
+
+
+We receive many questions about using CiteDrive to create citations in parentheticals and narratives. Since the app is a BibTeX-based online reference management tool that works with both LaTeX and Pandoc-based systems (such as R Markdown and Quarto) and synchronizes your bibliographies with Overleaf and RStudio, we show you different options depending on the system and package you use.
+
+
+
+## Parenthetical and narrative citations - what's the difference?
+
+
+
+In a parenthetical citation, you include information about a source in parentheses at the end of a sentence or clause where you are using information from that source. This allows you to identify the source of information without interrupting the flow of your writing. For example:
+
+`According to a recent study (Smith, 2020), the average lifespan of a dog is 12 years.`
+
+Narrative citation, on the other hand, involves incorporating information about the source into the text of your writing. This typically includes the author's name and the publication date. For example:
+
+`According to Smith (2020), the average lifespan of a dog is 12 years.`
+
+Both parenthetical and narrative citations are used to give credit to the source of information and to allow readers to locate the source if they want to learn more. Using a parenthetical or narrative citation will depend on your style guide and preference.
+
+
+## In LaTeX/Overleaf
+
+When using LaTeX/Overleaf, it will depend if you use BibTeX or BibLaTeX. If you're using BibTeX, then the natbib package will be of help, which includes several commands for customizing citations, such as `\citet*` for in-text citations and `\citep*` for citations without parentheses.
+
+
+
+In BibLaTeX `\parencite*` is an already built-in option for appropriate customizations. 
+
+
+
+## In Pandoc, Quarto, or R Markdown
+
+
+
+It is straightforward with Pandoc; add your citation key without brackets, i.e., `@citationkey` if you use a narrative citation, and the in-text version with brackets, i.e., `[@citationkey]`.
+
+
+
