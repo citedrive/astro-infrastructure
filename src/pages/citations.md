@@ -25,6 +25,8 @@ Fonseca, William D'Andrea. "Introdução ao LaTeX e como iniciar um novo projeto
 
 ### 2022
 
-Bilaney, Gareth. “Better bibliography management with Overleaf, CiteDrive, and BibTeX/BibLaTeX — about 3.0 and an updated guide” Overleaf.com, 2022, https://www.overleaf.com/blog/better-bibliography-management-with-overleaf-citedrive-and-bibtex-biblatex
+Bilaney, Gareth. “Better bibliography management with Overleaf, CiteDrive, and BibTeX/BibLaTeX — about 3.0 and an updated guide” *Overleaf.com*, 2022, https://www.overleaf.com/blog/better-bibliography-management-with-overleaf-citedrive-and-bibtex-biblatex.
 
-Bilaney, Gareth. “CiteDrive—Easy Reference Management for Overleaf” Overleaf.com, 2022, https://www.overleaf.com/blog/citedrive-easy-reference-management-for-overleaf
+Bilaney, Gareth. “CiteDrive—Easy Reference Management for Overleaf” *Overleaf.com*, 2022, https://www.overleaf.com/blog/citedrive-easy-reference-management-for-overleaf.
+
+Neumann, Christoph. "Werkzeuge | Prof. Dr. Christoph P. Neumann – OTH Amberg-Weiden" *OTH Amberg-Weiden*, 2022 https://www.oth-aw.de/neumann/tools/.
