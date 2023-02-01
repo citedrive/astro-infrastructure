@@ -28,28 +28,30 @@ We recommend using **CiteDrive** to create the.bib-file because it assists you w
 
 Your bib-file, which you can also create manually if you don't want to use **CiteDrive**, is a bibliographic reference file that LaTeX uses to format bibliographies and citations. Here's an example of a straightforward bib-file:
 
-```tex
+```bibtex
 @book{knuth1984texbook,
-    author = "Donald E. Knuth",
-    title = "The {\TeX}book",
-    year = "1984",
-    publisher = "Addison-Wesley"
+	title        = {The {\TeX}book},
+	author       = {Donald E. Knuth},
+	year         = 1984,
+	publisher    = {Addison-Wesley}
 }
 
 @article{lamport1994latex,
-    author = "Leslie Lamport",
-    title = "{LaTeX}: A Document Preparation System",
-    year = "1994",
-    journal = "Addison-Wesley"
+	title        = {{LaTeX}: A Document Preparation System},
+	author       = {Leslie Lamport},
+	year         = 1994,
+	journal      = {Addison-Wesley}
 }
 
 @inproceedings{gosling1995java,
-    author = "James Gosling and Henry McGilton",
-    title = "The Java Language Environment",
-    booktitle = "Proceedings of the Sun Microsystems Symposium on the Java Language",
-    year = "1995",
-    publisher = "Sun Microsystems"
+	title        = {The Java Language Environment},
+	author       = {James Gosling and Henry McGilton},
+	year         = 1995,
+	booktitle    = {Proceedings of the Sun Microsystems 
+                        Symposium on the Java Language},
+	publisher    = {Sun Microsystems}
 }
+
 
 ```
 

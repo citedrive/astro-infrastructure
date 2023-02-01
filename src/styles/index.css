@@ -396,8 +396,11 @@ select {
 
 
 
-
-
+ pre {
+	padding: 1rem;
+	border-radius: 14px;
+	border: 3px solid #7867ff;
+}
 
 
 
