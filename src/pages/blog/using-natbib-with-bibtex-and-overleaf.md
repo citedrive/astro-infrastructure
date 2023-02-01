@@ -82,7 +82,8 @@ Here's how to get everything together in our tex-file after we've created our.bi
 4.  To cite a reference in the text, use the `\cite` or \citep command followed by the reference identifier:
 
 ```tex
-As discussed in \cite{knuth1984texbook}, \TeX\ is a powerful typesetting system.
+As discussed in \cite{knuth1984texbook}, 
+\TeX\ is a powerful typesetting system.
 ```
 
 5.  Finally, include the following command to produce the bibliography at the end of your document:
