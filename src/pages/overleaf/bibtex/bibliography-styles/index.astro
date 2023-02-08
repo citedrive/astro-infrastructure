@@ -1,0 +1,19 @@
+---
+import pages from '../../../../JSON/bibtexStyles.json';
+import DocsLayout from '../../../../layouts/DocsLayout.astro';
+
+const { bibtex } = Astro.props;
+
+
+---
+<DocsLayout title={"All BibTeX bibliography styles available on Overleaf"} descpription = {"All BibTeX bibliography styles available on Overleaf"} lang={"en"}  >
+
+<h1>All bibliography BibTeX styles available on Overleaf</h1>
+   
+{pages.map(({ bibtex, type }) => (
+
+    <a href={bibtex + "/"} title={bibtex}><b>{bibtex}</b> ({type})</a>  
+    <br>
+))}
+
+</DocsLayout>
