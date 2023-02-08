@@ -1,6 +1,8 @@
 ---
 import pages from '../../../../JSON/bibtexStyles.json';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import DocsLayout from '../../../../layouts/DocsLayout.astro';
+import { markdown } from '@astropub/md'
 export async function getStaticPaths() {
 
   return pages.map(({ bibtex }) => {
@@ -12,30 +14,63 @@ export async function getStaticPaths() {
 }
 
 const { bibtex } = Astro.props;
+
+
 ---
-<BaseLayout title={bibtex} site>
-<article class="content" >
-    <h1>Can you use the {bibtex} BibTeX bibliography style in Overleaf?</h1>
-
-    The answer is yes! The {bibtex} bibliography style is one of many built-in styles in Overleaf. Use this style by typing \bibliographystyle({bibtex}) in your tex-document, or open the following example on Overleaf.
-
-BibTeX is a powerful bibliographic tool used to create bibliographies in LaTeX documents. It is one of the most widely used bibliography tools and supports many different bibliography styles and citation formats.
-
-While Overleaf does not currently support all bibliography styles compatible with BibTeX, many bibliography styles are included in the bibtex bibliography style library. These bibliography styles include APA, IEEE, CSE, and Chicago citation formats. You can also use custom bibliography styles by creating your bibtex bibliography format file or importing one from another source.
+<DocsLayout title={"How to use the BibTeX " + bibtex + " Bibliography style in Overleaf"} descpription = {bibtex} lang={"en"}  >
 
 
-Whether using BibTeX on your own or through Overleaf, it is an essential tool for creating bibliographies in scientific and technical documents. To learn more about bibliography management with bibtex and Overleaf, visit bibtex.eu or our docs!
+    <h1>Can you use the <b>{bibtex}</b> BibTeX bibliography style in Overleaf?</h1>
+
+
+
+
+<p>The answer is yes! The <b>{bibtex}</b> bibliography style is one of many built-in styles in Overleaf. Use this style by typing <code>\bibliographystyle({bibtex})</code> in your tex-document, or use the following example for a new document on Overleaf:</p>
+
+<pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">\documentclass</span><span style="color: #C9D1D9">{"{"</span><span style="color: #79C0FF">article</span><span style="color: #C9D1D9">{"}"}</span></span>
+<span class="line"><span style="color: #FF7B72">\usepackage</span><span style="color: #C9D1D9">[utf8]{"{"}</span><span style="color: #79C0FF">inputenc</span><span style="color: #C9D1D9">{"}"}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #79C0FF">\title</span><span style="color: #C9D1D9">{"{"}A LaTeX example of BibTeX references </span></span>
+<span class="line"><span style="color: #C9D1D9">using the {bibtex} bibliography style.{"}"}</span></span>
+<span class="line"><span style="color: #79C0FF">\author</span><span style="color: #C9D1D9">{"{"}John Smith{"}"}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #79C0FF">\begin</span><span style="color: #C9D1D9">{"{"}document{"}"}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #79C0FF">\maketitle</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span></span>
+<span class="line"><span style="color: #C9D1D9">Praesent enim urna, dapibus et bibendum vel, </span></span>
+<span class="line"><span style="color: #C9D1D9">consectetur et turpis. </span></span>
+<span class="line"><span style="color: #C9D1D9">Cras a molestie nulla. </span><span style="color: #FF7B72">\cite</span><span style="color: #C9D1D9">{</span><span style="color: #79C0FF">{"{"}Hemingway1952{"}"}</span><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #79C0FF">\medskip</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #79C0FF">\bibliographystyle</span><span style="color: #C9D1D9">{"{"}{bibtex}{"}"}</span></span>
+<span class="line"><span style="color: #79C0FF">\bibliography</span><span style="color: #C9D1D9">{"{"}bibliography{"}"}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #79C0FF">\end</span><span style="color: #C9D1D9">{"{"}document{"}"}</span></span>
+<span class="line"></span></code></pre>
+
+
+
+<p>BibTeX is a powerful bibliographic tool used to create bibliographies in LaTeX documents. It is one of the most widely used bibliography tools and supports many different bibliography styles and citation formats.</p>
+
+<p>While Overleaf does not currently support all bibliography styles compatible with BibTeX, many bibliography styles are included in the bibtex bibliography style library. These bibliography styles include APA, IEEE, CSE, and Chicago citation formats. You can also use custom bibliography styles by creating your bibtex bibliography format file or importing one from another source.</p>
+
+
+<p>Whether using BibTeX on your own or through Overleaf, it is an essential tool for creating bibliographies in scientific and technical documents. To learn more about bibliography management with bibtex and Overleaf, visit bibtex.eu or our docs!</p>
 
 <h2>Are you looking for a Collaborative Online tool to manage your BibTeX reference, which connects to Overleaf?</h2>
-If you're looking for an online tool to help manage your references, citations, and bibliography in Overleaf, CiteDrive may be perfect! It allows you to collect and organize teams and references in projects while keeping your BibTeX entries up to date in your Overleaf project. You can also use CiteDrive to create bibliographies and citations in various styles, including {bibtex}. So if you're looking for an easy way to manage your bibliography in Overleaf, give CiteDrive a try today!
+<p>If you're looking for an online tool to help manage your references, citations, and bibliography in Overleaf, CiteDrive may be perfect! It allows you to collect and organize teams and references in projects while keeping your BibTeX entries up to date in your Overleaf project. </p>
 
-You can find more information on how to do this in our online help documentation.
-</article>
+<p>You can also use CiteDrive to create bibliographies and citations in various styles, including {bibtex}. So if you're looking for an easy way to manage your bibliography in Overleaf, give CiteDrive a try today!</p>
 
-</BaseLayout>
+<p>You can find more information on how to do this in our online help documentation.</p>
+
+
+</DocsLayout>
 <style>
    .content {
-    max-width: 900px;
+    max-width: 700px;
     margin: 6.6rem auto;
    }
 </style>

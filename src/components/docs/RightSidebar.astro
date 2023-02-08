@@ -2,11 +2,12 @@
 import InternalLink from '../InternalLink.astro';
 import TableOfContents from './TableOfContents';
 const { headings, githubEditUrl } = Astro.props;
----
 
+
+---
 <nav>
 	<div>
-	{headings.length > 1 &&
+	{typeof headings !== "undefined" && headings.length > 1 &&
 			<>
 			<ul>
 				{headings

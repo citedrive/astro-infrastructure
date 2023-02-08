@@ -1,13 +1,14 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-const { title, lang, dir, frontmatter, headings } = Astro.props;
+const { title, lang, dir, frontmatter, description, headings } = Astro.props;
 import RightSidebar from '../components/docs/RightSidebar.astro';
 import LeftSidebar from '../components/docs/LeftSidebar.astro';
 import '../styles/markdown.css';
 import ReactAccordion from '../components/Accordion/ReactAccordion';
+
 ---
 
-<BaseLayout title={frontmatter.title} description={frontmatter.description}  lang={frontmatter.lang} doc={true}>
+<BaseLayout title={title ?? frontmatter.title} description={description}  lang={lang ?? frontmatter.lang} doc={true}>
 
    <div>
 
