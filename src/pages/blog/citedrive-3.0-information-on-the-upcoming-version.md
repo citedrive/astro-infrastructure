@@ -4,6 +4,7 @@ title: "CiteDrive 3.0: Information on the upcoming version"
 pubDate: "Apr 27 2022"
 lang: en
 ---
+export const prerender = true;
 
 # CiteDrive 3.0: Information on the upcoming version
 

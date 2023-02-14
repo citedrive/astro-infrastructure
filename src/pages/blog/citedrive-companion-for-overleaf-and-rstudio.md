@@ -1,7 +1,7 @@
 ---
-layout: "../../layouts/BlogPost.astro"
-title: "The CiteDrive Companion for Overleaf and RStudio"
-pubDate: "June 01 2022"
+layout: '../../layouts/BlogPost.astro'
+title: 'The CiteDrive Companion for Overleaf and RStudio'
+pubDate: 'June 01 2022'
 lang: en
 ---
 export const prerender = true;

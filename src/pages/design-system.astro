@@ -3,8 +3,7 @@ export const prerender = true;
 import Layout from '../layouts/BaseLayout.astro';
 import CallToActionButton from '../components/CTA.astro';
 import InternalLink from '../components/InternalLink.astro';
-import ReactDropdown from '../components/Dropdown/ReactDropdown.tsx';
-import ReactAccordion from '../components/Accordion/ReactAccordion.tsx';
+//import ReactDropdown from '../components/Dropdown/ReactDropdown.tsx';
 ---
 
 <Layout title="CiteDrive | Design System" lang="en">
@@ -94,14 +93,14 @@ import ReactAccordion from '../components/Accordion/ReactAccordion.tsx';
             <InternalLink link="#" label="I'm a label" />
 
             <div class="flex" style="width: 100%; --gap: 2.5rem; justify-content: space-between;">
-
+                {/* 
                 <ReactDropdown label="I'm a Dropdown Menu" client:load>
                     <ul class="grid" style="list-style: none; padding: 0">
                         <li><a href="/">Overleaf</a></li>
                         <li><a href="/">RStudio</a></li>
                     </ul>
                 </ReactDropdown>
-
+                    */}
                  <div class="grid">
 
                 <!-- <ReactAccordion label="How to cite in Overleaf?" isOpen={false} client:load>

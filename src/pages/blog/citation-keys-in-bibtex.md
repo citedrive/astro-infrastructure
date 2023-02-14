@@ -4,6 +4,7 @@ title: "Citation keys in BibTeX"
 pubDate: "Jan 08 2023"
 lang: en
 ---
+export const prerender = true;
 
 # Citation keys in BibTeX
 
