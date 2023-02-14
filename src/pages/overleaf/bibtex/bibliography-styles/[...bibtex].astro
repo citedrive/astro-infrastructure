@@ -27,30 +27,28 @@ const { bibtex } = Astro.props;
 
 
 <p>The answer is yes! The <b>{bibtex}</b> bibliography style is one of many built-in styles in Overleaf. Use this style by typing <code>\bibliographystyle({bibtex})</code> in your tex-document, or use the following example for a new document on Overleaf:</p>
-
-<pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">\documentclass</span><span style="color: #C9D1D9">"{ "{"</span><span style="color: #79C0FF">article</span><span style="color: #C9D1D9">{"}"}</span></span>
-<span class="line"><span style="color: #FF7B72">\usepackage</span><span style="color: #C9D1D9">[utf8]{"{"}</span><span style="color: #79C0FF">inputenc</span><span style="color: #C9D1D9">{"}"}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #79C0FF">\title</span><span style="color: #C9D1D9">{"{"}A LaTeX example of BibTeX references </span></span>
-<span class="line"><span style="color: #C9D1D9">using the {bibtex} bibliography style.{"}"}</span></span>
-<span class="line"><span style="color: #79C0FF">\author</span><span style="color: #C9D1D9">{"{"}John Smith{"}"}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #79C0FF">\begin</span><span style="color: #C9D1D9">{"{"}document{"}"}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #79C0FF">\maketitle</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span></span>
-<span class="line"><span style="color: #C9D1D9">Praesent enim urna, dapibus et bibendum vel, </span></span>
-<span class="line"><span style="color: #C9D1D9">consectetur et turpis. </span></span>
-<span class="line"><span style="color: #C9D1D9">Cras a molestie nulla. </span><span style="color: #FF7B72">\cite</span><span style="color: #C9D1D9">{</span><span style="color: #79C0FF">{"{"}Hemingway1952{"}"}</span><span style="color: #C9D1D9">}</span></span>
-<span class="line"><span style="color: #79C0FF">\medskip</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #79C0FF">\bibliographystyle</span><span style="color: #C9D1D9">{"{"}{bibtex}{"}"}</span></span>
-<span class="line"><span style="color: #79C0FF">\bibliography</span><span style="color: #C9D1D9">{"{"}bibliography{"}"}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #79C0FF">\end</span><span style="color: #C9D1D9">{"{"}document{"}"}</span></span>
-<span class="line"></span></code></pre>
-
+<pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">\documentclass</span><span style="color: #C9D1D9">&#123;</span><span style="color: #79C0FF">article</span><span style="color: #C9D1D9">&#125;</span></span>
+  <span class="line"><span style="color: #FF7B72">\usepackage</span><span style="color: #C9D1D9">[utf8]&#123;</span><span style="color: #79C0FF">inputenc</span><span style="color: #C9D1D9">&#125;</span></span>
+  <span class="line"></span>
+  <span class="line"><span style="color: #79C0FF">\title</span><span style="color: #C9D1D9">&#123;A LaTeX example of BibTeX references </span></span>
+  <span class="line"><span style="color: #C9D1D9">using the {bibtex} bibliography style.&#125;</span></span>
+  <span class="line"><span style="color: #79C0FF">\author</span><span style="color: #C9D1D9">&#123;John Smith&#125;</span></span>
+  <span class="line"></span>
+  <span class="line"><span style="color: #79C0FF">\begin</span><span style="color: #C9D1D9">&#123;document&#125;</span></span>
+  <span class="line"></span>
+  <span class="line"><span style="color: #79C0FF">\maketitle</span></span>
+  <span class="line"></span>
+  <span class="line"><span style="color: #C9D1D9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span></span>
+  <span class="line"><span style="color: #C9D1D9">Praesent enim urna, dapibus et bibendum vel, </span></span>
+  <span class="line"><span style="color: #C9D1D9">consectetur et turpis. </span></span>
+  <span class="line"><span style="color: #C9D1D9">Cras a molestie nulla. </span><span style="color: #FF7B72">\cite</span><span style="color: #C9D1D9">&#123;</span><span style="color: #79C0FF">Hemingway1952</span><span style="color: #C9D1D9">&#125;</span></span>
+  <span class="line"><span style="color: #79C0FF">\medskip</span></span>
+  <span class="line"></span>
+  <span class="line"><span style="color: #79C0FF">\bibliographystyle</span><span style="color: #C9D1D9">&#123;{bibtex}&#125;</span></span>
+  <span class="line"><span style="color: #79C0FF">\bibliography</span><span style="color: #C9D1D9">&#123;bibliography&#125;</span></span>
+  <span class="line"></span>
+  <span class="line"><span style="color: #79C0FF">\end</span><span style="color: #C9D1D9">&#123;document&#125;</span></span>
+  <span class="line"></span></code></pre>
 
 
 <p>BibTeX is a powerful bibliographic tool used to create bibliographies in LaTeX documents. It is one of the most widely used bibliography tools and supports many different bibliography styles and citation formats.</p>
