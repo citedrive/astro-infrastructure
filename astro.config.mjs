@@ -8,11 +8,14 @@ import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
+ 
   site: 'https://www.citedrive.com',
   trailingSlash: 'always',
+  /*
+  output: "server",
   integrations: [react(), partytown(), mdx(), sitemap()],
   adapter: node({
     mode: 'standalone'
   }),
+  */
 });
