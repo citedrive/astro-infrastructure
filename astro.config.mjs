@@ -11,9 +11,10 @@ export default defineConfig({
  
   site: 'https://www.citedrive.com',
   trailingSlash: 'always',
+  integrations: [react(), partytown(), mdx(), sitemap()],
   /*
   output: "server",
-  integrations: [react(), partytown(), mdx(), sitemap()],
+
   adapter: node({
     mode: 'standalone'
   }),
