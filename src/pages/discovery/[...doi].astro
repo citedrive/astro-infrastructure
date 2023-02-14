@@ -1,0 +1,39 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+const { doi } = Astro.params;
+let url = "https://api.crossref.org/works/" + doi;
+const response = await fetch(url);
+const data = await response.json();
+
+
+
+
+
+---
+<DocsLayout title={"slug"} descpription = {doi} lang={"en"}  >
+
+
+  <h1>{data.message.title[0]} </h1>
+  <p>{data.message.abstract}</p>
+  <p>{data.message.author[0].given}</p>
+  <p>{data.message["container-title"]}</p>
+
+
+  {typeof data.message.reference !== "undefined" &&
+                data.message.reference.map((x) => (
+                  <>
+                    {typeof x.DOI !== "undefined" && (
+                      <>
+             
+                        <div
+                         
+                        >
+                          {x.DOI}
+                        </div>
+                      </>
+                    )}
+                  </>
+                ))}
+
+
+</DocsLayout>

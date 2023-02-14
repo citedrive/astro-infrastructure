@@ -6,6 +6,7 @@ side: Quick Start
 cat: "quick-start"
 lang: en
 ---
+export const prerender = true;
 
 # Quick Start
 
