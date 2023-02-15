@@ -19,15 +19,15 @@ const pages = [
 
 const { slug } = Astro.params;
 const page = pages.find((page) => page.slug === slug);
-if (!page) return Astro.redirect("/404");
-const { title, text } = page;
+//if (!page) return Astro.redirect("/404");
+//const { title, text } = page;
 ---
 <html>
 <head>
-  <title>{title}</title>
+  <title>{slug}</title>
 </head>
 <body>
-  <h1>{title}</h1>
-  <p>{text}</p>
+  <h1>{slug}</h1>
+  <p>{slug}</p>
 </body>
 </html>
