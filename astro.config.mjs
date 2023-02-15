@@ -3,9 +3,7 @@ import react from '@astrojs/react';
 import partytown from "@astrojs/partytown";
 import mdx from "@astrojs/mdx";
 import sitemap from '@astrojs/sitemap';
-import netlify from '@astrojs/netlify/functions';
-
-// https://astro.build/config
+import netlify from "@astrojs/netlify/edge-functions";
 export default defineConfig({
   //site: 'https://www.citedrive.com',
   trailingSlash: 'always',
