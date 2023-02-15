@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@algolia/client-search": "^4.13.1",
+    "@astrojs/netlify": "^2.1.2",
     "@astrojs/node": "^5.0.3",
     "@astrojs/partytown": "^1.0.0",
     "@astrojs/tailwind": "^3.0.1",
