@@ -19,12 +19,16 @@ const pages = [
 
 const { slug } = Astro.params;
 const page = pages.find((page) => page.slug === slug);
+
+let url = "https://api.crossref.org/works/" + slug;
+const response = await fetch(url);
+const data = await response.json();
 //if (!page) return Astro.redirect("/404");
 //const { title, text } = page;
 ---
 <html>
 <head>
-  <title>{slug}</title>
+  <title>This slug: {slug}</title>
 </head>
 <body>
   <h1>{slug}</h1>
