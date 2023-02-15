@@ -9,8 +9,9 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 // const posts = await Astro.glob('../../pages/blog/*.{md,mdx}');
 ---
 
-<nav>
+<nav class="leftSideBar">
 <div style="padding-bottom: 4rem">
+    <h4 style="margin-bottom: 1rem; font-weight: 500; color: hsl(var(--clr-secondary));">All Blog Posts</h4>
 	<ul class="list">
 		{posts.map((post) => (
 			<li>
@@ -58,6 +59,20 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+}
+
+
+
+@media only screen and (min-width: 1280px) {
+
+.leftSideBar{
+      overflow-x: hidden;
+      width: 260px;
+      height: calc(100vh - 120px);
+      position: sticky;
+      top: 104px;
+   }
+
 }
 
 

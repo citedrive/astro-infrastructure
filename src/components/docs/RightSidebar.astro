@@ -5,8 +5,9 @@ const { headings, githubEditUrl } = Astro.props;
 
 
 ---
-<nav>
+<nav class="rightSideBar">
 	<div>
+	<h4>On this page</h4>
 	{typeof headings !== "undefined" && headings.length > 1 &&
 			<>
 			<ul>
@@ -21,11 +22,14 @@ const { headings, githubEditUrl } = Astro.props;
 			</>
 			}
 	</div>
-</nav>
 
-<a class="banner" href="/">
+	<a class="banner" href="/">
 <img src="/assets/Banner/banner.svg" alt="Try CiteDrive!">
 </a>
+
+</nav>
+
+
 
 <style>
 
@@ -50,6 +54,18 @@ const { headings, githubEditUrl } = Astro.props;
 	display: block;
 	margin-top: 3rem
 }
+
+}
+
+@media only screen and (min-width: 1280px) {
+
+.rightSideBar{
+      overflow-x: hidden;
+
+      height: calc(100vh - 120px);
+      position: sticky;
+      top: 104px;
+   }
 
 }
 

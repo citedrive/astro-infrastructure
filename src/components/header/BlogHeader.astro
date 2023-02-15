@@ -9,7 +9,7 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 ---
 <header>
 
-   <nav class="alternative-header flex" style="justify-content: space-between; align-items: center;">
+<nav class="header" style="display: flex; justify-content: space-between; align-items: center;">
     
     <div class="flex" style="align-items: center; justify-content: space-between; width: 100%;">
 
@@ -80,6 +80,11 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 .bg-white {
       background-color: white;
    }
+/* 
+.alternative-header {
+    background-color: white;
+} */
+
 </style>
 
 <script>
@@ -96,7 +101,7 @@ const posts = (await Astro.glob('../../pages/blog/*.{md,mdx}')).sort(
 
 
 
-    const header = document.querySelector('.alternative-header');
+    const header = document.querySelector('.header');
 
         const handleScroll = () => {
         if (window.pageYOffset > 100 && window.innerWidth < 1028) {

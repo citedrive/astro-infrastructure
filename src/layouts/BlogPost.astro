@@ -23,13 +23,8 @@ const { title, lang, dir, desc, type, frontmatter, headings } = Astro.props;
 
       <section class="grid">
 
-         <aside class="left" style="position: fixed;">
-          <h4 style="margin-bottom: 1rem; font-weight: 500; color: hsl(var(--clr-secondary));;">All Blog Posts</h4>
-         <div class="leftSideBar">
-
+         <aside class="left">
             <LeftSidebarBlog lang={lang ?? frontmatter.lang} />
-         </div>
-
          </aside>
 
          <article class="article" >
@@ -48,8 +43,7 @@ const { title, lang, dir, desc, type, frontmatter, headings } = Astro.props;
                </div>
          </article>
 
-         <aside class="rightSidebar">
-            <h4>On this page</h4>
+         <aside class="right">
             <RightSidebar headings={headings} githubEditUrl={"githubEditUrl"} />
          </aside>
 
@@ -65,14 +59,15 @@ const { title, lang, dir, desc, type, frontmatter, headings } = Astro.props;
    display: none;
 }
 
-.rightSidebar{
-    display: none;
+.right {
+   display: none;
 }
+
+
 
 .mobileAnchor {
    margin-bottom: 2rem;
 }
-
 
 .article{
    width: 100%;
@@ -97,19 +92,27 @@ const { title, lang, dir, desc, type, frontmatter, headings } = Astro.props;
 
    .left {
       display: block;
+
    }
 
-   .leftSideBar{
+   .right {
+      display: block;
+
+   }
+
+   /* .leftSideBar{
       overflow-x: hidden;
       width: 260px;
       height: calc(100vh - 120px);
-   }
+      
+   } */
 
    .rightSidebar{
-      width: 300px;
-      display: block;
-      position: fixed;
-      right: 2rem;
+       overflow-x: hidden;
+
+      height: calc(100vh - 120px);
+      position: sticky;
+      top: 104px;
    }
 
    .mobileAnchor {
