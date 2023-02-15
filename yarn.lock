@@ -1168,7 +1168,7 @@ astro-analytics@^2.5.1:
   resolved "https://registry.yarnpkg.com/astro-analytics/-/astro-analytics-2.5.1.tgz#b805256d9a4c2fa451629f28ac40a423bd87c82c"
   integrity sha512-0n3QlHYt+VINbqs5Ukbzl1NHHpvjO/1LeEdz1umA40mgPbyUjivJJ5wwINrOqxu8swPD+jmUFCm7VHDSGxkNwQ==
 
-astro@^2.0.6:
+astro@^2.0.7:
   version "2.0.11"
   resolved "https://registry.yarnpkg.com/astro/-/astro-2.0.11.tgz#22f59cbef36bd6b538e23004479092ee18729909"
   integrity sha512-dXBuHE1ZYfafHyjhe7ZUkcZzGGInWrLCMeHAML//+mdySr/htDsiMo8DN25Ld5siKClsCvyXgxitu651wSWcyw==

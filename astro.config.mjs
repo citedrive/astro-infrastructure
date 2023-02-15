@@ -3,15 +3,13 @@ import react from '@astrojs/react';
 import partytown from "@astrojs/partytown";
 import mdx from "@astrojs/mdx";
 import sitemap from '@astrojs/sitemap';
-
 import netlify from '@astrojs/netlify/functions';
 
+// https://astro.build/config
 export default defineConfig({
- 
   site: 'https://www.citedrive.com',
   trailingSlash: 'always',
   integrations: [react(), partytown(), mdx(), sitemap()],
   output: "server",
-  adapter: netlify(),
- 
+  adapter: netlify()
 });
