@@ -7,7 +7,7 @@ import netlify from '@astrojs/netlify/functions';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.citedrive.com',
+  //site: 'https://www.citedrive.com',
   trailingSlash: 'always',
   integrations: [react(), partytown(), mdx(), sitemap()],
   output: "server",
