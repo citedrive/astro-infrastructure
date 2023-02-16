@@ -1,30 +1,11 @@
 ---
-const pages = [
-  {
-    slug: undefined,
-    title: 'Astro Store',
-    text: 'Welcome to the Astro store!',
-  },
-  {
-    slug: 'products',
-    title: 'Astro products',
-    text: 'We have lots of products for you',
-  },
-  {
-    slug: 'products/astro-handbook',
-    title: 'The ultimate Astro handbook',
-    text: 'If you want to learn Astro, you must read this book.',
-  }
-];
 
-const { slug } = Astro.params;
-
-let url = "https://api.crossref.org/works/10.4000/kentron.5990";
+const { slug } = await Astro.params;
+let url = "https://api.crossref.org/works/" + slug;
 const response = await fetch(url);
 const data = await response.json();
 console.log(data);
-//if (!page) return Astro.redirect("/404");
-//const { title, text } = page;
+
 ---
 <html>
 <head>
