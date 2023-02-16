@@ -3,7 +3,6 @@ const { doi } = await Astro.params;
 import DocsLayout from '../../layouts/DocsLayout.astro';
 let url = "https://api.crossref.org/works/" + doi;
 const response = await fetch(url);
-if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 const data = await response.json();
 
 
@@ -15,6 +14,7 @@ const data = await response.json();
 
 
   <h1>{data.message.title[0]} </h1>
+  {/* 
   <p>{data.message.abstract}</p>
   <p>{data.message.author[0].given}</p>
   <p>{data.message["container-title"]}</p>
@@ -35,6 +35,6 @@ const data = await response.json();
                     )}
                   </>
                 ))}
-
+ */}
 
 </DocsLayout>

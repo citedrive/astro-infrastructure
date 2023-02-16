@@ -5,14 +5,10 @@ let url = "https://api.crossref.org/works/" + slug;
 const response = await fetch(url);
 const data = await response.json();
 console.log(data);
+import DocsLayout from '../../layouts/DocsLayout.astro';
 
 ---
-<html>
-<head>
-  <title>This slug: {slug} </title>
-</head>
-<body>
+<DocsLayout title={"slug"} descpription = {slug} lang={"en"}  >
   <h1>{slug} | {data.message.title[0]}</h1>
   <p>{slug}</p>
-</body>
-</html>
+</DocsLayout>
