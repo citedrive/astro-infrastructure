@@ -1,6 +1,6 @@
 ---
-import DocsLayout from '../../layouts/DocsLayout.astro';
 const { doi } = await Astro.params;
+import DocsLayout from '../../layouts/DocsLayout.astro';
 let url = "https://api.crossref.org/works/" + doi;
 const response = await fetch(url);
 if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
