@@ -3,6 +3,7 @@
 
 let url = "https://api.crossref.org/works/10.4000/kentron.5990";
 const response = await fetch(url);
+if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 const data = await response.json();
 console.log(data);
 //if (!page) return Astro.redirect("/404");
