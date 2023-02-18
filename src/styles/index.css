@@ -44,6 +44,7 @@ h3 {
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 body {
@@ -71,6 +72,11 @@ button,
 textarea,
 select {
 	font: inherit;
+}
+
+pre {
+	padding: 1rem;
+	border-radius: 14px;
 }
 
 @media(prefers-reduced-motion: reduce) {
@@ -396,11 +402,7 @@ select {
 
 
 
- pre {
-	padding: 1rem;
-	border-radius: 14px;
-	border: 3px solid #7867ff;
-}
+
 
 
 

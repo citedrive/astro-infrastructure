@@ -1,40 +1,180 @@
 ---
+import DiscoveryHeader from '../../components/header/DiscoveryHeader.astro';
+import DiscoveryLayout from '../../layouts/DiscoveryLayout.astro';
+import BibtexPreview from '../../components/Discovery/bibtexPreview.astro';
+import References from '../../components/Discovery/references.astro';
 const { doi } = await Astro.params;
-import DocsLayout from '../../layouts/DocsLayout.astro';
 let url = "https://api.crossref.org/works/" + doi;
 const response = await fetch(url);
+if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
 const data = await response.json();
+console.log(await JSON.stringify(data));
+// console.log(await data);
 
+let type = data.message.type;
+let title = data.message.title[0];
+let author = data.message.author.map((author, i, arr) => (`${author.given} ${author.family}`));
+let journal = data.message["container-title"];
+let year = data.message.published["date-parts"][0][0];
+let volume = data.message.volume;
+let pages = data.message.page;
 
-
-
+// let key = DOI
 
 ---
-<DocsLayout title={"slug"} descpription = {doi} lang={"en"}  >
+
+<DiscoveryLayout title={title} description = {doi} lang={"en"}>
+
+<div class="flex" style="flex-direction: column; align-items: center; --gap: 0;">
+  <a href={data.message.resource.primary.URL}><div class="pill-tag" style="margin-bottom: 1rem;">{`DOI: ${data.message.DOI}`}</div></a>
+  <div class="freight author" style="margin-bottom: .25rem;">
+    {data.message.author.map((author, i, arr) => (
+      <span>
+      { (i < arr.length - 1 ? `${author.given} ${author.family}` + ', ' : `${author.given} ${author.family}`)}
+      </span>
+    )
+    )}
+  </div>
+  <h1 class="freight title">{title}</h1>
+  <div class="freight year">{year}</div>
+</div>
+
+<div class="flex" style="gap: .25rem; flex-wrap: wrap;">
+  {data.message.subject.map((subject) => (
+    <div class="tag">{subject}</div>
+  ))
+  }
+</div>
+
+<div class="flex" style="align-items: center;">
+    <button type="button" class="safe-to-citedrive">Safe To CiteDrive</button>
+  <div class="pill-tag">{`${data.message['is-referenced-by-count']} Citations `}</div>
+</div>
 
 
-  <h1>{data.message.title[0]} </h1>
-  {/* 
-  <p>{data.message.abstract}</p>
-  <p>{data.message.author[0].given}</p>
-  <p>{data.message["container-title"]}</p>
+<div>
+  <div class="publisher">Journal: {journal}</div>
+  <div class="publisher">Volume: {volume}</div>
+</div>
 
+<div>
+  <h3 style="margin-bottom: 12px;">Abstract:</h3>
+
+<!-- <p>{data.message.abstract}</p> -->
+</div>
+
+
+<BibtexPreview 
+  type={type}
+  title={title}
+  author= {author}
+  journal={journal}
+  year={year}
+  volume={volume}
+  pages={pages}
+/>
+
+ 
+<div>{data.message["reference-count"]} References</div>
+
+
+<!-- <div>{data.message.issue}</div>
+<div>{data.message.volume}</div>
+<div>{data.message.type}</div> -->
+
+  <!-- <div>{data.message["container-title"]}</div> -->
 
   {typeof data.message.reference !== "undefined" &&
-                data.message.reference.map((x) => (
-                  <>
-                    {typeof x.DOI !== "undefined" && (
-                      <>
-             
-                        <div
-                         
-                        >
-                          {x.DOI}
-                        </div>
-                      </>
-                    )}
-                  </>
+              <div class="grid references-grid" style="--gap: .5rem">
+                {data.message.reference.map((ele) => (
+                  <References
+                  doi={typeof ele.DOI !== "undefined" ? ele.DOI : "No DOI"}
+                  author={ele.author}
+                  title={ele["article-title"]}
+                  year={ele.year}
+                   />
                 ))}
- */}
+                </div>
+                }
 
-</DocsLayout>
+</DiscoveryLayout>
+
+
+
+<style>
+
+.freight {
+  font-family: freight-display-pro, serif;
+  font-style: normal;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 50px;
+}
+
+.author {
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 30px;
+}
+
+.year {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.publisher {
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+.reference {
+  border: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+.pill-tag {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 14px;
+  text-align: left;
+  font-size: .95rem;
+  /* display: inline-block; */
+  white-space: normal;
+  padding: .25rem .5rem;
+}
+
+a > .pill-tag:hover {
+  background-color: rgb(204, 204, 204);
+}
+
+.tag {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 14px;
+  text-align: left;
+  font-size: .65rem;
+  /* display: inline-block; */
+  white-space: normal;
+  padding: .25rem;
+}
+
+.safe-to-citedrive {
+  cursor: pointer;
+  background-color: hsl(var(--clr-secondary));
+  padding: 1rem 2rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 14px;
+}
+
+.references-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+}
+
+</style>
+

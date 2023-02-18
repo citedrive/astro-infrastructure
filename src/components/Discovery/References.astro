@@ -1,0 +1,42 @@
+---
+const {doi, title, author, journal, year, volume, pages} = Astro.props
+---
+<a href={`http://localhost:3000/discovery/${doi}/`}>
+    <article class="referenced-article">
+        <div class="doi">DOI: {doi}</div>
+        <h4 class="title freight">{title}</h4>
+        {author}
+        {year}
+    </article>
+</a>
+
+
+<style>
+
+.freight {
+  font-family: freight-display-pro, serif;
+  font-style: normal;
+}
+
+.referenced-article {
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 14px;
+    background-color: mintcream;
+    padding: 1rem;
+
+}
+
+.referenced-article:hover {
+    background-color: rgb(167, 175, 171);;
+}
+
+.doi {
+  background-color: white;
+  border-radius: 14px;
+  text-align: left;
+  font-size: .55rem;
+  white-space: normal;
+  padding: .25rem .5rem;
+}
+
+</style>

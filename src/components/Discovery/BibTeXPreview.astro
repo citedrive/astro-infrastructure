@@ -1,0 +1,88 @@
+---
+const {type, title, author, journal, year, volume, pages} = Astro.props
+
+// let citeKey = ""
+---
+
+<!-- conditional rendering -->
+
+{type === "journal-article" &&
+
+<div class="bibtex-wrapper">
+<pre class="bibtex">
+  @article{`{cite-key,
+    title: {${title}},
+    author: {${author}},
+    journal: {${journal}},
+    year: {${year}},
+    volume: {${volume}},
+    pages: {${pages}}
+  }
+  `
+  }
+</pre>
+<button type="button" class="copy">Copy BibTeX Code</button>
+</div>
+
+<div class="alert" style="visibility: hidden">Copied to Clipboard</div>
+}
+
+
+
+
+<style>
+
+.bibtex-wrapper {
+    max-width: 500px;
+    position: relative;
+}
+
+.bibtex {
+    height: 500px;
+    background-color: black;
+    color: white;
+    font-family: Dico-Code-One;
+    overflow: auto;
+}
+
+.copy {
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+.alert-active {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    visibility: visible!important;;
+    background-color:rgb(173, 178, 184);
+    color: rgb(230, 230, 230);
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 14px;
+}
+
+</style>
+
+<script>
+
+const code = document.querySelector('.bibtex');
+const copyBtn = document.querySelector('.copy');
+const alert = document.querySelector('.alert');
+
+let bibtex = code.textContent;
+
+function copy() {
+    navigator.clipboard.writeText(bibtex);
+    copyBtn.textContent = "copied!"
+    alert.classList.add('alert-active');
+    setTimeout(() => {
+        alert.classList.remove('alert-active');
+    }, 2500);
+}
+
+copyBtn.addEventListener('click', copy);
+
+</script>

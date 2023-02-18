@@ -3,11 +3,13 @@ import { GoogleAnalytics } from 'astro-analytics';
 import Header from '../components/header/Header.astro';
 import DocHeader from '../components/header/DocHeader.astro';
 import BlogHeader from '../components/header/BlogHeader.astro';
+import DiscoveryHeader from '../components/header/DiscoveryHeader.astro';
 import Footer from '../components/footer/Footer.astro';
 // import CookieConsent from '../components/CookieConsent.astro';
 import { SITE } from "../config.ts"
 import '../styles/index.css';
 import '../styles/theme.css';
+
 interface Props {
   lang?: string;
   desc?: string;
@@ -18,12 +20,13 @@ interface Props {
   site?: boolean;
   doc?: boolean;
   blog?: boolean;
+  disc?: boolean;
 //   schemaHomepage?: object;
 //   schemaOverleaf?: object;
 //   schemaBlog?: object;
 //   schemaBlogPost?: object;
 }
-const { title, lang, dir, description, type, frontmatter, headings, site, doc, blog } = Astro.props;
+const { title, lang, dir, description, type, frontmatter, headings, site, doc, blog, disc } = Astro.props;
 
 const TITLE_TAG = typeof title !== "undefined"
   ? title + " | CiteDrive - Citation and Bibliographic management for Overleaf and RStudio"
@@ -76,6 +79,7 @@ const DESCRIPTION_TAG =
 <body>
 <>
 {site && <Header />}
+{disc && <DiscoveryHeader />}
 {doc && <DocHeader />}
 {blog && <BlogHeader />}
  <main style="margin-top: 6.5rem">
@@ -83,6 +87,7 @@ const DESCRIPTION_TAG =
             <!-- <CookieConsent /> -->
 </main>
 {site && <Footer />}
+{disc && <Footer />}
 {blog && <Footer />}
 </>
 </body>

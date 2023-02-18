@@ -1,0 +1,43 @@
+---
+
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  lang?: string;
+  description?: string;
+  title?: string;
+  type?: string;
+  thumbnail?: string;
+//   schemaHomepage?: object;
+//   schemaOverleaf?: object;
+//   schemaBlog?: object;
+//   schemaBlogPost?: object;
+}
+const { title, lang, dir, description, type, frontmatter, headings } = Astro.props;
+---
+
+<BaseLayout 
+title={title ?? frontmatter.title} 
+lang={lang ?? frontmatter.lang} 
+description={description} 
+disc={true}
+>
+
+<article class="discovery flex" style="flex-direction: column; --gap: 2.5rem; margin-bottom: 6.5rem;">
+  <slot />
+</article>
+
+</BaseLayout>
+
+
+<style>
+
+.discovery {
+   margin-top: 12rem;
+   padding-inline: 1rem;
+   margin-inline: auto;
+   width: 100%;
+   max-width: 940px
+}
+
+</style>
