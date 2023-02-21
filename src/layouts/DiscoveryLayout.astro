@@ -1,5 +1,4 @@
 ---
-
 import BaseLayout from "./BaseLayout.astro";
 
 interface Props {
@@ -23,7 +22,7 @@ description={description}
 disc={true}
 >
 
-<article class="discovery flex" style="flex-direction: column; --gap: 2.5rem; margin-bottom: 6.5rem;">
+<article class="discovery flex" style="flex-direction: column; --gap: 3.5rem; margin-bottom: 6.5rem;">
   <slot />
 </article>
 
@@ -33,11 +32,18 @@ disc={true}
 <style>
 
 .discovery {
-   margin-top: 12rem;
+   margin-top: 8.5rem;
    padding-inline: 1rem;
    margin-inline: auto;
    width: 100%;
    max-width: 940px
+}
+
+@media(min-width: 980px) {
+  .discovery {
+   margin-top: 10rem;
+}
+
 }
 
 </style>

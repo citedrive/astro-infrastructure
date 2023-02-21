@@ -8,8 +8,9 @@ const {type, title, author, journal, year, volume, pages} = Astro.props
 
 {type === "journal-article" &&
 
+<h4>BibTeX:</h4>
 <div class="bibtex-wrapper">
-<pre class="bibtex">
+<pre class="bibtex" style="margin-bottom: 0">
   @article{`{cite-key,
     title: {${title}},
     author: {${author}},
@@ -21,10 +22,14 @@ const {type, title, author, journal, year, volume, pages} = Astro.props
   `
   }
 </pre>
-<button type="button" class="copy">Copy BibTeX Code</button>
+
+<button type="button" class="copy">
+    <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><path d="m29.85,69.47h-13.66c-7.73,0-14-6.27-14-14V16.5c0-7.73,6.27-14,14-14h26.37c7.73,0,14,6.27,14,14v3.27" style="fill:none; stroke:#e6e6e6; stroke-linecap:round; stroke-linejoin:round; stroke-width:5px;"/><rect x="39.04" y="26.67" width="54.37" height="66.97" rx="14" ry="14" style="fill:none; stroke:#e6e6e6; stroke-linecap:round; stroke-linejoin:round; stroke-width:5px;"/></svg>
+</button>
+
 </div>
 
-<div class="alert" style="visibility: hidden">Copied to Clipboard</div>
+<div class="alert">Copied to Clipboard!</div>
 }
 
 
@@ -33,7 +38,7 @@ const {type, title, author, journal, year, volume, pages} = Astro.props
 <style>
 
 .bibtex-wrapper {
-    max-width: 500px;
+    width: 100%;
     position: relative;
 }
 
@@ -50,18 +55,27 @@ const {type, title, author, journal, year, volume, pages} = Astro.props
     position: absolute;
     top: 24px;
     right: 24px;
+    width: 32px;
+    background: inherit;
+    border: none;
 }
 
-.alert-active {
+.alert {
+    visibility: hidden;
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    visibility: visible!important;;
-    background-color:rgb(173, 178, 184);
-    color: rgb(230, 230, 230);
+    background-color:white;
+    color: rgb(32, 32, 32);
     padding: 1rem;
-    border: 1px solid black;
-    border-radius: 14px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border-left: 5px solid hsl(var(--clr-secondary));
+    box-shadow: 1px 2px 12px 2px gray;
+}
+
+.alert-active {
+    visibility: visible;
 }
 
 </style>
@@ -76,7 +90,7 @@ let bibtex = code.textContent;
 
 function copy() {
     navigator.clipboard.writeText(bibtex);
-    copyBtn.textContent = "copied!"
+    // copyBtn.textContent = "copied!"
     alert.classList.add('alert-active');
     setTimeout(() => {
         alert.classList.remove('alert-active');
