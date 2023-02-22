@@ -1,7 +1,7 @@
 ---
 const {doi, title, author, journal, year, volume, pages} = Astro.props
 ---
-<a href={`http://localhost:3000/discovery/${doi}/`}>
+<a href={`/discovery/${doi}/`}>
     <article class="referenced-article">
         <div class="doi">DOI: {doi}</div>
         <h4 class="title freight">{title}</h4>
