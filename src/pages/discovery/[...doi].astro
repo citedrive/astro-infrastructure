@@ -14,7 +14,7 @@ const response = await fetch(url);
 if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
 const data = await response.json();
-console.log(await JSON.stringify(data));
+//console.log(await JSON.stringify(data));
 // console.log(await data);
 
 let type = data.message.type;
@@ -24,12 +24,22 @@ let journal = data.message["container-title"];
 let year = data.message.published["date-parts"][0][0];
 let volume = data.message.volume;
 let pages = data.message.page;
+let desciprion = `${title} by ${author} on CiteDrive Discovery`
 
-// let key = DOI
+let schema = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "name": title,
+      "author": author,
+      "datePublished": year
+    })
+
 
 ---
 
-<DiscoveryLayout title={title} description = {doi} lang={"en"}>
+<DiscoveryLayout title={`${title} | Discovery`} description = {desciprion} lang={"en"}>
+
+  <script type="application/ld+json" set:html={schema}></script>
 
 
 <section>
