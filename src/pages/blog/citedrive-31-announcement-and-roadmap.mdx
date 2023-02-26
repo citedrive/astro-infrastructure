@@ -1,0 +1,59 @@
+---
+layout: "../../layouts/BlogPost.astro"
+title: "CiteDrive 3.1 – Announcement and Roadmap "
+pubDate: "Feb 26 2023"
+lang: en
+---
+export const prerender = true;
+
+
+# CiteDrive 3.1 – Announcement and Roadmap 
+
+  
+
+We are pleased to announce some significant CiteDrive updates! We've worked hard to bring you the most up-to-date features to help you manage your research and academic projects more effectively.
+
+<video muted="" autoplay="" loop="" width="99.9%">
+<source src="/assets/citedrive_tagging_biblatex.mp4"></source>
+</video>
+
+First and foremost, we are pleased to present the first iteration of the "Main library" feature, which has been highly requested by our users. This new feature will allow you to organize and centralize all of your references into different projects.
+
+We have also made several enhancements to CiteDrive's performance. We refactored the code and fixed errors and bugs to make it faster and more responsive. Furthermore, we have updated the CiteDrive style to make it look crisper and sharper.
+
+We're also excited to tell you about our new tagging system, which allows for easier organization and retrieval of your references. More information about this feature can be found in the relevant section.
+
+
+## Main library Roadmap
+
+  
+CiteDrive is a research management tool that takes a project-based approach to help you manage your research more efficiently. With CiteDrive, you can organize your references and teams into different projects. For example, you can collaborate with a completely different team on a paper they want to bring into various document formats, such as LaTeX, Overleaf, Pandoc, RStudio, Quarto, R Markdown, and more. Each project can have different documents with unique structures, and CiteDrive makes it easy to manage all of them in one place.
+
+
+However, many users have requested a way to easily copy references from one project to another and even clone entire projects. Additionally, they have expressed a desire to manage a central library, known as the "main.bib" project, from which they can assign references to different projects while still maintaining a project-based approach. This allows users to organize references within the structure of a paper, thesis, book, or other formats and collaborate with team members to annotate, discuss, and keep references synchronized within a common project, such as Overleaf. The system provides version and collision control to ensure that multiple users can work together smoothly to prevent issues such as duplicate keys.
+
+
+### Roadmap and status
+
+CiteDrive 3.1 marks a significant update to our platform, as we have changed the data structure and infrastructure to prepare for upcoming releases. Also, you will be able to clone projects.
+
+Our team has planned a series of releases in the coming weeks, building upon the groundwork laid in this update.
+
+## New Tagging
+
+Tagging will be made more accessible by extracting the relationships directly from your bibtex entry using the field 
+```bibtex 
+@article{...
+	keywords={keyword1,keyword2,...}
+}
+```
+
+
+
+This feature will be especially useful for those using CiteDrive with JabRef. 
+
+## In the pipeline
+
+Last little note: In addition to offline LaTeX editors and Markdown-based systems such as Quarto and R Markdown, we are developing extensions for Jupyter Notebook, Microsoft Word, and Google Docs.
+
+Thank you for choosing CiteDrive as your reference management tool; we are confident these updates will enhance your experience. We will love to hear from you if you have any feedback or suggestions.
