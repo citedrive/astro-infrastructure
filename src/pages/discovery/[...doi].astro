@@ -10,12 +10,24 @@ import Quote from '/assets/Quotes.svg';
 
 const { doi } = await Astro.params;
 let url = "https://api.crossref.org/works/" + doi;
+let url_bib = "https://dx.doi.org/" + doi;
+let options = {
+      headers: {
+        Accept: "application/x-bibtex",
+      },
+    };
 const response = await fetch(url);
 if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
 const data = await response.json();
-//console.log(await JSON.stringify(data));
-// console.log(await data);
+
+
+const bib = await fetch(url_bib, options).then((response) => response.text());
+
+
+const bibtex = bib;
+
+alert(bibtex)
 
 let type = data.message.type;
 let title = data.message.title[0];
@@ -83,13 +95,7 @@ let schema = JSON.stringify({
 
 
 <BibtexPreview 
-  type={type}
-  title={title}
-  author= {author}
-  journal={journal}
-  year={year}
-  volume={volume}
-  pages={pages}
+  bibtex={bibtex}
 />
 
 </section>
@@ -101,12 +107,14 @@ let schema = JSON.stringify({
   {typeof data.message.reference !== "undefined" &&
               <div class="grid references-grid" style="--gap: .5rem">
                 {data.message.reference.map((ele) => (
+                 <>{typeof ele.DOI !== "undefined" &&
                   <References
                   doi={typeof ele.DOI !== "undefined" ? ele.DOI : "No DOI"}
                   author={ele.author}
                   title={ele["article-title"]}
                   year={ele.year}
                    />
+                  }</>
                 ))}
                 </div>
                 }

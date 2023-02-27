@@ -1,26 +1,18 @@
 ---
-const {type, title, author, journal, year, volume, pages} = Astro.props
+const {bibtex} = Astro.props
 
 // let citeKey = ""
 ---
 
 <!-- conditional rendering -->
 
-{type === "journal-article" &&
+
 
 <h4>BibTeX:</h4>
 <div class="bibtex-wrapper">
 <pre class="bibtex" style="margin-bottom: 0">
-  @article{`{cite-key,
-    title: {${title}},
-    author: {${author}},
-    journal: {${journal}},
-    year: {${year}},
-    volume: {${volume}},
-    pages: {${pages}}
-  }
-  `
-  }
+ {bibtex}
+  
 </pre>
 
 <button type="button" class="copy">
@@ -30,7 +22,7 @@ const {type, title, author, journal, year, volume, pages} = Astro.props
 </div>
 
 <div class="alert">Copied to Clipboard!</div>
-}
+
 
 
 
