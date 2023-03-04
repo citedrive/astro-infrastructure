@@ -13,7 +13,6 @@
   "dependencies": {
     "@algolia/client-search": "^4.13.1",
     "@astrojs/netlify": "^2.1.2",
-    "@astrojs/node": "^5.0.3",
     "@astrojs/partytown": "^1.0.0",
     "@astrojs/tailwind": "^3.0.1",
     "@astropub/md": "^0.1.4",
@@ -21,10 +20,10 @@
     "@docsearch/react": "^3.1.0",
     "@types/react": "^17.0.45",
     "astro-analytics": "^2.5.1",
-    "chrome-aws-lambda": "~7.0.0",
+    "chrome-aws-lambda": "2.0.0",
     "framer-motion": "^7.3.6",
     "preact": "^10.7.3",
-    "puppeteer-core": "~7.0.0",
+    "puppeteer-core": "2.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
