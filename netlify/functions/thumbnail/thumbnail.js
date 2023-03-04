@@ -5,7 +5,7 @@ const fs = require('fs')
 exports.handler = async function (event, context) {
 
     let localChrome = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
-    let executable =  chromium.executablePath //fs.existsSync(localChrome) ? localChrome :
+    let executable = chromium.executablePath // fs.existsSync(localChrome) ? localChrome :
 
     const browser = await puppeteer.launch({
         args: chromium.args,
