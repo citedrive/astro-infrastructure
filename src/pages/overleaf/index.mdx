@@ -5,56 +5,63 @@ side: Enable support
 cat: "natbib"
 lang: en
 ---
+
 export const prerender = true;
 
-# Reference Manager for Overleaf with CiteDrive
+# Reference Manager for Overleaf with CiteDrive [2023 Update]
 
 At last, focus on authoring your paper instead of worrying about keeping your references and citations in sync. Thanks to the seamless integration between CiteDrive and Overleaf, you can now effortlessly add in-text citations to your paper without ever leaving your Overleaf project.
 
-![](dasd)
+## Features:
 
-
-### In-text citations, made dead simple.
-
+<details>
+<summary>In-text citations, made dead simple.</summary>
 With the help of the CiteDrive Companion browser add-on, inserting in-text citations to your Overleaf paper is a snap. Simply place your cursor within the editor, click the “insert citation” button along the top of the screen, select the reference of interest and confirm.
+</details>
+<details>
 
-### Collect references from anywhere
-
+<summary>Collect references from anywhere</summary>
 CiteDrive Companion improves life outside the editor as well by empowering you to quickly collect references where you find them. Whether you prefer to use PubMed, Google Scholar or other resources for discovering references, you can quickly generate, customize and add BibTeX entries to your project and immediately make them available for citation in your Overleaf paper.
+</details>
 
-### Natively Bib[La]TeX - not an afterthought.
-
+<details>
+<summary>Natively Bib[La]TeX - not an afterthought.</summary>
 Most reference managers with BibTeX / BibLaTeX support do so as a conversion or translation and you lose out on much of the benefit and rich control offered by handcrafting your references. Because CiteDrive is built natively for Bib[La]TeX, you maintain full control and can leverage custom fields as you please. You shouldn’t be forced to choose between ease and utility.
+</details>
 
-### Collaborative, just like Overleaf
-
+<details>
+<summary>Collaborative, just like Overleaf</summary>
 We believe collaborative writing and collaborative reference management go hand-in-hand. Add collaborators to your CiteDrive project just as you would with your Overleaf paper so collecting references can be a team effort.
+</details>
 
-At last, focus on authoring your paper instead of worrying about keeping your references and citations in sync. Thanks to the seamless integration between CiteDrive and Overleaf, you can now effortlessly add in-text citations to your paper without ever leaving your Overleaf project.
-
+<br></br>
 
 ## Getting started
 
-Starting to use Overleaf and CiteDrive together can be done in less than a couple of minutes:
+When you initially sign in to CiteDrive, you will be presented with several CiteDrive project types to choose from. We will proceed to generate a **new Overleaf** project within CiteDrive, which we will name **Thesis**. Following that, you can proceed to [include references](https://medium.com/@citedrive/adding-bibliographic-references-to-overleaf-with-citedrive-325f131e3ca2) in your newly created project. This is an example of what your project may look like:
 
-1.  First, sign up for a CiteDrive account (it’s free!) and create your first Overleaf-type project
-2.  Install the CiteDrive Companion plugin appropriate for your browser:  
-    [Add-on for chrome](https://chrome.google.com/webstore/detail/citedrive-bibtex-companio/gmmonfphegngpcbcapfbgembkjeookik)  
-    [Add-on for firefox](https://addons.mozilla.org/af/firefox/addon/citedrive-companion/)
-3.  Head over to Google Scholar, Pubmed, or another academic research site and collect your reference or two
-4.  Head to Overleaf and start authoring a paper (or open an existing one)
-5.  Connect your paper and CiteDrive project
-6.  Click Insert Citation at the top of the editing screen to insert your first in-text citation
+![CiteDrive Dashboard](/assets/blog/citedrive-example-project-with-bibtex-or-biblatex-entries-for-overleaf.png)
 
-Complete instructions may be found in the [docs](https://docs.citedrive.com/).
+CiteDrive simplifies the process of adding bibliographic references to your Overleaf project. You can add as many references as you need and organize them however you like. CiteDrive provides multiple ways to add references, including hand-adding BibTeX entries, importing a *.bib file, using the search engine, utilizing the ISBN resolver, or installing the CiteDrive browser extension to directly cite papers or websites from your web browser. The choice is yours!
+### Step 2: Connect your CiteDrive project with Overleaf.
 
-## Where can I read more Overleaf + Citedrive?
+To link your CiteDrive project with an Overleaf project, simply click on the .bib button located in the upper right corner of your CiteDrive project page.
 
-[Check out our featured guest post on the Overleaf blog](https://www.overleaf.com/blog/citedrive-easy-reference-management-for-overleaf)
+![CiteDrive 3.0 blog post](/assets/blog/connect-your-citedrive-project-with-overleaf.png)
 
-[Read our most recent release announcement](https://citedrive.medium.com/citedrive-january-2022-release-497d3a5abdb6)
+*Copy* the link to Overleaf to connect both apps through our dynamic `.bib` file.
 
-[Follow the quick start guide in the docs](https://docs.citedrive.com/)
+![CiteDrive 3.0 blog post](/assets/blog/copy-citedrive-link-to-overleaf.png)
+
+Now, returning to Overleaf. Click the *New File* icon and select *From External URL*.
+
+![CiteDrive 3.0 blog post](/assets/blog/overleaf-create-a-new-file.png)
+
+Paste the CiteDrive link into the text field labeled *URL to fetch the file from*.
+
+![CiteDrive 3.0 blog post](/assets/blog/overleaf-url-to-fetch-the-file-from.png)
+
+To incorporate your `bibliography.bib` into your LaTeX document, simply click on the "Create" button and use `\bibliography{bibliography}`. That's all there is to it! If you want to ensure that you have the latest version of your CiteDrive `.bib` file, you can refresh the imported file in Overleaf.
 
 ## About Overleaf
 
@@ -67,3 +74,9 @@ CiteDrive was born out of a common refrain among our team, friends, and fellow a
 After a couple of initial failed experiments, the first end-to-end experience focusing on Overleaf users was piloted in fall 2021 and quickly evolved into the platform as it exists today.
 
 CiteDrive continues to relentlessly focus on refining and simplifying the experience of discovering references and citing as you write. After a couple of initial failed experiments, the first end-to-end experience focusing on Overleaf users was piloted in fall 2021 and quickly evolved into the platform as it exists today.
+
+### Where can I read more Overleaf + Citedrive?
+
+- [Check out our featured guest post on the Overleaf blog](https://www.overleaf.com/blog/citedrive-easy-reference-management-for-overleaf)
+- [Read our most recent release announcement](https://citedrive.medium.com/citedrive-january-2022-release-497d3a5abdb6)
+- [Follow the quick start guide in the docs](https://docs.citedrive.com/)
