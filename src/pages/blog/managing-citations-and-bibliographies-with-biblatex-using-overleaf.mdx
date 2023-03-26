@@ -1,0 +1,75 @@
+---
+layout: "../../layouts/BlogPost.astro"
+title: "Announcing CiteDrive 3.0: keep track of your bibliographies, references, and citations on Overleaf and RStudio"
+pubDate: "Mar 26 2023"
+lang: en
+---
+
+# Managing Citations and Bibliographies with BibLaTeX using Overleaf
+
+In academic writing, citations and bibliographies play a crucial role in presenting a comprehensive and well-researched paper. With the advent of digital tools, managing citations and bibliographies has become significantly easier than before. In this blog post, we will discuss how to manage citations and bibliographies with BibLaTeX using Overleaf, a popular online LaTeX editor.
+
+## What is BibLaTeX?
+
+BibLaTeX is a LaTeX package that provides advanced bibliographic facilities for processing bibliographies. It is a powerful tool for managing citations, bibliographies, and references. BibLaTeX works with BibTeX files, which are databases of references in a specific format. BibLaTeX allows the user to create customized citation and bibliography styles and supports a wide range of citation styles.
+
+## What is Overleaf?
+
+Overleaf is a web-based LaTeX editor that allows users to create, edit and share LaTeX documents online. It has a built-in compiler that can generate PDFs from LaTeX code. Overleaf is a collaborative tool that allows multiple users to work on the same document simultaneously. It has several features that make it popular among researchers and students, including templates, automatic compilation, and integration with other tools such as Git and Zotero.
+
+## Managing Citations and Bibliographies with BibLaTeX using Overleaf
+
+To manage citations and bibliographies with BibLaTeX using Overleaf, follow these steps:
+
+### Step 1: Create a New Project
+
+Log in to your Overleaf account and click on the "New Project" button. Choose the template that best suits your requirements. For this blog post, we will be using the "LaTeX Article" template.
+
+### Step 2: Add BibLaTeX Package
+
+In the preamble section of your LaTeX document, add the following lines to load the BibLaTeX package:
+
+
+```latex
+\usepackage[style=authoryear, backend=biber]{biblatex} 
+\addbibresource{bibliography.bib}
+```
+
+The `style` option specifies the citation style, and the `backend` option specifies the BibTeX engine to be used. The `addbibresource` command specifies the location of the BibTeX file that contains the references.
+
+### Step 3: Add References to the Bibliography File
+
+Create a new file called `bibliography.bib` and add the references to the file. The format of the BibTeX entries may vary depending on the type of reference. Here is an example of a book reference:
+
+```bibtex
+@book{example,     
+	author = {John Doe},     
+	title = {The Book Title},     
+	publisher = {The Publisher},     
+	year = {2021}, 
+}
+```
+
+### Step 4: Citing References
+
+To cite a reference in your document, use the `\cite{}` command and specify the citation key of the reference. For example:
+
+```latex
+According to \cite{example}, the world is round.
+```
+
+This will generate a citation in the text as "(Doe, 2021)" and add an entry to the bibliography at the end of the document.
+
+### Step 5: Generate Bibliography
+
+To generate the bibliography, add the following line at the end of your document:
+
+```latex
+\printbibliography
+```
+
+This will generate a list of references in the specified citation style.
+
+## Conclusion
+
+In conclusion, managing citations and bibliographies with BibLaTeX using Overleaf is a straightforward process. By following the steps outlined in this blog post, you can easily manage your references and create customized citation styles. Overleaf provides an excellent platform for collaborative writing and can make the process of academic writing much more efficient. With these tools at your disposal, you can focus on the content of your paper and leave the
