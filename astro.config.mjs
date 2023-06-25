@@ -8,7 +8,7 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.citedrive.com',
+  site: 'https://pages.citedrive.com',
   trailingSlash: 'always',
   integrations: [react(), partytown(), mdx(), sitemap(), compress()]
 });
