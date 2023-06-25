@@ -2,7 +2,7 @@ export const SITE = {
 	title: 'CiteDrive',
 	description: 'Your website description.',
 	defaultLanguage: 'en',
-	url: "https://www.citedrive.com"
+	url: "https://pages.citedrive.com"
 };
 
 export const OPEN_GRAPH = {
